@@ -1,0 +1,206 @@
+# Benford Law
+
+## History
+Benford’s Law is named after physicist __Frank Benford__, who worked on the theory in 1938 and as a result a paper titled __The Law of Anomalous Numbers__ was published.[@frank_ben].  However, its discovery is associated more than five decades earlier when astronomer __Simon Newcomb__, observed that initial pages of log tables booklet were more worn out than later pages and publisged a two page article titled __Note on the Frequency of Use of the Different Digits in Natural Numbers__ in 1881 [@newcomb].
+```{r fig.cap="Frank Benford and Simon Newcomb", echo=FALSE, fig.align='center', fig.show='hold', out.height="49%", out.width="49%"}
+knitr::include_graphics(c("images/frank_benford.jpg", "images/Simon.jpg"))
+```
+
+## What the law states
+
+If someone asks us, what is probability of any digit occurring in first place (from left side), by natural intuition we may answer this question is _one out of nine_.  In other words, probability of any digit that be in first place should follow uniform distribution. However when the Canadian-American astronomer __Simon Newcomb__ was flipping, in 1881, through logarithmic tables booklet, he noticed that initial pages were more worn out than those in the end.  Later on, __Frank Benford__ by analysing 20 different data-sets, ranging from river sizes, chemical compound weights, population, etc., showed that probability diminishes successively from digit 1 to 9, which means that probability of digit 1 occurring at initial place should be highest and that of 9 should be lowest.  
+
+Mathematically, _Benford's Law_ or _Law of first digits_ states that the probability of any digit in first place should follow -
+
+$P(d=d_i)=log(1 + 1/d_i)$ where $d_i = [1...9]$
+
+The probabilities may be plotted as -
+
+```{r echo=FALSE, message=FALSE, fig.cap="Diminishing Probabilities of First Digits - Benford Law"}
+library(tidyverse)
+# Implement Benford's Law for first digit
+benlaw <- function(d) log10(1 + 1 / d)
+# Calculate expected frequency for d=5
+
+# Create a dataframe of the 9 digits and their Benford's Law probabilities
+df <- data.frame(digit = 1:9, probability = benlaw(1:9))
+# Create barplot with expected frequencies
+ggplot(df, aes(x = digit, y = probability)) + 
+	geom_bar(stat = "identity", fill = "dodgerblue") + 
+	xlab("First digit") + ylab("Expected frequency") + 
+	scale_x_continuous(breaks = 1:9, labels = 1:9) + 
+	ylim(0, 0.33) + theme(text = element_text(size = 11))
+```
+
+Benford showed it on 20 different data-sets.  Later in 1961, Roger Pinkham later showed that law is invariant to scaling [@pinkham].  By _Scale Invariance_, he actually showed that the law is invariant to measurements units i.e. law still holds if we measure price in USD or in INR, measure length in KMs or Miles, etc.
+
+To test the proposed law, Benford showed it on many different datasets.  In R, there is a package named `benford.analysis` [@R-benford.analysis] to perform analytics based on this law.  Moreover, the library also has many of those datasets on which Benford tested his proposed law.  
+
+Let us see the results on dataset named `census.2009` available with the afore-mentioned package.  This data-set contains the figures of population of towns and cities of the United States, as of July of 2009.
+
+```{r census, fig.cap="First Digit Analysis on US Census 2009 data"}
+# Load package benford.analysis
+library(benford.analysis)
+data(census.2009)
+# Check conformity
+bfd.cen <- benford(census.2009$pop.2009, 
+                   number.of.digits = 1) 
+plot(bfd.cen, except = c("second order", 
+                         "summation", 
+                         "mantissa", 
+                         "chi squared",
+                         "abs diff", 
+                         "ex summation", 
+                         "Legend"), 
+     multiple = F) 
+```
+
+Figure \@ref(fig:census) shows that the law holds for the data.  Let us also test the Pinkham's corollary on the aforesaid data.  For this let's multiply all the figures of population by say 3.
+
+```{r scaling, fig.cap="Law still holds after scaling the numbers"}
+# Multiply the data by 3 and check conformity again
+data <- census.2009$pop.2009 * 3
+bfd.cen3 <- benford(data, number.of.digits=1)
+plot(bfd.cen3, except = c("second order", 
+                          "summation", 
+                          "mantissa", 
+                          "chi squared",
+                          "abs diff", 
+                          "ex summation", 
+                          "Legend"), 
+     multiple = F)
+```
+
+Through figure \@ref(fig:scaling) it is clear that law still holds after scaling.  Theodore P. Hill later-on showed that law extends for further digits as well. [@t_hill] We can check it for first two digits, in the above example (Refer figure \@ref(fig:ben2)).
+
+```{r ben2, fig.cap="Law holds for first two digits as well"}
+bfd.cen2 <- benford(census.2009$pop.2009, number.of.digits = 2) 
+plot(bfd.cen2, except = c("second order", 
+                          "summation", 
+                          "mantissa", 
+                          "chi squared",
+                          "abs diff", 
+                          "ex summation", 
+                          "Legend"), 
+     multiple = F) 
+```
+
+## Limitations
+Benford's Law may not hold in the following circumstances-
+
+1. When the data-set is comprised of assigned numbers.  Like cheque numbers, invoices numbers, telephone numbers, pincodes, etc.
+2. Numbers that may be influenced viz. ATM withdrawals, etc.
+3. Where amounts have either lower bound, or upper bounds or both.  E.g. passengers onboard airplane, hourly wage rate, etc.
+4. Count of transactions less than 500.
+
+
+## Fraud detection using Benford's Law
+
+Dr Mark Nigrini, an accountancy professor from Dallas, has made use of this law for fraud detection. His theory is that - _If somebody tries to falsify, say, their tax return then invariably they will have to invent some data. When trying to do this, the tendency is for people to use too many numbers starting with digits in the mid range, 5,6,7 and thus not enough numbers starting with 1._ 
+
+## Second Order Tests 
+
+### Digits distribution second order Test [@articlesec]
+Mark J Nigrini, in a reasearch paper published in 2009, proposed this new test which diagnoses the relationships and patterns found in transactional data and is based on the _digits of the differences between the amounts that have been sorted from smallest to largest_.  Nigrini showed that these digits are expected to closely follow the frequencies of Benford law. Using four different datasets he showed that this test can detect -
+
+  - anamolies occuring in data downloads
+  - rounded data
+  - use of 'regression output' OR 'statistically generated data' in place of actual (transactional) data.
+
+### Summation Test [@nigrinifraud]
+The __summation test__, another second order test, looks for excessively large numbers in a dataset. It identifies numbers that are large compared to the norm for that data. The test was proposed by Nigrini [@nigrinifraud] and it is based on the fact that the sums of all numbers in a Benford distribution with first-two digits (10, 11, 12, …99) should be the same. Therefore, for each of the 90 first-two digits groups sum proportions should be equal, i.e. 1/90 or 0.011. The spikes, if any indicate that there are some large single numbers or set of numbers.
+
+## Examining significance using statistical tests
+
+### Chi-square statistic
+The critical value for Chi-Square Test, also known as goodness of fit test, comes from a chi-square distribution.  Here we have (9-1) = 8 degrees of freedom. For a significance level of 0.01, we get a critical value of 20.09. If the value of $χ^2$ is greater than this value, then we can reject a fit to Benford’s law with 99% certainty.
+For significance level of 0.05, we may take 15.507 and 112.022 as critical values for first and first-two digits tests, respectively.
+
+### Z-score
+Mark Nigrini, in his book, proposed that if the values of Z-statistic exceed the critical value 1.96, the null hypothesis $H_{0A}$ is rejected at 5% of significance level.
+
+### Mean absolute deviation
+These values prescribed by Mark J Nigrini are -
+
+
+| First Digits   |                  |First-Two Digits |  |
+| ----------------------- | --------------------| --------------------- | -------------------- |
+| 0.000 to 0.006 | Close conformity                 | 0.000 to 0.012 | Close conformity |
+| 0.006 to 0.012 | Acceptable conformity            | 0.012 to 0.018 | Acceptable conformity |
+| 0.012 to 0.015 | Marginally acceptable conformity | 0.018 to 0.022 | Marginally acceptable conformity |
+| above 0.015    | Nonconformity                    | above 0.022 | Nonconformity |
+
+
+## Using external package for Benford Analytics
+There is a package named `benford.analysis`, which provides tools that make it easier to validate data using Benford's Law.  This package has been developed by **Carlos Cinelli**.  As the package author himself states that the main purpose of the package is to identify suspicious data that need further verification, it should always be kept in mind that these analytics only provide us red-flagged transactions that should be validated further.
+
+Apart from useful functions in the package, this also loads some default datasets specially those which were used by Frank Benford while proposing his law.  Loading the library is pretty simple-
+
+```{r}
+library(benford.analysis)
+```
+
+### Creating a benford object
+The main function `benford()` taken a data as input and creates an output of class benford. The syntax is
+```
+benford(data, number.of.digits=2)
+```
+where-
+  
+  - `data` is numeric vector on which analysis has to be performed.
+  - `number.of.digits` is number of digits on which analysis has to be performed.  Default value is `2`.
+  
+Let us apply this on `lakes.perimeter`^[A dataset of the perimeter of the lakes arround the water from the global lakes and wetlands database (GLWD) [http://www.worldwildlife.org/pages/global-lakes-and-wetlands-database](http://www.worldwildlife.org/pages/global-lakes-and-wetlands-database)] data which is available with the package.
+
+```{r}
+# load sample data
+data(lakes.perimeter) 
+lake_ben <- benford(lakes.perimeter$perimeter.km, number.of.digits = 2)
+```
+
+To view it, we can either -
+  
+  - print it
+  - plot it
+  
+### Printing Benford object
+The print method first shows the general information of the analysis, like the name of the data used, the number of observations used and how many significant digits were analyzed.  After that you have the main statistics of the log mantissa of the data. If the data follows Benford’s Law, the numbers should be close to those shown in table following.
+
+Table: (\#tab:benford) Ideal Statistics for data that follows Benford's Law
+
+| Statistic |	Value |
+|:----------------------:|:-------------------------------:|
+| Mean |	0.5 |
+| Variance |	1/12 (0.08333…) |
+| Ex. Kurtosis | -1.2 |
+| Skewness |	0 |
+
+The basic syntax is -
+```
+print(x, how.many=5, ...)
+```
+where -
+
+  - `x` is a benford object
+  - `how.many` is a number that defines how many of the biggest absolute differences to show.
+
+```{r}
+print(lake_ben)
+```
+If we plot the object, it gives us 5 plots, as can be seen in following figure.
+
+```{r benplot, fig.cap="Plotting the diagnostic charts of lake perimeter data", fig.show='hold', fig.align='center'}
+plot(lake_ben)
+```
+ 
+
+-----
+Further Reading-
+
+1. ISACA JOURNAL ARCHIVES - [Understanding and Applying Benford’s Law - 1 May 2011](https://www.isaca.org/resources/isaca-journal/past-issues/2011/understanding-and-applying-benfords-law)
+
+2. Newcomb, Simon. “Note on the Frequency of Use of the Different Digits in Natural Numbers.” American Journal of Mathematics, vol. 4, no. 1, 1881, pp. 39–40. JSTOR, [https://doi.org/10.2307/2369148](https://doi.org/10.2307/2369148). Accessed 15 Jun. 2022. 
+
+3. Durtschi, Cindy & Hillison, William & Pacini, Carl. (2004). The Effective Use of Benford's Law to Assist in Detecting Fraud in Accounting Data. J. Forensic Account.
+
+

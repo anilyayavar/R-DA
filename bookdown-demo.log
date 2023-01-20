@@ -1,0 +1,2789 @@
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  19 JAN 2023 17:06
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**bookdown-demo.tex
+(./bookdown-demo.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-01-16> (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2022/07/02 v1.4n Standard LaTeX document class
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count181
+\c@chapter=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
+\c@figure=\count188
+\c@table=\count189
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+For additional information on amsmath, use the `?' option.
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen141
+)) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count190
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count191
+\leftroot@=\count192
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count193
+\DOTSCASE@=\count194
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count195
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count196
+\dotsspace@=\muskip16
+\c@parentequation=\count197
+\dspbrk@lvl=\count198
+\tag@help=\toks17
+\row@=\count199
+\column@=\count266
+\maxfields@=\count267
+\andhelp@=\toks18
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math.sty (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-01-16 L3 programming layer (loader) 
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
+\g__graphics_track_int=\count268
+\l__pdf_internal_box=\box53
+\g__pdf_backend_object_int=\count269
+\g__pdf_backend_annotation_int=\count270
+\g__pdf_backend_link_int=\count271
+))
+Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
+Package: unicode-math-xetex 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-01-16 L3 Experimental document command parser
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2023-01-16 LaTeX2e option processing using LaTeX3 keys
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count272
+\l__fontspec_language_int=\count273
+\l__fontspec_strnum_int=\count274
+\l__fontspec_tmp_int=\count275
+\l__fontspec_tmpa_int=\count276
+\l__fontspec_tmpb_int=\count277
+\l__fontspec_tmpc_int=\count278
+\l__fontspec_em_int=\count279
+\l__fontspec_emdef_int=\count280
+\l__fontspec_strong_int=\count281
+\l__fontspec_strongdef_int=\count282
+\l__fontspec_tmpa_dim=\dimen150
+\l__fontspec_tmpb_dim=\dimen151
+\l__fontspec_tmpc_dim=\dimen152
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\g__um_fam_int=\count283
+\g__um_fonts_used_int=\count284
+\l__um_primecount_int=\count285
+\g__um_primekern_muskip=\muskip17
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex))) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2022/06/06 4.5 verbatim text (tvz,hv)
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+\FV@CodeLineNo=\count286
+\FV@InFile=\read2
+\FV@TabBox=\box54
+\c@FancyVerbLine=\count287
+\FV@StepNumber=\count288
+\FV@OutFile=\write3
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip53
+\fb@frw=\dimen153
+\fb@frh=\dimen154
+\FrameRule=\dimen155
+\FrameSep=\dimen156
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count289
+\LTcapwidth=\dimen157
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@gbox=\box59
+\LT@cols=\count290
+\LT@rows=\count291
+\c@LT@tables=\count292
+\c@LT@chunks=\count293
+\LT@p@ftn=\toks22
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen158
+\lightrulewidth=\dimen159
+\cmidrulewidth=\dimen160
+\belowrulesep=\dimen161
+\belowbottomsep=\dimen162
+\aboverulesep=\dimen163
+\abovetopsep=\dimen164
+\cmidrulesep=\dimen165
+\cmidrulekern=\dimen166
+\defaultaddspace=\dimen167
+\@cmidla=\count294
+\@cmidlb=\count295
+\@aboverulesep=\dimen168
+\@belowrulesep=\dimen169
+\@thisruleclass=\count296
+\@lastruleclass=\count297
+\@thisrulewidth=\dimen170
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen171
+\ar@mcellbox=\box60
+\extrarowheight=\dimen172
+\NC@list=\toks23
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box61
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count298
+\calc@Bcount=\count299
+\calc@Adimen=\dimen173
+\calc@Bdimen=\dimen174
+\calc@Askip=\skip60
+\calc@Bskip=\skip61
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count300
+\calc@Cskip=\skip62
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count301
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box62
+\fn@width=\dimen175
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen176
+\Gin@req@width=\dimen177
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip63
+\thm@postskip=\skip64
+\thm@headsep=\skip65
+\dth@everypar=\toks29
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip66
+\bibsep=\skip67
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count302
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-11-13 v7.00u Hypertext links for LaTeX
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count303
+)
+\@linkdim=\dimen178
+\Hy@linkcounter=\count304
+\Hy@pagecounter=\count305
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-11-13 v7.00u Hyperref: PDFDocEncoding definition (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count306
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-11-13 v7.00u Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4045.
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4410.
+\c@Hy@tempcnt=\count307
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4748.
+\XeTeXLinkMargin=\dimen179
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count308
+\Field@Width=\dimen180
+\Fld@charsize=\dimen181
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count309
+\c@Item=\count310
+\c@Hfootnote=\count311
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2022-11-13 v7.00u Hyperref driver for XeTeX
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box63
+\c@Hy@AnnotLevel=\count312
+\HyField@AnnotCount=\count313
+\Fld@listcount=\count314
+\c@bookmark@seq@number=\count315
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip68
+) (./bookdown-demo.aux)
+\openout1 = `bookdown-demo.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 129.
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 129.
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[0.9999964596882403]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[0.9999964596882403]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 129.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 129.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 129.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 129.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 129.
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 1.000096459334209.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustment={\fontdimen
+(fontspec)             8\font =6.77pt\relax \fontdimen 9\font =3.94pt\relax
+(fontspec)             \fontdimen 10\font =4.44pt\relax \fontdimen 11\font
+(fontspec)             =6.86pt\relax \fontdimen 12\font =3.45pt\relax
+(fontspec)             \fontdimen 13\font =3.63pt\relax \fontdimen 14\font
+(fontspec)             =3.63pt\relax \fontdimen 15\font =2.89pt\relax
+(fontspec)             \fontdimen 16\font =2.47pt\relax \fontdimen 17\font
+(fontspec)             =2.47pt\relax \fontdimen 18\font =2.5pt\relax
+(fontspec)             \fontdimen 19\font =2.0pt\relax \fontdimen 22\font
+(fontspec)             =2.5pt\relax \fontdimen 20\font =0pt\relax \fontdimen
+(fontspec)             21\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[1.000096459334209]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.000096459334209]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.000096459334209]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =6.77pt\relax \fontdimen 9\font
+(fontspec)             =3.94pt\relax \fontdimen 10\font =4.44pt\relax
+(fontspec)             \fontdimen 11\font =6.86pt\relax \fontdimen 12\font
+(fontspec)             =3.45pt\relax \fontdimen 13\font =3.63pt\relax
+(fontspec)             \fontdimen 14\font =3.63pt\relax \fontdimen 15\font
+(fontspec)             =2.89pt\relax \fontdimen 16\font =2.47pt\relax
+(fontspec)             \fontdimen 17\font =2.47pt\relax \fontdimen 18\font
+(fontspec)             =2.5pt\relax \fontdimen 19\font =2.0pt\relax \fontdimen
+(fontspec)             22\font =2.5pt\relax \fontdimen 20\font =0pt\relax
+(fontspec)             \fontdimen 21\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1.000096459334209]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =6.77pt\relax \fontdimen 9\font
+(fontspec)             =3.94pt\relax \fontdimen 10\font =4.44pt\relax
+(fontspec)             \fontdimen 11\font =6.86pt\relax \fontdimen 12\font
+(fontspec)             =3.45pt\relax \fontdimen 13\font =3.63pt\relax
+(fontspec)             \fontdimen 14\font =3.63pt\relax \fontdimen 15\font
+(fontspec)             =2.89pt\relax \fontdimen 16\font =2.47pt\relax
+(fontspec)             \fontdimen 17\font =2.47pt\relax \fontdimen 18\font
+(fontspec)             =2.5pt\relax \fontdimen 19\font =2.0pt\relax \fontdimen
+(fontspec)             22\font =2.5pt\relax \fontdimen 20\font =0pt\relax
+(fontspec)             \fontdimen 21\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 129.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 129.
+LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 129.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 129.
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
+
+
+Package fontspec Info: latinmodern-math scale = 0.9998964600422715.
+
+
+Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
+(fontspec)             'latinmodern-math.otf' with options
+(fontspec)             [Scale=MatchLowercase,BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustment={\fontdimen
+(fontspec)             8\font =0.4pt\relax \fontdimen 9\font =2.0pt\relax
+(fontspec)             \fontdimen 10\font =1.67pt\relax \fontdimen 11\font
+(fontspec)             =1.11pt\relax \fontdimen 12\font =6.0pt\relax
+(fontspec)             \fontdimen 13\font =0pt\relax }].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <8.5->s*[0.9998964600422715]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[0.9998964600422715]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[0.9998964600422715]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.4pt\relax \fontdimen 9\font
+(fontspec)             =2.0pt\relax \fontdimen 10\font =1.67pt\relax
+(fontspec)             \fontdimen 11\font =1.11pt\relax \fontdimen 12\font
+(fontspec)             =6.0pt\relax \fontdimen 13\font =0pt\relax 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9998964600422715]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 8\font =0.4pt\relax \fontdimen 9\font
+(fontspec)             =2.0pt\relax \fontdimen 10\font =1.67pt\relax
+(fontspec)             \fontdimen 11\font =1.11pt\relax \fontdimen 12\font
+(fontspec)             =6.0pt\relax \fontdimen 13\font =0pt\relax 
+
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 129.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 129.
+LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 129.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 129.
+Package hyperref Info: Link coloring OFF on input line 129.
+(./bookdown-demo.out) (./bookdown-demo.out)
+\@outlinefile=\write4
+\openout4 = `bookdown-demo.out'.
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 131.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 131.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 131.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 131.
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 12.0011pt on input line 131.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.00073pt on input line 131.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.00055pt on input line 131.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 11.99872pt on input line 131.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.99915pt on input line 131.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 131.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 131.
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 131.
+(c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+] [2
+
+] (./bookdown-demo.toc
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 4.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 4.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00092pt on input line 4.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00064pt on input line 4.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00046pt on input line 4.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 4.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 4.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 4.
+[3]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 146.
+[4] [5] [6])
+\tf@toc=\write5
+\openout5 = `bookdown-demo.toc'.
+
+[7] [8
+
+]
+Chapter 1.
+[9] [10
+
+] [11] [12
+
+]
+
+Package natbib Warning: Citation `10.2307/1390807' on page 1 undefined on input line 170.
+
+File: images/history.png Graphic file (type bmp)
+<images/history.png>
+File: images/whyR.png Graphic file (type bmp)
+<images/whyR.png>
+[1
+
+] [2]
+File: images/CRAN.png Graphic file (type bmp)
+<images/CRAN.png>
+File: images/workspace.png Graphic file (type bmp)
+<images/workspace.png>
+File: images/first_code.png Graphic file (type bmp)
+<images/first_code.png>
+File: images/indent.png Graphic file (type bmp)
+<images/indent.png>
+
+Underfull \hbox (badness 1062) in paragraph at lines 240--242
+[]\TU/lmr/m/n/10 R is case sensitive. This will have to be remebered while writ-
+ []
+
+[3] [4] [5]
+File: images/rstudio.png Graphic file (type bmp)
+<images/rstudio.png>
+File: images/new_script.png Graphic file (type bmp)
+<images/new_script.png>
+[6]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 383.
+
+Underfull \hbox (badness 1584) in paragraph at lines 391--393
+[]\TU/lmr/m/n/10 To call a function say \TU/lmtt/m/n/10 filter \TU/lmr/m/n/10 from package \TU/lmtt/m/n/10 dplyr \TU/lmr/m/n/10 we may use
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--393
+
+ []
+
+[7]
+Underfull \hbox (badness 1077) in paragraph at lines 416--417
+[]\TU/lmr/m/n/10 Though \TU/lmtt/m/n/10 tidyverse \TU/lmr/m/n/10 is a collection 20+ packages (in fact 80+ packages
+ []
+
+[8] [9] [10
+
+] [11] [12
+
+]
+Chapter 2.
+[13] [14]
+File: images/datatypes.png Graphic file (type bmp)
+<images/datatypes.png>
+[15] [16] [17] [18] [19]
+File: images/homgeneous.jpg Graphic file (type bmp)
+<images/homgeneous.jpg>
+File: images/hetero.jpg Graphic file (type bmp)
+<images/hetero.jpg>
+File: images/vec_buck.jpg Graphic file (type bmp)
+<images/vec_buck.jpg>
+[20]
+File: images/example_vecs.png Graphic file (type bmp)
+<images/example_vecs.png>
+[21]
+File: images/vector_concatenation.png Graphic file (type bmp)
+<images/vector_concatenation.png>
+
+Overfull \hbox (73.01292pt too wide) in paragraph at lines 991--992
+ [][] 
+ []
+
+[22] [23]
+Overfull \hbox (85.5pt too wide) in paragraph at lines 1018--1018
+[]\TU/lmtt/m/n/10 ##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25[] 
+ []
+
+[24]
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1100--1100
+[]\TU/lmtt/m/n/10 ## [1] "repeat this" "repeat this" "repeat this" "repeat this" "repeat this"[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 1139--1139
+[]\TU/lmtt/m/n/10 ##  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S"[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 1150--1150
+[]\TU/lmtt/m/n/10 ##  [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s"[] 
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 1153--1153
+[][]\TU/lmr/bx/n/10 Generate gregorian calendar month names with \TU/lmtt/b/n/10 month.name \TU/lmr/bx/n/10 /
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1165--1165
+[]\TU/lmtt/m/n/10 ##  [1] "January"   "February"  "March"     "April"     "May"       "June"[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 1165--1165
+[]\TU/lmtt/m/n/10 ##  [7] "July"      "August"    "September" "October"   "November"  "December"[] 
+ []
+
+[25]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 1175--1175
+[]\TU/lmtt/m/n/10 ##  [1] "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"[] 
+ []
+
+File: images/named_vector.png Graphic file (type bmp)
+<images/named_vector.png>
+[26]
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1251--1251
+[]\TU/lmtt/m/n/10 ##  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1251--1251
+[]\TU/lmtt/m/n/10 ##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 1264--1264
+[]\TU/lmtt/m/n/10 ##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1275--1275
+[]\TU/lmtt/m/n/10 ##  A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1275--1275
+[]\TU/lmtt/m/n/10 ##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 1287--1287
+[]\TU/lmtt/m/n/10 ##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25[] 
+ []
+
+[27]
+File: images/implicit_coercion.png Graphic file (type bmp)
+<images/implicit_coercion.png>
+[28] [29] [30]
+File: images/byrow.png Graphic file (type bmp)
+<images/byrow.png>
+[31]
+Overfull \hbox (54.0pt too wide) in paragraph at lines 1578--1578
+[]\TU/lmtt/m/n/10 ##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13][] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1578--1578
+[]\TU/lmtt/m/n/10 ## [1,] "A"  "C"  "E"  "G"  "I"  "K"  "M"  "O"  "Q"  "S"   "U"   "W"   "Y"[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1578--1578
+[]\TU/lmtt/m/n/10 ## [2,] "B"  "D"  "F"  "H"  "J"  "L"  "N"  "P"  "R"  "T"   "V"   "X"   "Z"[] 
+ []
+
+[32]
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1649--1649
+[]\TU/lmtt/m/n/10 ## Warning in matrix(1:10, nrow = 5, ncol = 5): data length differs from size of[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 1669--1669
+[]\TU/lmtt/m/n/10 ## Warning in matrix(1:1000, nrow = 2, ncol = 3): data length [1000] is not a[] 
+ []
+
+[33]
+File: images/cbind_vs_rbind.png Graphic file (type bmp)
+<images/cbind_vs_rbind.png>
+[34] [35] [36]
+File: images/list_ex.png Graphic file (type bmp)
+<images/list_ex.png>
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 1835--1835
+[]\TU/lmtt/m/n/10 ##  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S"[] 
+ []
+
+File: images/list_ex2.png Graphic file (type bmp)
+<images/list_ex2.png>
+[37]
+File: images/named_list.png Graphic file (type bmp)
+<images/named_list.png>
+[38]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 1917--1917
+[]\TU/lmtt/m/n/10 ##  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S"[] 
+ []
+
+File: images/dataframe.png Graphic file (type bmp)
+<images/dataframe.png>
+[39]
+File: images/list_vs_df.png Graphic file (type bmp)
+<images/list_vs_df.png>
+[40]
+File: images/Objects.png Graphic file (type bmp)
+<images/Objects.png>
+[41]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 2034--2034
+[]\TU/lmtt/m/n/10 ##  [1] "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S"[] 
+ []
+
+[42] [43]
+Overfull \hbox (75.0pt too wide) in paragraph at lines 2141--2141
+[]\TU/lmtt/m/n/10 ## [1] Post Graduate  Post Graduate  Ph.D           Under-Graduate Post Graduate[] 
+ []
+
+[44]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2273--2273
+[]\TU/lmtt/m/n/10 ##  [1] "sec"    "min"    "hour"   "mday"   "mon"    "year"   "wday"   "yday"[] 
+ []
+
+[45] [46]
+Chapter 3.
+File: images/subset_vec.png Graphic file (type bmp)
+<images/subset_vec.png>
+[47
+
+] [48]
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2418--2418
+[]\TU/lmtt/m/n/10 ## [1] "Andrew"  "Bob"     "Chris"   "Danny"   "Edmund"  "Freddie"[] 
+ []
+
+[49]
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2508--2508
+[]\TU/lmtt/m/n/10 ## [1] "Andrew"  "Bob"     "Chris"   "Danny"   "Edmund"  "Freddie"[] 
+ []
+
+[50] [51] [52] [53]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2717--2717
+[]\TU/lmtt/m/n/10 ##  [1] "A11" "A31" "A51" "A22" "A42" "A13" "A33" "A53" "A24" "A44" "A15" "A35"[] 
+ []
+
+[54] [55] [56]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ##                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Hornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Merc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Merc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3[] 
+ []
+
+[57]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Toyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Porsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2969--2969
+[]\TU/lmtt/m/n/10 ## Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 2980--2980
+[]\TU/lmtt/m/n/10 ##  [1] 6 6 4 6 8 6 8 4 4 6 6 8 8 8 8 8 8 4 4 4 4 8 8 8 8 4 4 4 8 6 8 4[] 
+ []
+
+[58] [59] [60
+
+]
+Chapter 4.
+File: images/function.png Graphic file (type bmp)
+<images/function.png>
+[61] [62]
+Overfull \hbox (6.75pt too wide) in paragraph at lines 3182--3182
+[]\TU/lmtt/m/n/10 ##  [1]  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE[] 
+ []
+
+[63]
+Overfull \hbox (17.25pt too wide) in paragraph at lines 3208--3208
+[]\TU/lmtt/m/n/10 ## Warning in x && y: 'length(x) = 4 > 1' in coercion to 'logical(1)'[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 3208--3208
+[]\TU/lmtt/m/n/10 ## Warning in x && y: 'length(x) = 4 > 1' in coercion to 'logical(1)'[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 3222--3222
+[]\TU/lmtt/m/n/10 ## Warning in x || y: 'length(x) = 4 > 1' in coercion to 'logical(1)'[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 3266--3266
+[]\TU/lmtt/m/n/10 ## Warning in LETTERS[1:5] == LETTERS[1:3]: longer object length is not a multiple[] 
+ []
+
+[64]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3294--3294
+[]\TU/lmtt/m/n/10 ##  [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3294--3294
+[]\TU/lmtt/m/n/10 ## [13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE[] 
+ []
+
+[65]
+Overfull \hbox (6.75pt too wide) in paragraph at lines 3404--3404
+[]\TU/lmtt/m/n/10 ##  [1] "Upto 5"         "Upto 5"         "Upto 5"         "Upto 5"[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 3404--3404
+[]\TU/lmtt/m/n/10 ##  [5] "Upto 5"         NA               "Greater than 5" "Greater than 5"[] 
+ []
+
+[66] [67]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3554--3554
+[]\TU/lmtt/m/n/10 ## Warning in x + c(1, 2, 3): longer object length is not a multiple of shorter[] 
+ []
+
+[68]
+Overfull \hbox (8.43146pt too wide) in paragraph at lines 3611--3611
+ []|\TU/lmtt/m/n/10 factorial()| 
+ []
+
+[69]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3676--3676
+[]\TU/lmtt/m/n/10 ##  [1] 3628800  362880   40320    5040     720     120      24       6       2[] 
+ []
+
+[70]
+Overfull \hbox (3.18146pt too wide) in paragraph at lines 3753--3753
+ []|\TU/lmtt/m/n/10 quantile()| 
+ []
+
+[71] [72]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3825--3825
+[]\TU/lmtt/m/n/10 ##  [1] -1.44081245 -0.06607587 -0.67106922  0.32293010  0.39647290 -1.28584784[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3836--3836
+[]\TU/lmtt/m/n/10 ##  [1]  1.57900458 -0.73790723  0.71046358  0.06075276 -1.99653459  0.34332659[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 3849--3849
+[]\TU/lmtt/m/n/10 ##  [1] 0.2875775 0.7883051 0.4089769 0.8830174 0.9404673 0.0455565 0.5281055[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 3861--3861
+[]\TU/lmtt/m/n/10 ##  [1] 0.2875775 0.7883051 0.4089769 0.8830174 0.9404673 0.0455565 0.5281055[] 
+ []
+
+
+Overfull \hbox (54.00342pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 4.4.  FUNCTIONS RELATED TO SAMPLING AND PROBABILITY DISTRIBUTIONS \TU/lmr/m/n/10 73
+ []
+
+[73]
+Overfull \hbox (6.75pt too wide) in paragraph at lines 3889--3889
+[]\TU/lmtt/m/n/10 ##  [1] "N" "T" "S" "O" "Y" "E" "C" "H" "Z" "Q" "M" "J" "D" "O" "H"[] 
+ []
+
+[74]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 3974--3974
+[]\TU/lmtt/m/n/10 ##  [1] -0.56047565 -0.23017749  1.55870831  0.07050839  0.12928774  1.71506499[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 3985--3985
+[]\TU/lmtt/m/n/10 ## [1]  0.33029816  1.78888580 -1.48819992  0.05877934  1.58577725 -1.25414878[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4016--4016
+[]\TU/lmtt/m/n/10 ##  [1] "A a" "B b" "C c" "D d" "E e" "F f" "G g" "H h" "I i" "J j" "K k" "L l"[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 4016--4016
+[]\TU/lmtt/m/n/10 ## [13] "M m" "N n" "O o" "P p" "Q q" "R r" "S s" "T t" "U u" "V v" "W w" "X x"[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4028--4028
+[]\TU/lmtt/m/n/10 ##  [1] "a_1"  "b_2"  "c_3"  "d_4"  "e_5"  "f_6"  "g_7"  "h_8"  "i_9"  "j_10"[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4028--4028
+[]\TU/lmtt/m/n/10 ## [11] "k_11" "l_12" "m_13" "n_14" "o_15" "p_16" "q_17" "r_18" "s_19" "t_20"[] 
+ []
+
+[75]
+Overfull \hbox (195.75pt too wide) in paragraph at lines 4040--4040
+[]\TU/lmtt/m/n/10 ## [1] "a1+b2+c3+d4+e5+f6+g7+h8+i9+j10+k11+l12+m13+n14+o15+p16+q17+r18+s19+t20+u21+v22+w23+x24+y25+z26"[] 
+ []
+
+[76] [77] [78] [79] [80]
+Underfull \hbox (badness 1655) in paragraph at lines 4405--4406
+[]\TU/lmr/m/n/10 Note Similar to \TU/lmtt/m/n/10 colSums()\TU/lmr/m/n/10 / \TU/lmtt/m/n/10 rowSums() \TU/lmr/m/n/10 we also have \TU/lmtt/m/n/10 colMeans() \TU/lmr/m/n/10 and
+ []
+
+[81]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 4524--4524
+[]\TU/lmtt/m/n/10 ##  [1] (0.994,3] (0.994,3] (0.994,3] (3,5]     (3,5]     (0.994,3] (0.994,3][] 
+ []
+
+[82]
+Overfull \hbox (38.25pt too wide) in paragraph at lines 4537--4537
+[]\TU/lmtt/m/n/10 ##  [1] (1,3] (1,3] (1,3] (3,5] (3,5] (1,3] (1,3] (3,5] (3,5] (5,7] (5,7][] 
+ []
+
+[83]
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4629--4629
+[]\TU/lmtt/m/n/10 ## January February March April May June July August September October November December[] 
+ []
+
+Missing character: There is no ₹ (U+20B9) in font [lmmono10-regular]:!
+[84]
+Overfull \hbox (13.292pt too wide) in paragraph at lines 4689--4690
+[]\TU/lmr/m/n/10 Thus, \TU/lmtt/m/n/10 sort(vec) \TU/lmr/m/n/10 will essentially perform the same operations as \TU/lmtt/m/n/10 vec[order(vec)]\TU/lmr/m/n/10 .
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 4732--4732
+[]\TU/lmtt/m/n/10 ##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 4732--4732
+[]\TU/lmtt/m/n/10 ##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 4732--4732
+[]\TU/lmtt/m/n/10 ##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...[] 
+ []
+
+
+Overfull \hbox (117.0pt too wide) in paragraph at lines 4732--4732
+[]\TU/lmtt/m/n/10 ##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...[] 
+ []
+
+[85] [86]
+Chapter 5.
+[87
+
+] [88]
+File: images/for_loop.png Graphic file (type bmp)
+<images/for_loop.png>
+[89] [90] [91]
+File: images/while_loop.png Graphic file (type bmp)
+<images/while_loop.png>
+
+LaTeX Font Warning: Font shape `TU/lmtt/bx/it' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 5057.
+
+[92] [93] [94] [95] [96]
+File: images/pipe.png Graphic file (type bmp)
+<images/pipe.png>
+
+Underfull \hbox (badness 1365) in paragraph at lines 5402--5403
+\TU/lmr/m/n/10 Pipes usually pass result of previous operation silently into first argu-
+ []
+
+[97] [98] [99] [100
+
+]
+Chapter 6.
+
+Underfull \vbox (badness 1406) has occurred while \output is active []
+
+[101]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 5530.
+[102]
+File: images/apply.png Graphic file (type bmp)
+<images/apply.png>
+[103] [104] [105] [106] [107] [108] [109] [110] [111]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ##                 mpg cyl  disp hp drat    wt  qsec vs am gear carb[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Datsun 710     22.8   4 108.0 93 3.85 2.320 18.61  1  1    4    1[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Merc 240D      24.4   4 146.7 62 3.69 3.190 20.00  1  0    4    2[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Merc 230       22.8   4 140.8 95 3.92 3.150 22.90  1  0    4    2[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Fiat 128       32.4   4  78.7 66 4.08 2.200 19.47  1  1    4    1[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Honda Civic    30.4   4  75.7 52 4.93 1.615 18.52  1  1    4    2[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Toyota Corolla 33.9   4  71.1 65 4.22 1.835 19.90  1  1    4    1[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ##                 mpg cyl  disp  hp drat    wt  qsec vs am gear carb[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Mazda RX4      21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Mazda RX4 Wag  21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Hornet 4 Drive 21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Valiant        18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Merc 280       19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Merc 280C      17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ##                     mpg cyl  disp  hp drat   wt  qsec vs am gear carb[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Hornet Sportabout  18.7   8 360.0 175 3.15 3.44 17.02  0  0    3    2[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Duster 360         14.3   8 360.0 245 3.21 3.57 15.84  0  0    3    4[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Merc 450SE         16.4   8 275.8 180 3.07 4.07 17.40  0  0    3    3[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Merc 450SL         17.3   8 275.8 180 3.07 3.73 17.60  0  0    3    3[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Merc 450SLC        15.2   8 275.8 180 3.07 3.78 18.00  0  0    3    3[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 6134--6134
+[]\TU/lmtt/m/n/10 ## Cadillac Fleetwood 10.4   8 472.0 205 2.93 5.25 17.98  0  0    3    4[] 
+ []
+
+[112]
+Overfull \hbox (85.5pt too wide) in paragraph at lines 6162--6162
+[]\TU/lmtt/m/n/10 ##     mpg     cyl    disp      hp    drat      wt    qsec      vs      am    gear[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 6162--6162
+[]\TU/lmtt/m/n/10 ##  33.900   8.000 472.000 335.000   4.930   5.424  22.900   1.000   1.000   5.000[] 
+ []
+
+[113] [114]
+Overfull \hbox (85.5pt too wide) in paragraph at lines 6284--6284
+[]\TU/lmtt/m/n/10 ##     mpg     cyl    disp      hp    drat      wt    qsec      vs      am    gear[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 6284--6284
+[]\TU/lmtt/m/n/10 ##  33.900   8.000 472.000 335.000   4.930   5.424  22.900   1.000   1.000   5.000[] 
+ []
+
+
+Underfull \hbox (badness 4403) in paragraph at lines 6287--6287
+[]\TU/lmr/bx/n/12 Iterate over two or more lists/vectors using
+ []
+
+File: images/map1.png Graphic file (type bmp)
+<images/map1.png>
+File: images/map2.png Graphic file (type bmp)
+<images/map2.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6297--6297
+[]\TU/lmr/m/n/10 Figure 6.2: []Working of map vs map2 family of functions
+ []
+
+[115]
+File: images/pmap.png Graphic file (type bmp)
+<images/pmap.png>
+File: images/pmap-arg.png Graphic file (type bmp)
+<images/pmap-arg.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6331--6331
+[]\TU/lmr/m/n/10 Figure 6.3: []Working of pmap family of functions
+ []
+
+[116]
+Chapter 7.
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <24.88> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 6335.
+
+Package natbib Warning: Citation `layered-grammar' on page 117 undefined on input line 6342.
+
+File: images/layers_gg.png Graphic file (type bmp)
+<images/layers_gg.png>
+[117
+
+] [118] [119]
+File: bookdown-demo_files/figure-latex/fig_blank-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/fig_blank-1.pdf>
+File: bookdown-demo_files/figure-latex/fig_gg_2-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/fig_gg_2-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-205-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-205-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6426--6428
+[][]
+ []
+
+
+Underfull \vbox (badness 4595) has occurred while \output is active []
+
+[120]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-206-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-206-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[121]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-207-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-207-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6454--6456
+[][]
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 6454--6456
+\TU/lmr/m/n/10 As the argument \TU/lmtt/m/n/10 color=[]red[] \TU/lmr/m/n/10 was mentioned inside the \TU/lmtt/m/n/10 geom_point()
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[122]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-208-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-208-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6464--6466
+[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[123]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-209-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-209-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6474--6476
+[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[124]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-210-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-210-1.pdf>
+
+Underfull \vbox (badness 5954) has occurred while \output is active []
+
+[125]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-211-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-211-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 6519--6521
+[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[126]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-212-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-212-1.pdf>
+[127] [128]
+File: shapes.png Graphic file (type bmp)
+<shapes.png>
+[129] [130
+
+] [131] [132
+
+]
+Chapter 8.
+[133]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 6650--6650
+[]\TU/lmtt/m/n/10 wh2021 <- read.csv("https://query.data.world/s/qbsbmxlfj54sl4mq3y6uxsr3pkhhmo")[] 
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 6655--6656
+[]\TU/lmr/bx/n/10 Tip: Use \TU/lmtt/b/n/10 "clipboard" \TU/lmr/bx/n/10 in file argument for pasting
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 6655--6656
+\TU/lmr/bx/n/10 copied data into R. E.g. Copy a few rows and
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 6655--6656
+\TU/lmr/bx/n/10 cells from excel spreadsheet and run this command
+ []
+
+[134]
+File: images/scan.png Graphic file (type bmp)
+<images/scan.png>
+File: images/readline.png Graphic file (type bmp)
+<images/readline.png>
+[135]
+Underfull \hbox (badness 4254) in paragraph at lines 6716--6716
+[][]\TU/lmr/bx/n/12 Writing tabular data through \TU/lmtt/b/n/12 write.table() \TU/lmr/bx/n/12 and/or
+ []
+
+[136]
+Overfull \hbox (6.75pt too wide) in paragraph at lines 6782--6782
+[]\TU/lmtt/m/n/10 ## structure(list(Name = c("Andrew", "Bob", "Charles"), Age = c(25,[] 
+ []
+
+[137]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 6847--6847
+[]\TU/lmtt/m/n/10 ## -- Column specification --------------------------------------------------------[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 6847--6847
+[]\TU/lmtt/m/n/10 ## i Use `spec()` to retrieve the full column specification for this data.[] 
+ []
+
+
+Overfull \hbox (96.0pt too wide) in paragraph at lines 6847--6847
+[]\TU/lmtt/m/n/10 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.[] 
+ []
+
+[138]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 6858--6858
+[]\TU/lmtt/m/n/10 ## 1 Foghorn Leghorn         rooster         0 That's a joke, ah say, that's a jok~[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 6858--6858
+[]\TU/lmtt/m/n/10 ## 2 Chicken Little          hen             3 The sky is falling![] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 6858--6858
+[]\TU/lmtt/m/n/10 ## 3 Ginger                  hen            12 Listen. We'll either die free chick~[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 6858--6858
+[]\TU/lmtt/m/n/10 ## 4 Camilla the Chicken     hen             7 Bawk, buck, ba-gawk.[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 6858--6858
+[]\TU/lmtt/m/n/10 ## 5 Ernie The Giant Chicken rooster         0 Put Captain Solo in the cargo hold.[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 6879--6879
+[]\TU/lmtt/m/n/10 ## -------------------------------------------------------- Delimiter: "," chr[] 
+ []
+
+
+Overfull \hbox (27.75pt too wide) in paragraph at lines 6879--6879
+[]\TU/lmtt/m/n/10 ## (1): Species dbl (5): ...1, Sepal.Length, Sepal.Width, Petal.Length,[] 
+ []
+
+
+Overfull \hbox (54.0pt too wide) in paragraph at lines 6879--6879
+[]\TU/lmtt/m/n/10 ## i Use `spec()` to retrieve the full column specification for this data. i[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 6879--6879
+[]\TU/lmtt/m/n/10 ## Specify the column types or set `show_col_types = FALSE` to quiet this message.[] 
+ []
+
+[139]
+File: images/reprex.png Graphic file (type bmp)
+<images/reprex.png>
+[140] [141] [142
+
+]
+Chapter 9.
+File: images/dplyr.png Graphic file (type bmp)
+<images/dplyr.png>
+[143]
+File: images/select_dplyr.png Graphic file (type bmp)
+<images/select_dplyr.png>
+[144] [145]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 7108--7108
+[]\TU/lmtt/m/n/10 ##  [1] "qsec" "mpg"  "cyl"  "disp" "hp"   "drat" "wt"   "vs"   "am"   "gear"[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 7123--7123
+[]\TU/lmtt/m/n/10 ##  [1] "drat" "qsec" "mpg"  "cyl"  "disp" "hp"   "wt"   "vs"   "am"   "gear"[] 
+ []
+
+[146] [147]
+File: images/mutate_dplyr.png Graphic file (type bmp)
+<images/mutate_dplyr.png>
+[148] [149]
+File: images/rename_dplyr.png Graphic file (type bmp)
+<images/rename_dplyr.png>
+[150]
+Overfull \hbox (69.75pt too wide) in paragraph at lines 7357--7357
+[]\TU/lmtt/m/n/10 ##               miles_per_gallon cyl disp  hp drat    wt  qsec vs am gear carb[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 7357--7357
+[]\TU/lmtt/m/n/10 ## Mazda RX4                 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 7357--7357
+[]\TU/lmtt/m/n/10 ## Mazda RX4 Wag             21.0   6  160 110 3.90 2.875 17.02  0  1    4    4[] 
+ []
+
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 7357--7357
+[]\TU/lmtt/m/n/10 ## Datsun 710                22.8   4  108  93 3.85 2.320 18.61  1  1    4    1[] 
+ []
+
+[151]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7401--7401
+[]\TU/lmtt/m/n/10 ##   name         hair_~1 skin_~2 eye_c~3 height  mass birth~4 sex   gender homew~5[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7401--7401
+[]\TU/lmtt/m/n/10 ##   <chr>        <chr>   <chr>   <chr>    <int> <dbl>   <dbl> <chr> <chr>  <chr>[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7401--7401
+[]\TU/lmtt/m/n/10 ## 1 Luke Skywal~ blond   fair    blue       172    77    19   male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7401--7401
+[]\TU/lmtt/m/n/10 ## 2 C-3PO        <NA>    gold    yellow     167    75   112   none  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7401--7401
+[]\TU/lmtt/m/n/10 ## 3 R2-D2        <NA>    white,~ red         96    32    33   none  mascu~ Naboo[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7401--7401
+[]\TU/lmtt/m/n/10 ## 4 Darth Vader  none    white   yellow     202   136    41.9 male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7401--7401
+[]\TU/lmtt/m/n/10 ## 5 Leia Organa  brown   light   brown      150    49    19   fema~ femin~ Aldera~[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 7401--7401
+[]\TU/lmtt/m/n/10 ## # ... with 4 more variables: species <chr>, films <list>, vehicles <list>,[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7401--7401
+[]\TU/lmtt/m/n/10 ## #   starships <list>, and abbreviated variable names 1: hair_color,[] 
+ []
+
+File: images/filter_dplyr.png Graphic file (type bmp)
+<images/filter_dplyr.png>
+[152]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##    name        height  mass hair_~1 skin_~2 eye_c~3 birth~4 sex   gender homew~5[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##    <chr>        <int> <dbl> <chr>   <chr>   <chr>     <dbl> <chr> <chr>  <chr>[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##  1 C-3PO          167    75 <NA>    gold    yellow    112   none  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##  2 R2-D2           96    32 <NA>    white,~ red        33   none  mascu~ Naboo[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##  3 Darth Vader    202   136 none    white   yellow     41.9 male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##  4 R5-D4           97    32 <NA>    white,~ red        NA   none  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##  5 Palpatine      170    75 grey    pale    yellow     82   male  mascu~ Naboo[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##  6 IG-88          200   140 none    metal   red        15   none  mascu~ <NA>[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##  7 Bossk          190   113 none    green   red        53   male  mascu~ Trando~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##  8 Nute Gunray    191    90 none    mottle~ red        NA   male  mascu~ Cato N~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ##  9 Watto          137    NA black   blue, ~ yellow     NA   male  mascu~ Toydar~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ## 10 Darth Maul     175    80 none    red     yellow     54   male  mascu~ Dathom~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ## 11 Dud Bolt        94    45 none    blue, ~ yellow     NA   male  mascu~ Vulpter[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ## 12 Ki-Adi-Mun~    198    82 white   pale    yellow     92   male  mascu~ Cerea[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ## 13 Yarael Poof    264    NA none    white   yellow     NA   male  mascu~ Quermia[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ## 14 Poggle the~    183    80 none    green   yellow     NA   male  mascu~ Geonos~[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ## 15 Zam Wesell     168    55 blonde  fair, ~ yellow     NA   fema~ femin~ Zolan[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ## 16 Dexter Jet~    198   102 none    brown   yellow     NA   male  mascu~ Ojom[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ## # ... with 4 more variables: species <chr>, films <list>, vehicles <list>,[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7452--7452
+[]\TU/lmtt/m/n/10 ## #   starships <list>, and abbreviated variable names 1: hair_color,[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7473--7473
+[]\TU/lmtt/m/n/10 ##   name        height  mass hair_c~1 skin_~2 eye_c~3 birth~4 sex   gender homew~5[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7473--7473
+[]\TU/lmtt/m/n/10 ##   <chr>        <int> <dbl> <chr>    <chr>   <chr>     <dbl> <chr> <chr>  <chr>[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7473--7473
+[]\TU/lmtt/m/n/10 ## 1 Darth Vader    202   136 none     white   yellow     41.9 male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7473--7473
+[]\TU/lmtt/m/n/10 ## 2 Yarael Poof    264    NA none     white   yellow     NA   male  mascu~ Quermia[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 7473--7473
+[]\TU/lmtt/m/n/10 ## # ... with 4 more variables: species <chr>, films <list>, vehicles <list>,[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7473--7473
+[]\TU/lmtt/m/n/10 ## #   starships <list>, and abbreviated variable names 1: hair_color,[] 
+ []
+
+[153]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ##   name         height  mass hair_~1 skin_~2 eye_c~3 birth~4 sex   gender homew~5[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ##   <chr>         <int> <dbl> <chr>   <chr>   <chr>     <dbl> <chr> <chr>  <chr>[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ## 1 Darth Vader     202   136 none    white   yellow     41.9 male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ## 2 Leia Organa     150    49 brown   light   brown      19   fema~ femin~ Aldera~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ## 3 Owen Lars       178   120 brown,~ light   blue       52   male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ## 4 Beru Whites~    165    75 brown   light   blue       47   fema~ femin~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ## 5 R5-D4            97    32 <NA>    white,~ red        NA   none  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ## 6 Biggs Darkl~    183    84 black   light   brown      24   male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ## 7 Obi-Wan Ken~    182    77 auburn~ fair    blue-g~    57   male  mascu~ Stewjon[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ## # ... with 4 more variables: species <chr>, films <list>, vehicles <list>,[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7515--7515
+[]\TU/lmtt/m/n/10 ## #   starships <list>, and abbreviated variable names 1: hair_color,[] 
+ []
+
+
+Underfull \hbox (badness 3503) in paragraph at lines 7528--7529
+[]\TU/lmtt/m/n/10 slice_sample() \TU/lmr/m/n/10 will randomly select the rows. Its syntax is
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7528--7529
+\TU/lmtt/m/n/10 slice_sample(.data, ..., n, prop, weight_by = NULL, replace
+ []
+
+[154]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7550--7550
+[]\TU/lmtt/m/n/10 ##   name         height  mass hair_~1 skin_~2 eye_c~3 birth~4 sex   gender homew~5[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7550--7550
+[]\TU/lmtt/m/n/10 ##   <chr>         <int> <dbl> <chr>   <chr>   <chr>     <dbl> <chr> <chr>  <chr>[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 7550--7550
+[]\TU/lmtt/m/n/10 ## 1 Yoda             66    17 white   green   brown       896 male  mascu~ <NA>[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7550--7550
+[]\TU/lmtt/m/n/10 ## 2 Ratts Tyere~     79    15 none    grey, ~ unknown      NA male  mascu~ Aleen ~[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7550--7550
+[]\TU/lmtt/m/n/10 ## 3 Wicket Syst~     88    20 brown   brown   brown         8 male  mascu~ Endor[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 7550--7550
+[]\TU/lmtt/m/n/10 ## # ... with 4 more variables: species <chr>, films <list>, vehicles <list>,[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7550--7550
+[]\TU/lmtt/m/n/10 ## #   starships <list>, and abbreviated variable names 1: hair_color,[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ##   name         height  mass hair_~1 skin_~2 eye_c~3 birth~4 sex   gender homew~5[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ##   <chr>         <int> <dbl> <chr>   <chr>   <chr>     <dbl> <chr> <chr>  <chr>[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## 1 Eeth Koth       171    NA black   brown   brown        NA male  mascu~ Iridon~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## 2 Tarfful         234   136 brown   brown   blue         NA male  mascu~ Kashyy~[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## 3 Plo Koon        188    80 none    orange  black        22 male  mascu~ Dorin[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## 4 San Hill        191    NA none    grey    gold         NA male  mascu~ Muunil~[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## 5 Dexter Jett~    198   102 none    brown   yellow       NA male  mascu~ Ojom[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## 6 Owen Lars       178   120 brown,~ light   blue         52 male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## 7 Dormé           165    NA brown   light   brown        NA fema~ femin~ Naboo[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## 8 Captain Pha~     NA    NA unknown unknown unknown      NA <NA>  <NA>   <NA>[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## # ... with 4 more variables: species <chr>, films <list>, vehicles <list>,[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7577--7577
+[]\TU/lmtt/m/n/10 ## #   starships <list>, and abbreviated variable names 1: hair_color,[] 
+ []
+
+File: images/arrange_dplyr.png Graphic file (type bmp)
+<images/arrange_dplyr.png>
+[155]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7615--7615
+[]\TU/lmtt/m/n/10 ##   name         height  mass hair_~1 skin_~2 eye_c~3 birth~4 sex   gender homew~5[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7615--7615
+[]\TU/lmtt/m/n/10 ##   <chr>         <int> <dbl> <chr>   <chr>   <chr>     <dbl> <chr> <chr>  <chr>[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 7615--7615
+[]\TU/lmtt/m/n/10 ## 1 Yoda             66    17 white   green   brown       896 male  mascu~ <NA>[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7615--7615
+[]\TU/lmtt/m/n/10 ## 2 Ratts Tyere~     79    15 none    grey, ~ unknown      NA male  mascu~ Aleen ~[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7615--7615
+[]\TU/lmtt/m/n/10 ## 3 Wicket Syst~     88    20 brown   brown   brown         8 male  mascu~ Endor[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7615--7615
+[]\TU/lmtt/m/n/10 ## 4 Dud Bolt         94    45 none    blue, ~ yellow       NA male  mascu~ Vulpter[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7615--7615
+[]\TU/lmtt/m/n/10 ## 5 R2-D2            96    32 <NA>    white,~ red          33 none  mascu~ Naboo[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 7615--7615
+[]\TU/lmtt/m/n/10 ## # ... with 4 more variables: species <chr>, films <list>, vehicles <list>,[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7615--7615
+[]\TU/lmtt/m/n/10 ## #   starships <list>, and abbreviated variable names 1: hair_color,[] 
+ []
+
+File: images/groupby_dplyr.png Graphic file (type bmp)
+<images/groupby_dplyr.png>
+[156]
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##    name        height  mass hair_~1 skin_~2 eye_c~3 birth~4 sex   gender homew~5[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##    <chr>        <int> <dbl> <chr>   <chr>   <chr>     <dbl> <chr> <chr>  <chr>[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##  1 Luke Skywa~    172    77 blond   fair    blue       19   male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##  2 C-3PO          167    75 <NA>    gold    yellow    112   none  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##  3 R2-D2           96    32 <NA>    white,~ red        33   none  mascu~ Naboo[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##  4 Darth Vader    202   136 none    white   yellow     41.9 male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##  5 Leia Organa    150    49 brown   light   brown      19   fema~ femin~ Aldera~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##  6 Owen Lars      178   120 brown,~ light   blue       52   male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##  7 Beru White~    165    75 brown   light   blue       47   fema~ femin~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##  8 R5-D4           97    32 <NA>    white,~ red        NA   none  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ##  9 Biggs Dark~    183    84 black   light   brown      24   male  mascu~ Tatooi~[] 
+ []
+
+
+Overfull \hbox (90.75pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ## 10 Obi-Wan Ke~    182    77 auburn~ fair    blue-g~    57   male  mascu~ Stewjon[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ## # ... with 77 more rows, 4 more variables: species <chr>, films <list>,[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ## #   vehicles <list>, starships <list>, and abbreviated variable names[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 7661--7661
+[]\TU/lmtt/m/n/10 ## #   1: hair_color, 2: skin_color, 3: eye_color, 4: birth_year, 5: homeworld[] 
+ []
+
+[157]
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7718--7718
+[]\TU/lmtt/m/n/10 ##     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7718--7718
+[]\TU/lmtt/m/n/10 ##   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7718--7718
+[]\TU/lmtt/m/n/10 ## 1  22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7718--7718
+[]\TU/lmtt/m/n/10 ## 2  21.4     4  121    109  4.11  2.78  18.6     1     1     4     2[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7718--7718
+[]\TU/lmtt/m/n/10 ## 3  21       6  160    110  3.9   2.88  17.0     0     1     4     4[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7718--7718
+[]\TU/lmtt/m/n/10 ## 4  19.7     6  145    175  3.62  2.77  15.5     0     1     5     6[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7718--7718
+[]\TU/lmtt/m/n/10 ## 5  10.4     8  472    205  2.93  5.25  18.0     0     0     3     4[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 7718--7718
+[]\TU/lmtt/m/n/10 ## 6  13.3     8  350    245  3.73  3.84  15.4     0     0     3     4[] 
+ []
+
+[158] [159]
+Overfull \hbox (27.75pt too wide) in paragraph at lines 7814--7814
+[]\TU/lmtt/m/n/10 ## [1] "negative" "negative" "positive" "positive" "positive" "missing"[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 7858--7858
+[]\TU/lmtt/m/n/10 ## [1] 330062.0 730644.1 427181.5 806413.9 852373.8 136445.2 522484.4[] 
+ []
+
+[160] [161] [162]
+Chapter 10.
+File: images/conf.jpg Graphic file (type bmp)
+<images/conf.jpg>
+[163
+
+]
+File: images/concat_joins.png Graphic file (type bmp)
+<images/concat_joins.png>
+[164]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 8055--8055
+[]\TU/lmtt/m/n/10 ##   Sepal.Length Sepal.Width Species...3 Petal.Length Petal.Width Species...6[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 8055--8055
+[]\TU/lmtt/m/n/10 ## 1          5.1         3.5      setosa          1.4         0.2      setosa[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 8055--8055
+[]\TU/lmtt/m/n/10 ## 2          4.9         3.0      setosa          1.4         0.2      setosa[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 8055--8055
+[]\TU/lmtt/m/n/10 ## 3          4.7         3.2      setosa          1.3         0.2      setosa[] 
+ []
+
+[165]
+Underfull \hbox (badness 1052) in paragraph at lines 8106--8107
+\TU/lmr/m/n/10 ues in identifiers. Try this \TU/lmtt/m/n/10 bind_rows(list(setosa=setosa,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8106--8107
+\TU/lmtt/m/n/10 versicolor=versicolor, virginica=virginica), .id =
+ []
+
+File: images/mutating_joins.png Graphic file (type bmp)
+<images/mutating_joins.png>
+
+Overfull \hbox (80.25pt too wide) in paragraph at lines 8127--8127
+[]\TU/lmtt/m/n/10 *_join(x, y, by = NULL, copy = FALSE, suffix = c('.x', '.y'), ... , keep = FALSE)[] 
+ []
+
+[166] [167] [168] [169] [170] [171] [172]
+Chapter 11.
+
+Package natbib Warning: Citation `JSSv059i10' on page 173 undefined on input line 8466.
+
+
+Package natbib Warning: Citation `JSSv021i12' on page 173 undefined on input line 8466.
+
+File: images/tidy-1.png Graphic file (type bmp)
+<images/tidy-1.png>
+[173
+
+] [174] [175]
+Underfull \hbox (badness 2671) in paragraph at lines 8633--8635
+[]\TU/lmr/m/n/10 re-organising the observation originally spread into multiple rows
+ []
+
+[176]
+File: images/pivot_longer.png Graphic file (type bmp)
+<images/pivot_longer.png>
+[177] [178] [179] [180]
+File: images/pivot_wider.png Graphic file (type bmp)
+<images/pivot_wider.png>
+[181] [182]
+Overfull \hbox (64.5pt too wide) in paragraph at lines 8967--8967
+[]\TU/lmtt/m/n/10 ##   country     `1999_cases` `1999_population` `2000_cases` `2000_population`[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 8967--8967
+[]\TU/lmtt/m/n/10 ##   <chr>              <int>             <int>        <int>             <int>[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 8967--8967
+[]\TU/lmtt/m/n/10 ## 1 Afghanistan          745          19987071         2666          20595360[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 8967--8967
+[]\TU/lmtt/m/n/10 ## 2 Brazil             37737         172006362        80488         174504898[] 
+ []
+
+
+Overfull \hbox (64.5pt too wide) in paragraph at lines 8967--8967
+[]\TU/lmtt/m/n/10 ## 3 China             212258        1272915272       213766        1280428583[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 8986--8986
+[]\TU/lmtt/m/n/10 ##   country     cases_1999 population_1999 cases_2000 population_2000[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 8986--8986
+[]\TU/lmtt/m/n/10 ##   <chr>            <int>           <int>      <int>           <int>[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 8986--8986
+[]\TU/lmtt/m/n/10 ## 1 Afghanistan        745        19987071       2666        20595360[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 8986--8986
+[]\TU/lmtt/m/n/10 ## 2 Brazil           37737       172006362      80488       174504898[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 8986--8986
+[]\TU/lmtt/m/n/10 ## 3 China           212258      1272915272     213766      1280428583[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9005--9005
+[]\TU/lmtt/m/n/10 ##   country     cases_1999 cases_2000 population_1999 population_2000[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9005--9005
+[]\TU/lmtt/m/n/10 ##   <chr>            <int>      <int>           <int>           <int>[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9005--9005
+[]\TU/lmtt/m/n/10 ## 1 Afghanistan        745       2666        19987071        20595360[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9005--9005
+[]\TU/lmtt/m/n/10 ## 2 Brazil           37737      80488       172006362       174504898[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9005--9005
+[]\TU/lmtt/m/n/10 ## 3 China           212258     213766      1272915272      1280428583[] 
+ []
+
+[183]
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9025--9025
+[]\TU/lmtt/m/n/10 ##   country     cases_1999 population_1999 cases_2000 population_2000[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9025--9025
+[]\TU/lmtt/m/n/10 ##   <chr>            <int>           <int>      <int>           <int>[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9025--9025
+[]\TU/lmtt/m/n/10 ## 1 Afghanistan        745        19987071       2666        20595360[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9025--9025
+[]\TU/lmtt/m/n/10 ## 2 Brazil           37737       172006362      80488       174504898[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9025--9025
+[]\TU/lmtt/m/n/10 ## 3 China           212258      1272915272     213766      1280428583[] 
+ []
+
+[184]
+Underfull \hbox (badness 2229) in paragraph at lines 9069--9071
+[]\TU/lmtt/m/n/10 convert \TU/lmr/m/n/10 if \TU/lmtt/m/n/10 TRUE\TU/lmr/m/n/10 , the component columns are converted to dou-
+ []
+
+[185]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 9134--9134
+[]\TU/lmtt/m/n/10 ## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 1 rows [2].[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 9158--9158
+[]\TU/lmtt/m/n/10 ## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 1 rows [1].[] 
+ []
+
+[186] [187] [188] [189] [190] [191] [192] [193
+
+] [194
+
+]
+Chapter 12.
+[195]
+Overfull \hbox (6.75pt too wide) in paragraph at lines 9558--9558
+[]\TU/lmtt/m/n/10 ##   firstName ábc@!* % successful (2009) REPEAT VALUE REPEAT VALUE[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 9558--9558
+[]\TU/lmtt/m/n/10 ## 1        NA     NA                  NA           NA           NA NA[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 9572--9572
+[]\TU/lmtt/m/n/10 ##   first_name abc percent_successful_2009 repeat_value repeat_value_2  x[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 9572--9572
+[]\TU/lmtt/m/n/10 ## 1         NA  NA                      NA           NA             NA NA[] 
+ []
+
+[196]
+Chapter 13.
+[197
+
+]
+File: images/simple.png Graphic file (type bmp)
+<images/simple.png>
+[198]
+File: images/systematic.png Graphic file (type bmp)
+<images/systematic.png>
+[199]
+Overfull \hbox (107.5601pt too wide) in paragraph at lines 9783--9812
+[][] 
+ []
+
+[200]
+File: images/stratified.png Graphic file (type bmp)
+<images/stratified.png>
+
+Overfull \hbox (8.485pt too wide) in paragraph at lines 9829--9830
+[]\TU/lmr/m/n/10 Example Data: - Let’s include region in \TU/lmtt/m/n/10 state.x77 \TU/lmr/m/n/10 data using \TU/lmtt/m/n/10 dplyr::bind_cols\TU/lmr/m/n/10 . 
+ []
+
+[201]
+Overfull \hbox (151.55011pt too wide) in paragraph at lines 9842--9859
+[][] 
+ []
+
+
+Overfull \hbox (185.25pt too wide) in paragraph at lines 9892--9892
+[]  \TU/lmtt/m/n/10 tibble::rownames_to_column('State') %>% # this step will not be used in databases without row names[] 
+ []
+
+
+Overfull \hbox (181.00009pt too wide) in paragraph at lines 9894--9915
+[][] 
+ []
+
+[202]
+Overfull \hbox (17.25pt too wide) in paragraph at lines 9945--9945
+[]  \TU/lmtt/m/n/10 mutate(stratum = cut(Population, c(0, 1000, 5000, max(Population)),[] 
+ []
+
+[203] [204]
+Chapter 14.
+
+Package natbib Warning: Citation `frank_ben' on page 205 undefined on input line 9997.
+
+
+Package natbib Warning: Citation `newcomb' on page 205 undefined on input line 9997.
+
+File: images/frank_benford.jpg Graphic file (type bmp)
+<images/frank_benford.jpg>
+File: images/Simon.jpg Graphic file (type bmp)
+<images/Simon.jpg>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-309-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-309-1.pdf>
+
+Package natbib Warning: Citation `pinkham' on page 205 undefined on input line 10025.
+
+[205
+
+] [206]
+File: bookdown-demo_files/figure-latex/census-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/census-1.pdf>
+File: bookdown-demo_files/figure-latex/scaling-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/scaling-1.pdf>
+
+Package natbib Warning: Citation `t_hill' on page 207 undefined on input line 10080.
+
+[207] [208]
+File: bookdown-demo_files/figure-latex/ben2-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/ben2-1.pdf>
+[209]
+
+Package natbib Warning: Citation `articlesec' on page 210 undefined on input line 10129.
+
+
+Package natbib Warning: Citation `nigrinifraud' on page 210 undefined on input line 10144.
+
+
+Package natbib Warning: Citation `nigrinifraud' on page 210 undefined on input line 10146.
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 10149--10149
+[]\TU/lmr/bx/n/14.4 Examining significance using statistical
+ []
+
+[210] [211] [212] [213]
+Overfull \hbox (195.75pt too wide) in paragraph at lines 10330--10330
+[]\TU/lmtt/m/n/10 ## Remember: Real data will never conform perfectly to Benford's Law. You should not focus on p-values![] 
+ []
+
+File: bookdown-demo_files/figure-latex/benplot-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/benplot-1.pdf>
+[214] [215] [216
+
+]
+Chapter 15.
+[217] [218]
+Overfull \hbox (122.25pt too wide) in paragraph at lines 10462--10462
+[]\TU/lmtt/m/n/10 ## Warning: Using `all_of()` outside of a selecting function was deprecated in tidyselect[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 10462--10462
+[]\TU/lmtt/m/n/10 ##   <https://tidyselect.r-lib.org/reference/faq-selection-context.html>[] 
+ []
+
+[219]
+File: images/network.png Graphic file (type bmp)
+<images/network.png>
+
+Overfull \hbox (373.78513pt too wide) in paragraph at lines 10489--10490
+ [][] 
+ []
+
+[220]
+
+LaTeX Warning: Reference `across' on page 221 undefined on input line 10569.
+
+[221] [222]
+File: bookdown-demo_files/figure-latex/igraph2-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/igraph2-1.pdf>
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 10643--10643
+[]\TU/lmtt/m/n/10 ##  1  2  3  4  5  6  7  8  9 11 1a AB 12 1b 13 BC 2a CD 14 2b EF 15 2c GH 16 HI[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 10643--10643
+[]\TU/lmtt/m/n/10 ##  1  1  1  1  2  3  3  3  3  1  1  1  1  1  1  1  1  1  2  2  2  3  3  3  3  3[] 
+ []
+
+[223]
+Overfull \hbox (75.0pt too wide) in paragraph at lines 10652--10652
+[]\TU/lmtt/m/n/10 ##  1  2  3  4  5  6  7  8  9 11 1a AB 12 1b 13 BC 2a CD 14 2b EF 15 2c GH 16 HI[] 
+ []
+
+
+Overfull \hbox (75.0pt too wide) in paragraph at lines 10652--10652
+[]\TU/lmtt/m/n/10 ##  1  1  1  1  2  3  3  3  3  1  1  1  1  1  1  1  1  1  2  2  2  3  3  3  3  3[] 
+ []
+
+[224] [225] [226
+
+]
+Chapter 16.
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 10732--10732
+[]\TU/lmtt/m/n/10 ##  [1] 500398 500445 500457 500716 500747 500862 501017 501018 501109 501333[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 10732--10732
+[]\TU/lmtt/m/n/10 ## [11] 501459 501609 501823 501908 502160 502191 502609 502937 502974 503002[] 
+ []
+
+[227]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 10742--10742
+[]\TU/lmtt/m/n/10 ##  [1] "A502763" "A502811" "A502527" "A500826" "A500495" "A503286" "A502142"[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 10758--10758
+[]\TU/lmtt/m/n/10 ##  [1] 500398 500445 500457 500716 500747 500862 501017 501018 501109 501333[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 10758--10758
+[]\TU/lmtt/m/n/10 ## [11] 501459 501609 501823 501908 502160 502191 502609 502937 502974 503002[] 
+ []
+
+[228]
+Chapter 17.
+File: images/excel.png Graphic file (type bmp)
+<images/excel.png>
+[229
+
+]
+Overfull \hbox (46.66232pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 230 \TU/lmr/m/sl/10 CHAPTER 17.  MERGING LARGE NUMBER OF SIMILAR DATASETS INTO ONE
+ []
+
+[230]
+Overfull \hbox (2.26842pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 17.2.  \TU/lmr/bx/sl/10 CASE-2\TU/lmr/m/sl/10 : MERGING MULTIPLE FILES INTO ONE DATA FRAME \TU/lmr/m/n/10 231
+ []
+
+[231]
+Overfull \hbox (46.66232pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 232 \TU/lmr/m/sl/10 CHAPTER 17.  MERGING LARGE NUMBER OF SIMILAR DATASETS INTO ONE
+ []
+
+[232]
+Overfull \hbox (201.0pt too wide) in paragraph at lines 10925--10925
+[]\TU/lmtt/m/n/10 ## [1] "C:\\Users\\User\\OneDrive - A c GeM CAG of INDIA (1)\\Documents\\R-DA\\Data\\data_by_4_cyl.xlsx"[] 
+ []
+
+
+Overfull \hbox (201.0pt too wide) in paragraph at lines 10925--10925
+[]\TU/lmtt/m/n/10 ## [1] "C:\\Users\\User\\OneDrive - A c GeM CAG of INDIA (1)\\Documents\\R-DA\\Data\\data_by_6_cyl.xlsx"[] 
+ []
+
+
+Overfull \hbox (201.0pt too wide) in paragraph at lines 10925--10925
+[]\TU/lmtt/m/n/10 ## [1] "C:\\Users\\User\\OneDrive - A c GeM CAG of INDIA (1)\\Documents\\R-DA\\Data\\data_by_8_cyl.xlsx"[] 
+ []
+
+
+Overfull \hbox (101.30626pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 17.4.  \TU/lmr/bx/sl/10 CASE-4\TU/lmr/m/sl/10 : SPLITTING ONE DATA INTO MULIPLE FILES HAVING MULTIPLE SHEETS \TU/lmr/m/n/10 233
+ []
+
+[233]
+Overfull \hbox (46.66232pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 234 \TU/lmr/m/sl/10 CHAPTER 17.  MERGING LARGE NUMBER OF SIMILAR DATASETS INTO ONE
+ []
+
+[234
+
+]
+Chapter 18.
+
+Underfull \vbox (badness 2478) has occurred while \output is active []
+
+[235] [236]
+File: bookdown-demo_files/figure-latex/wordcloud-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/wordcloud-1.pdf>
+[237] [238]
+Chapter 19.
+[239
+
+] [240
+
+]
+Appendix A.
+[241
+
+]
+Underfull \hbox (badness 2237) in paragraph at lines 11102--11103
+\TU/lmr/m/n/10 The file name can be changed within the R console using, function
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 11102--11103
+\TU/lmtt/m/n/10 file.rename()\TU/lmr/m/n/10 . Basic syntax is \TU/lmtt/m/n/10 file.rename(from = "old_name", to
+ []
+
+[242]
+Overfull \hbox (38.25pt too wide) in paragraph at lines 11173--11173
+[]\TU/lmtt/m/n/10 ## [1] "C:/Users/User/OneDrive - A c GeM CAG of INDIA (1)/Documents/R-DA"[] 
+ []
+
+[243] [244]
+File: images/Rproj1.png Graphic file (type bmp)
+<images/Rproj1.png>
+File: images/Rproj2.png Graphic file (type bmp)
+<images/Rproj2.png>
+[245] [246
+
+]
+Appendix B.
+[247] [248]
+Overfull \hbox (155.18452pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 B.3.  NON-PRINTABLE CHARACTERS/ META CHARACTERS (SHORT-HAND CHARACTER CLASSES) \TU/lmr/m/n/10 249
+ []
+
+[249] [250] [251] [252
+
+]
+Appendix C.
+
+Overfull \hbox (62.68002pt too wide) in paragraph at lines 11575--11644
+[][] 
+ []
+
+(./bookdown-demo.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[253] [254])
+
+Package natbib Warning: There were undefined citations.
+
+[255
+
+] (./bookdown-demo.aux)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
+(rerunfilecheck)             Checksum: 209D2D943F9C9653C79D416536E691E6;25849.
+ ) 
+Here is how much of TeX's memory you used:
+ 19147 strings out of 478775
+ 365519 string characters out of 5849353
+ 1864985 words of memory out of 5000000
+ 38819 multiletter control sequences out of 15000+600000
+ 518866 words of font info for 101 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 86i,8n,121p,902b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on bookdown-demo.pdf (267 pages).

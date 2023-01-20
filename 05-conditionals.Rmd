@@ -1,0 +1,309 @@
+# Control statements and Custom Functions
+In the previous chapter we learnt about many of the useful pre-built functions in R.  In this chapter we will learn how to create customized functions suited to our needs.
+
+**_Though these are core concepts of a programming language, yet a reading to this chapter is advised for better understanding and better application while using r for data analytics._**
+
+## Control flow/Loops
+
+### `if else` {-}
+The basic form(s) of `if else` \index{if else statement}statement in R, are-
+```
+if (test) do_this_if_true
+if (test) do_this_if_true else else_do_this
+```
+So, if `test` is true, `do_this_if_true` will be performed and optionally if `test` is not true `else_do_this` will be performed.  See this example-
+```{r}
+x <- 50
+if(x < 10){
+  'Smaller than 10'
+} else {
+  '10 or more'
+}
+```
+**Note** that the `if`/`if else` are evaluated for a single `TRUE` or `FALSE` i.e. this control flow is **not vectorised** as we have in the case of `ifelse()` function which was vectorised.
+
+### `for` loop {-}
+The `for` loops \index{for loops}in r are used to iterate over _given_ items.  So, the basic structure of these loops are -
+
+```
+for(item in vector) perform_some_action
+
+# OR
+
+for(item in vector) {
+  perform_some_action
+}
+```
+
+Thus, for each item in `vector`, `perform_some_action` is called once; updating the value of item each time.  This can be understood by the following simple example-
+```{r}
+for(i in 1:3){
+  print(i)
+}
+```
+Conventionally `i` has been used in above example to iterate over given vector `1:3`, however any other symbol may also be used.
+```{r}
+for(item in 1:3){
+  print(item)
+}
+```
+If we use the name of any existing variable as `item` to iterate over the given object, `for loop` assigns the `item` to the current environment, overwriting any existing variable with the same name.  See this example -
+```{r}
+x <- 500
+for(x in 1:3){
+  # do nothing
+}
+x
+```
+
+```{r echo=FALSE, fig.cap="A Diagrammatic representation of For Loop", fig.align='center', fig.show='hold', out.width="99%"}
+knitr::include_graphics("images/for_loop.png")
+```
+
+The idea can also used to iterate over any object any *number of times* as we want.  See these two examples.
+
+Example-1
+```{r}
+my_names <- c('Andrew', 'Bob', 'Charles', 'Dylan', 'Edward')
+# If we want first 4 elements
+for(i in 1:4){
+  print(my_names[i])
+}
+```
+Example-2
+```{r}
+# if we want all elements
+for(i in seq_along(my_names)){
+  print(my_names[i])
+}
+```
+
+There are 2 ways to terminate any `for loop` early-
+
+- `next` which exits the current iteration only\index{next}
+- `break` which breaks the entire loop.\index{break}
+
+See these examples.
+
+Example-1
+```{r}
+for(i in 1:5){
+  if (i == 4){
+    next
+  }
+  print(i)
+}
+```
+Example-2
+```{r}
+for(i in 1:5){
+  if (i == 4){
+    break
+  }
+  print(i)
+}
+```
+
+### `while` loop {-}
+We have seen that `for` loop is used to iterate over a set of `known values` or at least known number of times.  If however, we want to perform some iterative action unknown number of times, we may use `while` loop\index{while loop} which iterates till a given `condition` is `TRUE`.  Another option is to have `repeat` loop\index{repeat loop} which can be used to iterate any number of times till it encounters a `break`.
+
+The basic syntax of `while` loop is-
+```
+while (condition) action
+```
+See these examples-
+
+Example-1
+```{r}
+i <- 1
+while(i <=4){
+  print(LETTERS[i])
+  i <- i+1
+}
+```
+We may check the value of `i` here after executing the loop
+```{r}
+i
+```
+Example-2: 
+```{r}
+i <- 4
+while(i >=0){
+  print(LETTERS[i])
+  i <- i-1
+}
+```
+**Note:** We have to make sure that the statements inside the brackets modify the `while condition` so that sooner or later the given condition is no longer `TRUE` otherwise the loop will never end and will go on forever.
+
+```{r echo=FALSE, fig.cap="Author's illustration of While Loop", fig.align='center', fig.show='hold', out.width="99%"}
+knitr::include_graphics("images/while_loop.png")
+```
+
+> **_Looping in R can be inefficient and time consuming when you’re processing the rows or columns of large data-sets. Even one of greatest feature in R is its parallel processing of vector objects.  Thus, whenever possible, it’s better to use R’s built-in numerical and character functions in conjunction with the `apply` family of functions.(We will discuss these in detail in the chapter related to functional programming)_**
+
+
+## Custom Functions {#cust}
+
+One of R’s greatest strengths is the user’s ability to add functions\index{custom function}. In fact, many of the functions in R are functions of existing functions. The structure of a function looks like this:
+
+```
+myfunctionname <- function(arg1, arg2, ... ){
+  statements
+  return(object)
+}
+```
+**Note:** Objects in the function are local to the function. The object returned can be any data type, from scalar to list. 
+
+Let’s take a look at an example.  We will create a function which will take 3 numbers, will give an output by adding thrice of first, second and twice of third.
+```{r}
+my_fun1 <- function(first,second,third){
+  first*3+second+third*2
+}
+# let's check whether it is working as desired
+my_fun1(3,1,10)
+```
+- If the arguments provided are not named, it will take all arguments in the order these are defined.
+- However, we can provide named arguments in any order.  See this
+```{r}
+my_fun1(second=3, first=1, third=10)
+```
+- Partial matching of names are also allowed.  Example
+```{r}
+my_fun1(sec=3,fir=1,thi=10)
+```
+- We can also provide default values to any argument.  These default values are however, overridden when specific values are given.  See this example.
+```{r}
+# let's create a new function which adds twice the second argument to first argument, which in turn by default is 10
+my_fun2 <- function(first=10, second){
+  first+second*2
+}
+my_fun2(second = 10)
+my_fun2(1, 10)
+```
+- There may be functions which do not require any argument.  See this example
+```{r}
+my_fun3 <- function(){
+  print('Hi')
+}
+my_fun3()
+```
+
+### Special argument ellipsis `...` {-}
+
+While searching for help of a function in r, you may have came across something like this `sum(..., na.rm = FALSE)`.  The three dots `...`\index{... ellipsis} here are referred to as ellipsis\index{ellipsis}.  Basically it means that the function is designed to take any number of named or unnamed arguments.
+
+Thus it means we can provide any number of arguments in place of `...`.  Now the point to be noted here is that values to all agruments occurring after `...` must only be named.  See this example-
+```{r}
+sum(1:100, NA, TRUE)
+sum(1:100, NA, na.rm = TRUE)
+```
+Now we can even use these three dots in our own custom functions.  Just unpack these before writing the actual statement for that function.  See this simple example-
+```{r}
+my_ellipsis_func <- function(...){
+  l <- list(...) # unpack ellipsis
+  length(l) # return length of l
+}
+my_ellipsis_func(1:10, 11:20, 'a string') # we are passing three arguments
+```
+
+### Environment issues {-}
+
+- Any of the argument values are not saved/updated in global environment\index{global environment}.  See this example
+```{r}
+x <- 10
+my_fun4 <- function(x){
+  x*2
+}
+my_fun4(2)
+x
+```
+- Even if we create another variable inside the function, that variable is not available outside that function's environment.
+```{r}
+y <- 5
+my_fun5 <- function(){
+  y <- 1
+  return(y)
+}
+my_fun5()
+y
+```
+- If however, we want to create a variable (or update existing variable) inside the function intentionally, we may use `forced assignment` denoted as `<<-`.  See this example
+```{r}
+y <- 5
+my_fun5 <- function(){
+  y <<- 1
+  return(y)
+}
+my_fun5()
+y
+```
+- As already stated, we can create object of any type using a custom function.
+```{r}
+my_list_fun <- function(x){
+  list(sum=sum(x),
+       mean = mean(x),
+       sd = sd(x))
+}
+my_list_fun(1:10)
+```
+
+## Pipes
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(magrittr)
+```
+
+Now here I would like to introduce you with the concept of pipes\index{pipes} in R. There are two types of pipes used-
+
+- `|>` is native pipe of R.  It was introduced in R version 4.1
+- `%>%` pipe introduced in `magrittr` package[@R-magrittr], now part of `tidyverse` which we will use extensively in our data analysis tasks.
+
+Actually `%>%` is predecessor to native R's pipe `|>`.  The pipes are powerful tools for clearly expressing a sequence of operations that transform an object, without the need of actually creating that object in each step.  Let us understand this concept with the following example.  Suppose, we have to three functions say `FIRST` , `SECOND` and `THIRD` to an object `OBJ` in sequence.  So the order of operations would either be like-
+```
+THIRD(SECOND(FIRST(OBJ)))
+```
+or with creating intermediate objects, when instead we actually do not need those intermediate objects. 
+```
+OBJ1 <- FIRST(OBJ)
+OBJ2 <- SECOND(OBJ1)
+OBJ3 <- THIRD(OBJ2)
+```
+Here actually we do not require `OBJ1` and `OBJ2`.  So in these cases we either have to compromise with the readability of code i.e. inside out or have to create unwanted objects.  Pipes actually mitigate both these issues simultaneously.  With pipes we can write above operations as either of these -
+```
+OBJ1 |> FIRST() |> SECOND() |> THIRD()
+OBJ1 %>% FIRST() %>% SECOND() %>% THIRD()
+```
+A diagrammatic representation is given in figure \@ref(fig:pipe).
+
+```{r pipe, echo=FALSE, fig.align='center', fig.show='hold', fig.cap="A diagrammtic illustation of Pipe concept in base R and tidyverse", out.width="99%"}
+knitr::include_graphics("images/pipe.png")
+```
+
+Now two questions may arise here-
+
+1. What if there are multiple arguments to be passed in any of the operations?
+2. Is there any difference between the two pipes?  If yes, which is better OR what are the pros and cons of each?
+
+To answer these questions, we will discuss both pipes separately.
+
+### Magrittr/Dplyr pipe `%>%`
+Pipes usually pass result of previous operation silently into first argument of next/right expression.  So `data %>% filter(col == 'A')` means `filter(data, col=='A')`.  But there may be cases when result of previous (LHS) expression is required to be passed on second or other argument in RHS expression.  A simple example may be of function `lm`, where `data` argument is second argument. In such cases we can make use special placeholder `.` as result of LHS specifically.  In other words aforesaid filter example can be written with placeholder as `data %>% filter(. , col == 'A')`.  Now using this placeholder we can use result of LHS wherever we want.  See this example
+```{r}
+iris %>% lm(Sepal.Length ~ Sepal.Width, data = .)
+```
+Thus `x %>% f(y)` is equivalent to `f(x, y)` but `x %>% f(y, .)` is equivalent to `f(y, x)`.
+
+### Base R pipe `|>` (Version 4.2.0 +)
+R version 4.2.0 introduced concept of placeholder `_` similar to dplyr/magrittr, but with a few differences.
+
+- The argument where `_` is to be used, must be named.  So `f(y, z = x)` can be written as `x |> f(y, z= _)`.
+
+```{r}
+iris |> lm(Sepal.Length ~ Sepal.Width, data = _)
+```
+The requirement of named argument is not there in dplyr pipe.  So essentially, `iris %>% lm(Sepal.Length ~ Sepal.Width, .)` will also work. But in base R `iris |> lm(Sepal.Length ~ Sepal.Width, _)` would not work and throw an error.  Thus, in cases where the argument of placeholder is not named, we have to use anonymous function. Thus we have write like this-
+
+```{r}
+iris |> {\(.x) lm(Sepal.Length ~ Sepal.Width, .x)}()
+```
+Type ?`|>` in console and see help page for more details.
+

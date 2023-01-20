@@ -1,0 +1,3 @@
+# Finding string similarity 
+
+Comparison of two (or more) numeric fields is an easy job in the sense that we can use multiple statistical methods available to measure comparision between these.  On the other hand, comparing strings in any way, shape or form is not a trivial task.  Despite this complexity, comparing text strings is a common and fundamental task in many text-processing algorithms.  Basic objective of all string similarity algorithms are to quantify the similarity between two text strings in terms of string metrics.   

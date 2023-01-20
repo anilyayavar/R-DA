@@ -1,0 +1,123 @@
+# Regex - A quick introduction
+A __Regular Expression__, or __regex__ for short, is a powerful tool, which helps us writing code for pattern matching in texts.  
+
+## Literal Characters
+
+Every _literal character_, in itself is a regex that matches itself. Thus, `a` matches third character in text `Charles`.  These literal characters are case sensitive.
+Example-1
+```{r}
+ex_text <- "This is an example text"
+# Match literal `x`
+grepl(pattern = "x", ex_text)
+# Match Upper case literal "X"
+grepl("X", ex_text)
+```
+
+## Character sets
+It is always not feasible to put every literal characters.  We may also match literal characters from a given set of options. To **match a group of characters** we have to put all these in square brackets.  So, `[abc]` matches either of `a`, `b`, or `c`.  
+Example-
+```{r}
+ex_vec <- c("Apple", "Orange", "Myrrh")
+# matches a vowel
+grepl("[aeiou]", ex_vec)
+```
+To **match a range of characters/numbers** we can separate these by hyphen in square brackets. So, `[a-n]` will match a character from range `[abcdefghijklmn]`.
+Example-
+```{r}
+ex_text <- "The quick brown fox jumps over the lazy dog"
+grepl("[a-z]", ex_text)
+grepl("[X-Z]", ex_text)
+```
+Example-2
+```{r}
+ex_colors <- c("grey", "black", "gray")
+grepl("gr[ae]y", ex_colors)
+```
+
+We can also use __pre-built character classes__ listed below.
+
+  + `[:punct:]` punctuation.
+  + `[:alpha:]` letters.
+  + `[:lower:]` lowercase letters.
+  + `[:upper:]` uppercase letters.
+  + `[:digit:]` digits.
+  + `[:xdigit:]` hex digits.
+  + `[:alnum:]` letters and numbers.
+  + `[:cntrl:]` control characters.
+  + `[:graph:]` letters, numbers, and punctuation.
+  + `[:print:]` letters, numbers, punctuation, and white-space.
+  + `[:space:]` space characters (basically equivalent to `\\s`).
+  + `[:blank:]` space and tab.
+
+Example-
+```{r}
+ex_vec2 <- c("One apple", "2 Oranges")
+grepl("[:digit:]", ex_vec2)
+```
+
+## Non-printable characters/ Meta characters (short-hand character classes)
+
+We can use special character sequences to put non-printable characters in our regular expression(s). E.g. `\t` matches a tab character.  __But since `\` is an escape character in R, we need to escape it too.__  So to match a tab character we have to put `\\t` in our regex sequence.  Regex for that matches new line (line feed) is `\\n`. `Regex` for other meta characters is listed below-
+
+  + `\\s` matches a white-space character.  Moreover, its complement `\\S` matches any character except a white-space.
+  + `\\w` matches any alphanumeric character. Similarly, its complement is `\\W` which matches any character except alphanumeric charachters.
+  + `\\d` matches any digit.  Similarly, its complement is `\\D` which matches any character except digits.
+  + `\\b` matches any word boundary.  Thus, `\\B` matches any character except a word boundary.
+  + `.` matches any character. To match a literal dot `.` we have to escape that; and thus `\\.` matches a dot charcter.
+  
+See these examples-
+```{r}
+ex_vec3 <- c("One apple", "2 oranges & 3 bananas.")
+# match word boundary
+grepl("\\w", ex_vec3)
+# match any character followed by a dot character
+grepl(".\\.", ex_vec3)
+```
+
+## Quantifiers
+
+What if we want to match more than one literal/character through `regex`? Let's say if we want to check whether the given string or string vector contain two consecutive vowels.  One method may be to use character classes two times i.e. using `[aeiou][aeiou]`. But this method is against the principles of __DRY__^[Dont repeat yourself] which is one of the common principle of programming.  To solve these issues, we have quantifiers.
+
+- `+` __1 or more__ occurrences
+- `*` __0 or more__
+- `?` __0 or 1__
+- `{}` specified numbers
+  + `{n}` exactly n
+  + `{n,}` n or more
+  + `{n,m}` between n and m
+
+Thus, we may match two consecutive vowels using `[aeiou]{2}`.  See this example
+
+```{r}
+ex_vec <- c("Apple", "Banana", "pineapple")
+grepl("[aeiou]{2}", ex_vec)
+```
+## Alternation
+
+  - `|` explain precedence
+
+## Anchors
+
+  - `^`
+  - `$`
+
+## Capture Groups
+
+- `()`
+
+## Lookaround
+
+- `(?=...)` positive look-ahead assertion. Matches if `...` matches at the current input.
+
+- `(?!...)` negative look-ahead assertion. Matches if `...` does not match at the current input.
+
+- `(?<=...)` positive look-behind assertion. Matches if `...` matches text preceding the current position, with the last character of the match being the character just before the current position. Length must be bounded (i.e. no `*` or `+`).
+
+- `(?<!...)` negative look-behind assertion. Matches if `...` does not match text preceding the current position. Length must be bounded (i.e. no `*` or `+`).
+
+## Comments
+
+- `(?#..)`
+- `regex(... , comments = TRUE)`
+
+
