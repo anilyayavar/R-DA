@@ -107,13 +107,58 @@ grepl("[aeiou]{2}", ex_vec)
 
 ## Lookaround
 
-- `(?=...)` positive look-ahead assertion. Matches if `...` matches at the current input.
+Lookahead and lookbehinds are zero-width assertions in regex. They are used to match a pattern only if it is followed or preceded by another pattern, respectively. The pattern in the lookahead or lookbehind is not included in the match.
 
-- `(?!...)` negative look-ahead assertion. Matches if `...` does not match at the current input.
+### Lookahead
 
-- `(?<=...)` positive look-behind assertion. Matches if `...` matches text preceding the current position, with the last character of the match being the character just before the current position. Length must be bounded (i.e. no `*` or `+`).
+A lookahead is used to match a pattern only if it is followed by another pattern. *Positive Lookaheads* are written as `(?=...)`, where `...` is the pattern that must follow the match.
 
-- `(?<!...)` negative look-behind assertion. Matches if `...` does not match text preceding the current position. Length must be bounded (i.e. no `*` or `+`).
+For example, the regex pattern `hello(?= world)` matches "hello" only if it is followed by " world". It matches "hello world" but not "hello there world" or "hello".
+
+Example
+
+```{r}
+string <- c("hello world", "hello there world", "hello")
+grep("hello(?= world)", string, value = TRUE, perl = TRUE)
+
+```
+
+### Lookbehind
+
+A lookbehind is used to match a pattern only if it is preceded by another pattern. Lookbehinds are written as `(?<=...)`, where `...` is the pattern that must precede the match.
+
+For example, the regex pattern `(?<=hello )world` matches "world" only if it is preceded by "hello ". It matches "hello world" but not "world hello" or "hello there world".
+
+Example
+
+```{r}
+string <- c("hello world", "world hello", "hello there world")
+grep("(?<=hello )world", string, value = TRUE, perl = TRUE)
+
+```
+
+### Negative Lookahead and Lookbehinds
+
+Negative lookahead and negative lookbehinds are used to match a pattern only if it is not followed or preceded by another pattern, respectively. Negative lookahead and lookbehinds are written as `(?!...)` and `(?<!...)`, respectively.
+
+For example, the regex pattern `hello(?! world)` matches "hello" only if it is not followed by " world". It matches "hello there" but not "hello world" or "hello world there".
+
+Example-
+
+
+```{r}
+string <- c("hello there", "hello world", "hello world there")
+grep("hello(?! world)", string, value = TRUE, perl = TRUE)
+
+```
+
+And the regex pattern `(?<!hello )world` matches "world" only if it is not preceded by "hello ". It matches "world hello" and "hello there world" but not "hello world".
+
+```{r}
+string <- c("hello world", "world hello", "hello there world")
+grep("(?<!hello )world", string, value = TRUE, perl = TRUE)
+```
+
 
 ## Comments
 
