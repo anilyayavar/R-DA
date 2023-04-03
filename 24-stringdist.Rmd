@@ -25,10 +25,35 @@ This algorithms gives high scores to two strings if,
 
 To be exact, the distance of finding similar character is 1 less than half of length of longest string. So if longest strings has length of 5, a character at the start of the string 1 must be found before or on ((5/2)–1) ~ 2nd position in the string 2 to be considered valid match. Because of this, the algorithm is directional and gives high score if matching is from the beginning of the strings. 
 
-### N-Gram
+### Q-Gram
+*Q-Grams* is based on the difference between occurences of `Q` consecutive characters in two strings.  To illustrate take a case of Q=3 (this special case is also called trigrams).  For `atharv` and its possible typo `ahtarv` the trigrams will be
 
-### Jaccard's Index
+- For atharv `{ath tha har arv}`
+- for ahtarv `{aht hta tar arv}`
+
+We can see that a total of `7` unique trigrams have been formed and out of these only `1` is similar.  Thus, 3-gram similarility would be `1/7=14%`.  We can see that this algorithm is not very effective for transpositions.
 
 ## Phonetic matching
 *Phonetic matching algorithms* match strings based on how similar they sound. Consider `Geeta` and `Gita.` They sound similar enough that one person might spell as `Geetha` or `Geeta`, another as `Gita.` As in this case, one is not necessarily a misspelling of the other. just sounds similar.
+
+### Soundex
+Created by *Robert Russel* and *Margaret King Odell* in 1918, this algorithm intended to match names and surnames based on the basic rules of English pronunciation, hence, similar names get the same value.
+
+### Metaphone
+
+Developed by *Lawrence Philips* in 1990, the Metaphone is also more accurate compared with the `Soundex` method as it takes into consideration the groups of letters. The disadvantage shows up when we apply it to reconcile the strings that are not in English, as it is based on the rules of English pronunciation.
+
+### Double Metaphone
+
+Following `Metaphone`, *Philips* also designed the *Double Metaphone*. As its name suggests, it returns two codes, so you have more chances to match the items, however, at the same time, it means a higher probability of an error. According to the algorithm, there are three matching levels: 
+
+- `primary key to the primary key = strongest match`, 
+- `secondary key to the primary key = normal match`, 
+- `secondary key against the secondary key = weakest match`.
+
+### Metaphone 3
+
+*Philips* further refined the double metaphone algorithm to produce better results.  The algorithm (Metaphone 3) is however, proprietary and is not open-source.
+
+# Examples
 

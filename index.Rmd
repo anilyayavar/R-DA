@@ -28,6 +28,20 @@ options(tinytex.verbose = TRUE)
 
 # Preface {-}
 
+In today's digital age, data is abundant and ubiquitous, and its importance cannot be overstated. As a result, auditors must be equipped with the necessary skills to leverage this data and draw insights from it. The use of programming languages such as R in auditing has become increasingly popular due to their ability to analyze large volumes of data and produce accurate results.
+
+This book aims to provide a comprehensive guide on data analytics in audit using R. It is designed to be a practical resource for auditors who wish to enhance their data analysis skills and learn how to apply them in real-world scenarios.
+
+The book covers a wide range of topics, including data collection, data cleaning, data visualization, and statistical analysis. It also includes examples of how R can be used to analyze financial and operational data, and how it can be used to identify risks and anomalies.
+
+The book is structured in a way that allows readers to gradually build their skills from basic concepts to advanced techniques. Each chapter includes practical examples, exercises, and case studies to reinforce the concepts covered. The book also includes tips and tricks to help readers optimize their workflow and avoid common pitfalls.
+
+It is worth noting that this book assumes some basic knowledge of R programming. However, readers who are new to R can still benefit from this book by following the step-by-step examples and exercises.
+
+Finally, I would like to express my gratitude to all the individuals who contributed to the creation of this book. Without their support and encouragement, this project would not have been possible.
+
+I hope this book serves as a valuable resource for auditors looking to enhance their data analytics skills and ultimately improve the quality of their work.
+
 
 
 ## Why read this book {-}
