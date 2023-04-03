@@ -55,5 +55,91 @@ Following `Metaphone`, *Philips* also designed the *Double Metaphone*. As its na
 
 *Philips* further refined the double metaphone algorithm to produce better results.  The algorithm (Metaphone 3) is however, proprietary and is not open-source.
 
-# Examples
+## Examples
+
+In R, we can use `stringdist` package to calculate many of the above mentioned distances.  The function is vectorised.  The synatx is 
+
+```
+stringdist(
+  a,
+  b,
+  method = c("osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw",
+    "soundex"),
+  useBytes = FALSE,
+  weight = c(d = 1, i = 1, s = 1, t = 1),
+  q = 1,
+  p = 0,
+  bt = 0,
+  nthread = getOption("sd_num_thread")
+)
+```
+
+where -
+
+- `a` and `b` are two strings/vectors for which similarity/distance is to be measured.
+- `method` to be used.  Default is 
+    + `osa` for *Optimal String Alignment*.  Other methods are-
+    + `lv` for *Levenstein distance*, 
+    + `dl` for *Damerau-Levenshtein*
+    + `hamming` for *Hamming distance*
+    + `lcs` for *Longest Common Substring*
+    + `qgram` for Q-Grams
+    + `cosine` for cosine 
+    + `jaccard` for Jaccard's algorithm
+    + `jw` for Jaro-Winkler
+    + `soundex` for Soundex
+- Other arguments are needed on the basis of algorithm chosen.
+
+
+To calculate 'metaphone' index we can use `phonics` package and for 'Double Metaphone' we can use `PGRdup` package in R.
+
+Example - Suppose we have a set of two names.
+```{r}
+nameset1 <- c('Geeta', 'Susheel', 'Ram', 'Dr. Suchitra')
+nameset2 <- c('Gita', 'Sushil', 'Rama', 'Suchitra')
+```
+
+Note most of these distances/similarity indices are cases sensitive, and therefore we have to use these methods with a bit cleaning first.  We can convert cases of all strings to lower-case to eliminate these (if) unwanted errors.
+
+```{r}
+library(stringdist)
+suppressPackageStartupMessages(library(dplyr))
+
+data.frame(
+  nameset1 = tolower(nameset1),
+  nameset2 = tolower(nameset2)
+) %>% 
+  mutate(lv_dist = stringdist(nameset1, nameset2, method = 'lv'),
+         jw_dist = stringdist(nameset1, nameset2, method = 'jw'),
+         qgram_3 = stringdist(nameset1, nameset2, method = 'qgram', q=3))
+```
+
+Creating Metaphone and Double Metaphone
+```{r}
+library(phonics)
+
+data.frame(
+  nameset1 = tolower(nameset1),
+  nameset2 = tolower(nameset2)
+) %>% 
+  mutate(metaphone_1 = metaphone(nameset1),
+         metaphone_2 = metaphone(nameset2))
+```
+Note that we cannot calculate `metaphone` for special characters even for spaces.
+
+*Double metaphone* is not vectorised.  So we have to use `apply` family of functions here.
+
+```{r}
+suppressPackageStartupMessages(library(PGRdup))
+library(purrr)
+
+data.frame(
+  nameset1 = tolower(nameset1),
+  nameset2 = tolower(nameset2)
+) %>% 
+  mutate(DMP_1_1 = map_chr(nameset1, ~DoubleMetaphone(.x)[[1]]),
+         DMP_1_2 = map_chr(nameset1, ~DoubleMetaphone(.x)[[2]]),
+         DMP_2_1 = map_chr(nameset2, ~DoubleMetaphone(.x)[[1]]),
+         DMP_2_2 = map_chr(nameset2, ~DoubleMetaphone(.x)[[2]]))
+```
 
