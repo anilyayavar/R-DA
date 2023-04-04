@@ -559,3 +559,6 @@ The `anti_join` is basically opposite to that of `semi_join`.  It keeps only tho
 ```{r}
 df1 %>% anti_join(df2, by = 'x')
 ```
+
+
+## Relational, but non-equi joins

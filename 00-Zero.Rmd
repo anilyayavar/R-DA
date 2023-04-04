@@ -155,6 +155,8 @@ Though `tidyverse`  is a collection 20+ packages (in fact 80+ packages will be i
 7. [**stringr**](https://stringr.tidyverse.org/) provides set of functions designed to work with strings.  It is built on top of another package [stringi](https://cran.r-project.org/package=stringi). 
 8. [**forcats**](https://forcats.tidyverse.org/) provides a suite of useful tools that solve common problems with factors. 
 
+With latest version of Tidyverse, while loading it [**lubridate**](https://lubridate.tidyverse.org/) also loads with default.
+
 There are several other `tidyverse` packages which we will be working with-
 
 - `lubridate`
