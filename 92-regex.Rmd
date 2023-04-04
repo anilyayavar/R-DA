@@ -1,4 +1,5 @@
 # Regex - A quick introduction
+
 A __Regular Expression__, or __regex__ for short, is a powerful tool, which helps us writing code for pattern matching in texts.  Regex, is a pattern that describes a set of strings. It is a sequence of characters that define a search pattern. It is used to search for and manipulate text. Regex can be used in many programming languages, including R.
 
 Regex patterns are made up of a combination of regular characters and special characters. Regular characters include letters, digits, and punctuation marks. Special characters have a specific meaning in regex and are used to represent patterns of characters.
@@ -12,9 +13,10 @@ Regex patterns can be used for a variety of purposes, including:
 
 In R, we can use the `grep` and `gsub` functions to search for and manipulate text using regex.
 
-## Basic Regex-  Literal Characters
+## Basic Regex -  Literal Characters
 
 Every _literal character_, in itself is a regex that matches itself. Thus, `a` matches third character in text `Charles`.  These literal characters are case sensitive.
+
 Example-1
 ```{r}
 ex_text <- "This is an example text"
@@ -28,6 +30,7 @@ grepl("X", ex_text)
 
 ### Character sets
 It is always not feasible to put every literal characters.  We may also match literal characters from a given set of options. To **match a group of characters** we have to put all these in square brackets.  So, `[abc]` matches either of `a`, `b`, or `c`.  
+
 Example-
 ```{r}
 ex_vec <- c("Apple", "Orange", "Myrrh")
@@ -35,6 +38,7 @@ ex_vec <- c("Apple", "Orange", "Myrrh")
 grepl("[aeiou]", ex_vec)
 ```
 To **match a range of characters/numbers** we can separate these by hyphen in square brackets. So, `[a-n]` will match a character from range `[abcdefghijklmn]`.
+
 Example-
 ```{r}
 ex_text <- "The quick brown fox jumps over the lazy dog"
@@ -76,7 +80,7 @@ We can use special character sequences to put non-printable characters in our re
   + `\\w` matches any alphanumeric character. Similarly, its complement is `\\W` which matches any character except alphanumeric charachters.
   + `\\d` matches any digit.  Similarly, its complement is `\\D` which matches any character except digits.
   + `\\b` matches any word boundary.  Thus, `\\B` matches any character except a word boundary.
-  + `.` matches any character. To match a literal dot `.` we have to escape that; and thus `\\.` matches a dot charcter.
+  + `.` matches any character. To match a literal dot `.` we have to escape that; and thus `\\.` matches a dot character.
   
 See these examples-
 ```{r}
