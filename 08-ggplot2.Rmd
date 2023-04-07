@@ -207,6 +207,17 @@ ggplot(mtcars, aes(x = hp, y = mpg)) +
 
 ```
 
+**TIP: Use package `ggrepel` to show all labels, when needed, without overlapping and in a better way.** E.g.
+```{r}
+library(ggrepel)
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point() +
+  geom_text_repel(aes(label = rownames(mtcars)),
+            size = 3,
+            color = "red",
+            vjust = -1)
+```
+
 #### Labeling Charts
 There are several ways to add labels to ggplot2 charts, but we will focus on using the `labs()` function, which allows us to add `titles`, `subtitles`, `axis labels`, and other annotations like `caption`, etc. to the plot.  Example -
 ```{r}
@@ -281,7 +292,9 @@ We can combine multiple customization options together to create a customized th
 
 ### More to read
 
-Book [@ggplot22016]
+- Book [@ggplot22016]
+- [ggplot2 cheatsheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) 
+- [Another Cheatsheet](http://r-statistics.co/ggplot2-cheatsheet.html)
 
 
 
