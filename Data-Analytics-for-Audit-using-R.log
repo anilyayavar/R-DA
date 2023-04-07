@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.6)  7 APR 2023 15:47
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.6)  7 APR 2023 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,289 +1193,289 @@ Overfull \hbox (132.75pt too wide) in paragraph at lines 8925--8925
 []\TU/lmtt/m/n/10 ## Warning in left_join(., df2, by = "x"): Detected an unexpected many-to-many relationship[] 
  []
 
-[185] [186] [187]
-Underfull \hbox (badness 10000) in paragraph at lines 9084--9085
+[185] [186] [187] [188] [189]
+Underfull \hbox (badness 10000) in paragraph at lines 9193--9194
 []\TU/lmtt/m/n/10 overlaps(x_lower, x_upper, y_lower, y_upper, ..., bounds =
  []
 
-[188]
+[190] [191] [192]
 Chapter 10.
 
-Package natbib Warning: Citation `JSSv059i10' on page 189 undefined on input line 9107.
+Package natbib Warning: Citation `JSSv059i10' on page 193 undefined on input line 9320.
 
 
-Package natbib Warning: Citation `JSSv021i12' on page 189 undefined on input line 9107.
+Package natbib Warning: Citation `JSSv021i12' on page 193 undefined on input line 9320.
 
 File: images/tidy-1.png Graphic file (type bmp)
 <images/tidy-1.png>
-[189
+[193
 
-] [190] [191]
-Underfull \hbox (badness 2671) in paragraph at lines 9274--9276
+] [194] [195]
+Underfull \hbox (badness 2671) in paragraph at lines 9487--9489
 []\TU/lmr/m/n/10 re-organising the observation originally spread into multiple rows
  []
 
-[192]
+[196]
 File: images/pivot_longer.png Graphic file (type bmp)
 <images/pivot_longer.png>
-[193] [194] [195] [196]
+[197] [198] [199] [200]
 File: images/pivot_wider.png Graphic file (type bmp)
 <images/pivot_wider.png>
-[197] [198] [199] [200]
-Underfull \hbox (badness 2229) in paragraph at lines 9714--9716
+[201] [202] [203] [204]
+Underfull \hbox (badness 2229) in paragraph at lines 9927--9929
 []\TU/lmtt/m/n/10 convert \TU/lmr/m/n/10 if \TU/lmtt/m/n/10 TRUE\TU/lmr/m/n/10 , the component columns are converted to dou-
  []
 
-[201] [202] [203] [204] [205] [206] [207] [208] [209
+[205] [206] [207] [208] [209] [210] [211] [212] [213
 
-] [210
+] [214
 
 ]
 Chapter 11.
-[211] [212]
-Overfull \hbox (3.00203pt too wide) in paragraph at lines 10278--10279
+[215] [216]
+Overfull \hbox (3.00203pt too wide) in paragraph at lines 10491--10492
 \TU/lmr/m/n/10 and/or columns. Sorting out this issue, is easy using \TU/lmtt/m/n/10 janitor::remove_empty()\TU/lmr/m/n/10 . 
  []
 
 
-Overfull \hbox (28.562pt too wide) in paragraph at lines 10298--10299
+Overfull \hbox (28.562pt too wide) in paragraph at lines 10511--10512
 \TU/lmr/m/n/10 formats, using \TU/lmtt/m/n/10 janitor::convert_to_date() \TU/lmr/m/n/10 or \TU/lmtt/m/n/10 janitor::convert_to_datetime()\TU/lmr/m/n/10 .
  []
 
-[213] [214]
+[217] [218]
 Chapter 12.
-[215
+[219
 
 ]
 File: images/simple.png Graphic file (type bmp)
 <images/simple.png>
-[216]
+[220]
 File: images/systematic.png Graphic file (type bmp)
 <images/systematic.png>
-[217]
-Overfull \hbox (107.5601pt too wide) in paragraph at lines 10505--10534
+[221]
+Overfull \hbox (107.5601pt too wide) in paragraph at lines 10718--10747
 [][] 
  []
 
-[218]
+[222]
 File: images/stratified.png Graphic file (type bmp)
 <images/stratified.png>
 
-Overfull \hbox (8.485pt too wide) in paragraph at lines 10551--10552
+Overfull \hbox (8.485pt too wide) in paragraph at lines 10764--10765
 []\TU/lmr/m/n/10 Example Data: - Let’s include region in \TU/lmtt/m/n/10 state.x77 \TU/lmr/m/n/10 data using \TU/lmtt/m/n/10 dplyr::bind_cols\TU/lmr/m/n/10 . 
  []
 
-[219]
-Overfull \hbox (151.55011pt too wide) in paragraph at lines 10564--10581
+[223]
+Overfull \hbox (151.55011pt too wide) in paragraph at lines 10777--10794
 [][] 
  []
 
 
-Overfull \hbox (185.25pt too wide) in paragraph at lines 10614--10614
+Overfull \hbox (185.25pt too wide) in paragraph at lines 10827--10827
 []  \TU/lmtt/m/n/10 tibble::rownames_to_column('State') %>% # this step will not be used in databases without row names[] 
  []
 
 
-Overfull \hbox (181.00009pt too wide) in paragraph at lines 10616--10637
+Overfull \hbox (181.00009pt too wide) in paragraph at lines 10829--10850
 [][] 
  []
 
-[220]
-Overfull \hbox (17.25pt too wide) in paragraph at lines 10667--10667
+[224]
+Overfull \hbox (17.25pt too wide) in paragraph at lines 10880--10880
 []  \TU/lmtt/m/n/10 mutate(stratum = cut(Population, c(0, 1000, 5000, max(Population)),[] 
  []
 
-[221] [222]
+[225] [226]
 Chapter 13.
 
-Package natbib Warning: Citation `frank_ben' on page 223 undefined on input line 10721.
+Package natbib Warning: Citation `frank_ben' on page 227 undefined on input line 10934.
 
 
-Package natbib Warning: Citation `newcomb' on page 223 undefined on input line 10721.
+Package natbib Warning: Citation `newcomb' on page 227 undefined on input line 10934.
 
 File: images/frank_benford.jpg Graphic file (type bmp)
 <images/frank_benford.jpg>
 File: images/Simon.jpg Graphic file (type bmp)
 <images/Simon.jpg>
-File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-317-1.pdf Graphic file (type pdf)
-<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-317-1.pdf>
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-321-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-321-1.pdf>
 
-Package natbib Warning: Citation `pinkham' on page 223 undefined on input line 10749.
+Package natbib Warning: Citation `pinkham' on page 227 undefined on input line 10962.
 
-[223
+[227
 
-] [224]
+] [228]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/census-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/census-1.pdf>
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/scaling-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/scaling-1.pdf>
 
-Package natbib Warning: Citation `t_hill' on page 225 undefined on input line 10804.
+Package natbib Warning: Citation `t_hill' on page 229 undefined on input line 11017.
 
-[225] [226]
+[229] [230]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/ben2-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/ben2-1.pdf>
-[227]
+[231]
 
-Package natbib Warning: Citation `articlesec' on page 228 undefined on input line 10853.
-
-
-Package natbib Warning: Citation `nigrinifraud' on page 228 undefined on input line 10868.
+Package natbib Warning: Citation `articlesec' on page 232 undefined on input line 11066.
 
 
-Package natbib Warning: Citation `nigrinifraud' on page 228 undefined on input line 10870.
+Package natbib Warning: Citation `nigrinifraud' on page 232 undefined on input line 11081.
 
 
-Underfull \hbox (badness 2762) in paragraph at lines 10873--10873
+Package natbib Warning: Citation `nigrinifraud' on page 232 undefined on input line 11083.
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 11086--11086
 []\TU/lmr/bx/n/14.4 Examining significance using statistical
  []
 
-[228] [229] [230] [231]
-Overfull \hbox (195.75pt too wide) in paragraph at lines 11054--11054
+[232] [233] [234] [235]
+Overfull \hbox (195.75pt too wide) in paragraph at lines 11267--11267
 []\TU/lmtt/m/n/10 ## Remember: Real data will never conform perfectly to Benford's Law. You should not focus on p-values![] 
  []
 
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/benplot-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/benplot-1.pdf>
-[232] [233] [234
+[236] [237] [238
 
 ]
 Chapter 14.
-[235] [236]
-Overfull \hbox (33.0pt too wide) in paragraph at lines 11189--11189
+[239] [240]
+Overfull \hbox (33.0pt too wide) in paragraph at lines 11402--11402
 []\TU/lmtt/m/n/10 ##   <https://tidyselect.r-lib.org/reference/faq-selection-context.html>[] 
  []
 
-[237]
+[241]
 File: images/network.png Graphic file (type bmp)
 <images/network.png>
 
-Overfull \hbox (373.78513pt too wide) in paragraph at lines 11216--11217
+Overfull \hbox (373.78513pt too wide) in paragraph at lines 11429--11430
  [][] 
  []
 
-[238] [239]
+[242] [243]
 
-LaTeX Warning: Reference `across' on page 240 undefined on input line 11296.
+LaTeX Warning: Reference `across' on page 244 undefined on input line 11509.
 
-[240]
+[244]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/igraph2-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/igraph2-1.pdf>
-[241] [242] [243] [244
+[245] [246] [247] [248
 
 ]
 Chapter 15.
-[245] [246]
+[249] [250]
 Chapter 16.
 File: images/excel.png Graphic file (type bmp)
 <images/excel.png>
-[247
+[251
 
 ]
 Overfull \hbox (46.66232pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 248 \TU/lmr/m/sl/10 CHAPTER 16.  MERGING LARGE NUMBER OF SIMILAR DATASETS INTO ONE
+\TU/lmr/m/n/10 252 \TU/lmr/m/sl/10 CHAPTER 16.  MERGING LARGE NUMBER OF SIMILAR DATASETS INTO ONE
  []
 
-[248]
+[252]
 Overfull \hbox (2.26842pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 16.2.  \TU/lmr/bx/sl/10 CASE-2\TU/lmr/m/sl/10 : MERGING MULTIPLE FILES INTO ONE DATA FRAME \TU/lmr/m/n/10 249
+\TU/lmr/m/sl/10 16.2.  \TU/lmr/bx/sl/10 CASE-2\TU/lmr/m/sl/10 : MERGING MULTIPLE FILES INTO ONE DATA FRAME \TU/lmr/m/n/10 253
  []
 
-[249]
+[253]
 Overfull \hbox (46.66232pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 250 \TU/lmr/m/sl/10 CHAPTER 16.  MERGING LARGE NUMBER OF SIMILAR DATASETS INTO ONE
+\TU/lmr/m/n/10 254 \TU/lmr/m/sl/10 CHAPTER 16.  MERGING LARGE NUMBER OF SIMILAR DATASETS INTO ONE
  []
 
-[250]
-Overfull \hbox (180.0pt too wide) in paragraph at lines 11654--11654
+[254]
+Overfull \hbox (180.0pt too wide) in paragraph at lines 11867--11867
 []\TU/lmtt/m/n/10 ## [1] "C:\\Users\\Dell\\OneDrive - A c GeM CAG of INDIA\\Documents\\R-DA\\Data\\data_by_4_cyl.xlsx"[] 
  []
 
 
-Overfull \hbox (180.0pt too wide) in paragraph at lines 11654--11654
+Overfull \hbox (180.0pt too wide) in paragraph at lines 11867--11867
 []\TU/lmtt/m/n/10 ## [1] "C:\\Users\\Dell\\OneDrive - A c GeM CAG of INDIA\\Documents\\R-DA\\Data\\data_by_6_cyl.xlsx"[] 
  []
 
 
-Overfull \hbox (180.0pt too wide) in paragraph at lines 11654--11654
+Overfull \hbox (180.0pt too wide) in paragraph at lines 11867--11867
 []\TU/lmtt/m/n/10 ## [1] "C:\\Users\\Dell\\OneDrive - A c GeM CAG of INDIA\\Documents\\R-DA\\Data\\data_by_8_cyl.xlsx"[] 
  []
 
 
 Overfull \hbox (101.30626pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 16.4.  \TU/lmr/bx/sl/10 CASE-4\TU/lmr/m/sl/10 : SPLITTING ONE DATA INTO MULIPLE FILES HAVING MULTIPLE SHEETS \TU/lmr/m/n/10 251
+\TU/lmr/m/sl/10 16.4.  \TU/lmr/bx/sl/10 CASE-4\TU/lmr/m/sl/10 : SPLITTING ONE DATA INTO MULIPLE FILES HAVING MULTIPLE SHEETS \TU/lmr/m/n/10 255
  []
 
-[251]
+[255]
 Overfull \hbox (46.66232pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 252 \TU/lmr/m/sl/10 CHAPTER 16.  MERGING LARGE NUMBER OF SIMILAR DATASETS INTO ONE
+\TU/lmr/m/n/10 256 \TU/lmr/m/sl/10 CHAPTER 16.  MERGING LARGE NUMBER OF SIMILAR DATASETS INTO ONE
  []
 
-[252
+[256
 
 ]
 Chapter 17.
 
 Underfull \vbox (badness 2478) has occurred while \output is active []
 
-[253] [254]
+[257] [258]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/wordcloud-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/wordcloud-1.pdf>
-[255] [256]
+[259] [260]
 Chapter 18.
-[257
+[261
 
-] [258] [259]
-Overfull \hbox (101.25pt too wide) in paragraph at lines 11887--11887
+] [262] [263]
+Overfull \hbox (101.25pt too wide) in paragraph at lines 12100--12100
 []  \TU/lmtt/m/n/10 method = c("osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw",[] 
  []
 
-[260] [261] [262]
+[264] [265] [266]
 Appendix A.
-[263
+[267
 
 
 ]
-Underfull \hbox (badness 2237) in paragraph at lines 12095--12096
+Underfull \hbox (badness 2237) in paragraph at lines 12308--12309
 \TU/lmr/m/n/10 The file name can be changed within the R console using, function
  []
 
 
-Underfull \hbox (badness 2119) in paragraph at lines 12095--12096
+Underfull \hbox (badness 2119) in paragraph at lines 12308--12309
 \TU/lmtt/m/n/10 file.rename()\TU/lmr/m/n/10 . Basic syntax is \TU/lmtt/m/n/10 file.rename(from = "old_name", to
  []
 
-[264]
-Overfull \hbox (17.25pt too wide) in paragraph at lines 12166--12166
+[268]
+Overfull \hbox (17.25pt too wide) in paragraph at lines 12379--12379
 []\TU/lmtt/m/n/10 ## [1] "C:/Users/Dell/OneDrive - A c GeM CAG of INDIA/Documents/R-DA"[] 
  []
 
-[265] [266]
+[269] [270]
 File: images/Rproj1.png Graphic file (type bmp)
 <images/Rproj1.png>
 File: images/Rproj2.png Graphic file (type bmp)
 <images/Rproj2.png>
-[267] [268
+[271] [272
 
 ]
 Appendix B.
-[269] [270] [271] [272] [273] [274] [275] [276] [277] [278]
+[273] [274] [275] [276] [277] [278] [279] [280] [281] [282]
 Appendix C.
 
-Overfull \hbox (62.68002pt too wide) in paragraph at lines 12857--12926
+Overfull \hbox (62.68002pt too wide) in paragraph at lines 13070--13139
 [][] 
  []
 
 (./Data-Analytics-for-Audit-using-R.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[279
+[283
 
-] [280])
+] [284])
 
 Package natbib Warning: There were undefined citations.
 
-[281
+[285
 
 ] (./Data-Analytics-for-Audit-using-R.aux)
 
@@ -1493,4 +1493,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  86i,8n,121p,921b,541s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Data-Analytics-for-Audit-using-R.pdf (295 pages).
+Output written on Data-Analytics-for-Audit-using-R.pdf (299 pages).

@@ -533,6 +533,20 @@ df2 <- data.frame(
 df2
 df1 %>% left_join(df2, by = 'x')
 ```
+In fact, we can use argument `relationship` explicitly to silence this warning and avoid errors.  This argument can take one of these values
+
+- `NULL` (default)
+- `"one-to-one"`
+- `"one-to-many"`
+- `"many-to-one"`
+- `"many-to-many"`
+
+Example above re-coded
+```{r}
+df1 %>% left_join(df2, by = 'x', relationship = "many-to-many")
+```
+
+
 
 ## Filtering Joins
 The other joins available in `dplyr` are basically filtering joins.  
@@ -577,10 +591,38 @@ Simple, isn't it.  But now using the potential of this new helper function, we c
 ### Inequality Joins
 Inequality joins match on an inequality, such as `>`, `>=`, `<`, or `<=`, and are common in time series analysis and genomics. To construct an inequality join using `join_by()`, we have to supply two column names separated by one of the above mentioned inequalities.  See the following example for better understanding of inequality joins.
 
+Example- Suppose we have two tables, one containing product-wise `sales` and another containing `rates` as and when these are revised.  So, in order to have total sales amount, we can use inequality join.
+
 ```{r}
-# E
+# sales
+sales <- data.frame(
+  product.id = c("A", "A", "A", "A", "A", "B", "B"),
+  sales.date = as.Date(c("01-01-2022",
+                 "02-02-2022","05-11-2022","05-04-2022",
+                 "05-10-2022","01-02-2022","01-01-2023"), format = "%d-%m-%Y"),
+  quantity = c(5L, 10L, 15L, 5L, 15L, 1L, 2L)
+)
+# Print it
+sales
+# rates
+rates <- data.frame(
+  product.id = c("A", "A", "A", "B", "B"),
+  revision.date = as.Date(c("01-02-2022",
+                    "03-04-2022","05-10-2022","01-01-2022",
+                    "05-10-2022"), format = "%d-%m-%Y"),
+  rate = c(50L, 60L, 70L, 500L, 1500L)
+)
+#print it
+rates
+
+# total sale(1st attempt)
+sales %>% 
+  left_join(rates,
+            by = join_by(product.id,
+                         sales.date >= revision.date))
 ```
 
+We got the results, but the results/rates are obtained fixed on all earlier dates.  To solve this issue, we have rolling joins.  See next section.
 
 ### Rolling Joins
 Rolling joins are a variant of inequality joins that limit the results returned from an inequality join condition. They are useful for "rolling" the closest match forward/backwards when there isn't an exact match. To construct a rolling join, we have to wrap inequality condition with `closest()`.
@@ -595,7 +637,49 @@ Overlap joins are a special case of inequality joins involving one or two column
 
 - `overlaps(x_lower, x_upper, y_lower, y_upper, ..., bounds = "[]")` which is short for `x_lower <= y_upper, x_upper >= y_lower`
 
+Above example solved by wrapping date condition in `closest()`
+```{r}
+sales %>% 
+  left_join(rates,
+            by = join_by(product.id,
+                         closest(sales.date >= revision.date)))
+```
+
+We may see that we do not have rates for product `A` for sales made on `01-01-2022`.  
+
+Similarly, we can make use of other helper functions as per our need.  
+
+Example-2: Suppose we have `orders` data where we have customer-wise orders, corresponsing order dates and ship dates.  Let us suppose we want to know about customers who placed another order, without waiting for shipping of any of their previous/earlier order.
+
+```{r}
+orders <- structure(list(customer_id = c("A", "A", "A", "B", "B", "C", 
+"C"), order_id = 1:7, order_date = c("2019-01-01", "2019-01-05", 
+"2019-01-16", "2019-01-05", "2019-01-06", "2019-01-07", "2019-01-09"
+), ship_date = c("2019-01-30", "2019-02-10", "2019-01-18", "2019-01-08", 
+"2019-01-08", "2019-01-08", "2019-01-10")), row.names = c(NA, 
+-7L), class = "data.frame")
+
+# print 
+orders
+
+# customers who placed the orders without
+# waiting to ship their earlier order
+orders %>% 
+  inner_join(orders,
+             by = join_by(customer_id,
+                          overlaps(order_date, ship_date, order_date, ship_date),
+                          order_id < order_id)) 
+```
+
+
 ### Cross Joins
+This join matches everything with everything and therefore can be thought of as a cross product of two data frames. We can use `cross_join` for this special join.  If we have `m` and `n` rows in two data frames, then as a result of cross join we will have `m*n` rows.
 
+Example-
+```{r}
+df <- data.frame(products = c('A', 'B', 'C'))
 
+df %>% 
+  cross_join(df)
+```
 
