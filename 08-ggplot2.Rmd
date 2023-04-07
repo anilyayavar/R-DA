@@ -278,10 +278,87 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
 We can combine multiple customization options together to create a customized theme that fits our specific needs. The possibilities for customization are endless, so feel free to experiment and create your own unique theme!
 
 ### Saving/exporting plots
+Of course, after creating charts/plots we would like to save them for further usage in our reports/documents, etc.  Though there may be many options to save a plot to disk, we will be focussing on three different methods.
+
+#### Saving through Rstudio menu
+To save a graph using the RStudio menus, go to the Plots tab and choose Export.
+```{r}
+knitr::include_graphics('images/export.png')
+```
+Three options are available here.
+
+- Save as Image
+- Save as PDF
+- Copy to clipboard.
+
+#### Saving through code
+We may also save our plots using function `ggsave()` here.  Its syntax is simple
+```
+ggsave(
+  filename,
+  plot = last_plot(),
+  device = NULL,
+  path = NULL,
+  scale = 1,
+  width = NA,
+  height = NA,
+  units = c("in", "cm", "mm", "px"),
+  dpi = 300,
+  limitsize = TRUE,
+  bg = NULL,
+  ...
+)
+```
+All arguments are simple to understand.  Thus for example if we need to save the following violin plot, 
+```{r}
+# Create sample data
+set.seed(123)
+df <- data.frame(group = rep(c("A", "B"), each = 100), value = c(rnorm(100, 0, 1), rnorm(100, 1, 1)))
+
+# Create base plot with violin plots and data labels
+base_plot <- ggplot(df, aes(x = group, y = value, fill = group)) + 
+  geom_violin(trim = FALSE, alpha = 0.7) +
+  geom_boxplot(width = 0.1, alpha = 0.8) +
+  ggrepel::geom_text_repel(aes(label = round(value, 2)), size = 3, box.padding = 0.5, nudge_y = 0.2) +
+  labs(x = "Group", y = "Value") +
+  scale_fill_manual(values = c("#CC6666", "#9999CC"))
+base_plot
+```
+
+we can use this code
+```
+ggsave('violin.png', base_plot, height = 10, width = 8)
+```
+#### Graphics Devices (Base R Plots)
+If we create plots outside of ggplot (with `plot()`, `hist()`, `boxplot()`, etc.), we cannot use `ggsave()` to save our plots since it only supports plots made with ggplot.
+
+Base R provides a way to save these plots with its graphic device functions.  There are three steps involved in this process-
+
+- Specify the file extension and properties (size, resolution, etc.) along with units
+- create the plot, in base R or/and ggplot2
+- Signal that the plot is finished and save it by running `dev.off()`.  Thus, using this way we can insert as many charts in a single pdf without turning off the device till our pdf is ready.
+
+Example-
+```
+png(filename = "scatter.png", width = 5, height = 3, units = "in", res = 300)
+ggplot(mtcars, aes(x = wt, y = mpg)) + 
+  geom_point() +
+  geom_abline(intercept = 5, slope = 3, color = "seagreen")
+dev.off()
+
+pdf(file = "two_page.pdf", width = 6, height = 4)
+plot(mtcars$wt, mtcars$mpg)
+abline(a = 5, b = 3, col = "red")
+ggplot(mtcars, aes(x = wt, y = mpg)) + 
+  geom_point() +
+  geom_abline(intercept = 5, slope = 3, color = "seagreen")
+dev.off()
+```
 
 ### GGPLOT2 Tips and other extensions/supporting libraries
 
-[Extensions](https://exts.ggplot2.tidyverse.org/gallery/)
+- [Extensions](https://exts.ggplot2.tidyverse.org/gallery/)
+- [R graph Gallery](https://r-graph-gallery.com/ggplot2-package.html)
 
 ### Quick recipes
 
