@@ -257,6 +257,11 @@ Now here I would like to introduce you with the concept of pipes\index{pipes} in
 - `|>` is native pipe of R.  It was introduced in R version 4.1
 - `%>%` pipe introduced in `magrittr` package[@R-magrittr], now part of `tidyverse` which we will use extensively in our data analysis tasks.
 
+```{r pipe2, echo=FALSE, fig.align='center', fig.show='hold', fig.cap="Magrittr, the R package, is named after the surrealist painter Rene' Magritte. His painting was self captioned, 'This is not a pipe.'", out.width="99%"}
+knitr::include_graphics('images/pipemag.png')
+```
+
+
 Actually `%>%` is predecessor to native R's pipe `|>`.  The pipes are powerful tools for clearly expressing a sequence of operations that transform an object, without the need of actually creating that object in each step.  Let us understand this concept with the following example.  Suppose, we have to three functions say `FIRST` , `SECOND` and `THIRD` to an object `OBJ` in sequence.  So the order of operations would either be like-
 ```
 THIRD(SECOND(FIRST(OBJ)))
@@ -285,6 +290,11 @@ Now two questions may arise here-
 
 To answer these questions, we will discuss both pipes separately.
 
+```{r pipe3, echo=FALSE, fig.align='center', fig.show='hold', fig.cap="Using pipes in R", out.width="99%"}
+knitr::include_graphics('images/pipes in R.png')
+```
+
+
 ### Magrittr/Dplyr pipe `%>%`
 Pipes usually pass result of previous operation silently into first argument of next/right expression.  So `data %>% filter(col == 'A')` means `filter(data, col=='A')`.  But there may be cases when result of previous (LHS) expression is required to be passed on second or other argument in RHS expression.  A simple example may be of function `lm`, where `data` argument is second argument. In such cases we can make use special placeholder `.` as result of LHS specifically.  In other words aforesaid filter example can be written with placeholder as `data %>% filter(. , col == 'A')`.  Now using this placeholder we can use result of LHS wherever we want.  See this example
 ```{r}
@@ -298,12 +308,17 @@ R version 4.2.0 introduced concept of placeholder `_` similar to dplyr/magrittr,
 - The argument where `_` is to be used, must be named.  So `f(y, z = x)` can be written as `x |> f(y, z= _)`.
 
 ```{r}
-iris |> lm(Sepal.Length ~ Sepal.Width, data = _)
+iris |> lm(Sepal.Length ~ Sepal.Width, data = _) |> summary()
 ```
-The requirement of named argument is not there in dplyr pipe.  So essentially, `iris %>% lm(Sepal.Length ~ Sepal.Width, .)` will also work. But in base R `iris |> lm(Sepal.Length ~ Sepal.Width, _)` would not work and throw an error.  Thus, in cases where the argument of placeholder is not named, we have to use anonymous function. Thus we have write like this-
+The requirement of named argument is not there in dplyr pipe.  So essentially, `iris %>% lm(Sepal.Length ~ Sepal.Width, .)` will also work. But in base R `iris |> lm(Sepal.Length ~ Sepal.Width, _)` would not work and throw an error.  Thus, in cases where the argument of placeholder is not named, we have to use anonymous function. See these-
 
-```{r}
-iris |> {\(.x) lm(Sepal.Length ~ Sepal.Width, .x)}()
 ```
-Type ?`|>` in console and see help page for more details.
+# placeholder without named argument
+iris |> lm(Sepal.Length ~ Sepal.Width, _)
+```
+```{r}
+# Correct way to use unnamed argument
+iris |> {\(.x) lm(Sepal.Length ~ Sepal.Width, .x)}() |> summary()
+```
+Type ```` ?`|>` ```` in console and see help page for more details.
 
