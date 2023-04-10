@@ -24,41 +24,66 @@ lapply(c('xfun'), function(pkg) {
 
 
 options(tinytex.verbose = TRUE)
+
+
 ```
 
 # Preface {-}
 
-In today's digital age, data is abundant and ubiquitous, and its importance cannot be overstated. As a result, auditors must be equipped with the necessary skills to leverage this data and draw insights from it. The use of programming languages such as R in auditing has become increasingly popular due to their ability to analyze large volumes of data and produce accurate results.
+Welcome to my book on R language, designed specifically for auditors who are interested in learning data analytics using open source resources. In today's digital age, data is abundant and ubiquitous, and its importance cannot be overstated. As a result, auditors must be equipped with the necessary skills to leverage this data and draw insights from it. This book is a result of my love for R and my passion for data analytics. In this book, I have tried to present R programming concepts and case studies that are useful in audit analysis as well as forensic audit and fraud investigation.
 
-This book aims to provide a comprehensive guide on data analytics in audit using R. It is designed to be a practical resource for auditors who wish to enhance their data analysis skills and learn how to apply them in real-world scenarios.
+This book is written based on my notes on R while I was learning the language myself. I have included sufficient figures and examples to make the concepts easy to understand for readers with little or zero knowledge of programming.
 
-One of the strengths of R is its ability to handle and manipulate large datasets with ease. R's wide range of packages for data analysis, visualization, and modeling allows auditors to easily perform complex data analysis tasks, such as data cleaning, data transformation, and statistical analysis. Another strength of R is its ability to produce high-quality graphics, which is particularly useful for data visualization and presentation.
+R is an open-source programming language that has been gaining popularity in recent years due to its versatility and flexibility in data analysis. My journey with R began during Covid-19 lockdown, and I was introduced to R for data analysis by one of my colleagues. Since then, R has become an essential tool in my toolbox for data analysis.
 
-The book covers a wide range of topics, including data collection, data cleaning, data visualization, and statistical analysis. It also includes examples of how R can be used to analyze financial and operational data, and how it can be used to identify risks and anomalies which can be further used in fraud detection.
+One of the reasons why I fell in love with R is due to the well-laid concepts of Hadley Wickham. His contributions to the development of R programming concepts have made data analysis more accessible and efficient. The tidyverse, a collection of R packages developed by Wickham, has transformed the way data analysts and data scientists work with data. The tidyverse promotes a consistent and coherent way of working with data, making it easier to write code that is easier to read, understand, and maintain. Wickham's contributions to R have become the foundation of many data analysis tools in other programming languages, including pandas in Python and the DataFrames.jl package in Julia. I hope that this book will inspire readers to explore the vast potential of R and the contributions made by Wickham in data analytics.
 
-The book is structured in a way that allows readers to gradually build their skills from basic concepts to advanced techniques. Each chapter includes practical examples, exercises, and case studies to reinforce the concepts covered. The book also includes tips and tricks to help readers optimize their workflow and avoid common pitfalls.
+One of the advantages of using free/open source tools like R is that they can be easily customized and extended to suit the specific needs of the user. Additionally, free/open source tools are often updated more frequently than licensed tools, ensuring that users have access to the latest features and bug fixes. Using licensed data analytics tools like Caseware IDEA, Tableau, and others can be expensive, and their licensing fees can be a significant burden on smaller organizations or individuals. By using open source tools like R, users can significantly reduce their costs while still having access to powerful data analytics capabilities.
 
-It is worth noting that this book assumes some basic knowledge of R programming. However, readers who are new to R can still benefit from this book by following the step-by-step examples and exercises.
+Another strength of R is its extensive library of packages, which includes many tools for statistical analysis and data visualization. In this book, I have tried to make the concepts of R programming and data analytics as accessible as possible for auditors who may have little or zero knowledge of programming. The book is divided into two parts, the first part covers R programming concepts, and the second part covers case studies in forensic audit and fraud investigation using R.
 
-Finally, I would like to express my gratitude to all the individuals who contributed to the creation of this book. Without their support and encouragement, this project would not have been possible.
+I hope that this book will be a useful resource for auditors who want to learn data analytics using open source resources like R. I invite readers to share their suggestions and comments on the book to help me improve it further.
 
-I hope this book serves as a valuable resource for auditors looking to enhance their data analytics skills and ultimately improve the quality of their work.
-
-
-
-## Why read this book {-}
-
-
+Happy reading and happy learning!
 
 ## Structure of the book {-}
+This book is a comprehensive guide to learning the R programming language, starting from the basics and progressing to advanced topics. The book is divided into two main parts, with the first part covering basic concepts and the second part covering advanced topics.
 
+The first part of the book covers the fundamental concepts of R programming, such as data types, data structures, and subsetting R objects. The second chapter of the book explains how to subset R objects such as vectors, matrices, and lists. The third chapter covers useful pre-defined functions and operations in R, including conditions and logical operators, arithmetical functions, statistical functions, and string manipulation functions.  Fourth chapter include how to use loops for doing tasks repeatedly and effectively.  defining custom functions has also been explained in this chapter.  Next chapter introduces conecpts of functional programming, one of the R's strengths, using `apply` and `purrr` functions.  Next chapter (6) introduces the readers about visualizations in R through ggplot2.
+
+Second part 
+
+Third part of the book covers eight case studies/use cases
+
+1. Data cleaning: This is a critical step in the data analysis process where the dataset is cleaned of errors, inconsistencies, and missing values. It involves identifying and removing duplicate records, handling missing data, and addressing outliers.
+
+2. Random sampling in R: Random sampling is a method of selecting a subset of data from a larger dataset. In R, there are several functions available for generating random samples, including the sample() function and the runif() function.
+
+3. Benford's Law: Benford's Law is a statistical principle that describes the frequency distribution of the first digit in many real-world datasets. It is often used to detect fraudulent data or errors in data entry.
+
+4. Finding duplicates: Duplicates in a dataset can skew results and cause errors in data analysis. There are several methods for finding duplicates, including using Excel's conditional formatting, using the R programming language, and using specialized software.
+
+5. Detecting gaps in sequences: When working with time series data, it is essential to identify any gaps in the data that may skew results or lead to incorrect conclusions. There are several methods for detecting gaps in time series data, including visual inspection, using the R programming language, and using specialized software.
+
+6. Merging large similar datasets into one: When working with large datasets, it may be necessary to merge two or more datasets into a single, comprehensive dataset. There are several methods for merging datasets, including using the R programming language, using SQL queries, and using specialized software.
+
+7. Sentimental analysis through word cloud: Sentiment analysis is a technique used to determine the sentiment or tone of a particular text or document. One way to visualize the results of sentiment analysis is by creating a word cloud, which displays the most commonly used words in the text.
+
+8. Finding string similarity: String similarity is a measure of how similar two strings of text are. This can be useful when working with large datasets that contain text fields, such as customer names or addresses. There are several methods for finding string similarity, including the Levenshtein distance algorithm and the Jaccard similarity index.
 
 
 ## Software information and conventions {-}
 
 Packages **knitr**\index{knitr} [@xie2015] and the **bookdown**\index{bookdown} [@R-bookdown] have been used to compile this book. My R session information is shown below:
 
-```{r}
+```{r echo=FALSE, warning=FALSE}
+suppressMessages(library(tidyverse))
+suppressMessages(library(ggrepel))
+suppressMessages(library(benford.analysis))
+suppressMessages(library(igraph))
+suppressMessages(library(stringdist))
+suppressMessages(library(phonics))
+suppressMessages(library(PGRdup))
 xfun::session_info()
 ```
 

@@ -32,7 +32,7 @@ path <- "data/daur1.xlsx"
 # Step-2
 states_data <- excel_sheets(path) %>% 
 # step-3
-    set_names() %>% 
+    set_names(., .) %>% 
 # step-4
     map_dfr(read_excel, path=path, .id = 'State_name')
 # print file
