@@ -3,7 +3,6 @@
 # R Programming Language
 
 ## Use R as a calculator {#calculator}
-
 To start learning R, just start entering equations directly at the command prompt `>` and press enter.  So, `3+4` will give you result `7`.  Common mathematical operators are listed in table \@ref(tab:table3).\index{common mathematical operators}
 
 Table: (\#tab:table3) Common Mathematical Operators in R
@@ -32,7 +31,6 @@ Strings or Characters have to be enclosed in single or double quotes (more on st
 ## Basic Concepts
 
 ### Object Assignment
-
 R is an object-oriented language.[@R-base] This means that *objects* \index{objects in R}are created and stored in R environment so that they can be used later. 
 
 So what is an object? An object can be something as simple as a number (value) that can be assigned to a variable. Think of it like this; Suppose we have greet each user by his/her name prefixing _hello_ to his/her name.  Now user's name may be saved in our work environment for later use. Thus, once the user name is saved in a variable then can be retrieved later on, by calling the variable name instead of asking the user name again and again.  An object can be also be a data-set or complex model output or some function. Thus, an object created in R can hold multiple values.
@@ -62,7 +60,7 @@ Names of variables even all objects in R are case sensitive, and thus `user`, `U
 - complex (numbers having both real and imaginary parts e.g. 1+1i)
 - raw (not discussed here)
 
-```{r datatypes, fig.cap="Data types in R", fig.show="hold", fig.align="center", echo=FALSE, out.width="99%"}
+```{r datatypes, fig.cap="Data types in R", fig.show="hold", fig.align="center", echo=FALSE, out.height="60%"}
 knitr::include_graphics("images/datatypes.png")
 ```
 
@@ -71,7 +69,6 @@ Let us discuss all of these.
 Note: We will use a pre-built function `typeof()` to check the type of given value/variable.  However, functions as such will be discussed later-on.
 
 ### Logical
-
 In R logical \index{logical data type}values are stored as either `TRUE` or `FALSE` (all in caps)
 ```{r}
 TRUE
@@ -82,7 +79,6 @@ typeof(my_val)
 ```
 
 #### `NA` {-}
-
 There is one special type of logical value i.e. `NA`\index{missing values in R} (short for _Not Available_)\index{NA in R}.  This is used for missing data.  Remember missing data is not empty string. The difference between two is explained in section \@ref(string).
 
 ### Integer
@@ -113,7 +109,6 @@ typeof(my_val4)
 typeof(0xcafeL)
 ```
 
-
 Thus, both `integer` and `double` data types may be understood in R as having sub-types of `numeric` data.  There are three other types of special numerals (specifically doubles) `Inf`\index{Inf data type}, `-Inf` and `NaN`\index{NaN data type}.  First two are infinity (positive and negative) and last one denotes indefinite number (`NaN` short for _Not a Number_).
 ```{r}
 1/0
@@ -122,7 +117,6 @@ Thus, both `integer` and `double` data types may be understood in R as having su
 ```
 
 ### Character {#string}
-
 Strings \index{characters in R}are\index{strings} stored in R as character type.  Strings should either be surrounded by single quotes `''` or double quotes `""`\index{quotes}^[Single and double quotes can be used interchangeably and won't have any difference in the objects created using any of these.  Only thing that should be kept in mind is that the quote used to start the string must be used to close the string, otherwise an error may be thrown.  However, this may be used to store objects with either type of string in the data itself.].
 
 ```{r}
@@ -177,7 +171,6 @@ typeof(my_complex_no)
 ```
 
 ## Data structures/Object Types in R
-
 Objects\index{data structures in R} in R can be either homogeneous or heterogeneous.
 
 ```{r datastr, fig.cap="Objects/Data structures in R, can either be homogeneous (left) or heterogeneous (right)", echo=FALSE, out.width="49%", out.height="49%", fig.show='hold', fig.align='center'}
@@ -204,7 +197,7 @@ knitr::include_graphics("images/example_vecs.png")
 How to create a vector?  Vectors in R are created using either -
 
 - `c()` function\index{c() function} which is shortest and most commonly used function in r.  The elements are concatenated (and hence the shortcut `c` for this function) using a comma `,` ; _OR_
-- `vector()`\index{vector() function} where one argument namely `length` specifies the number of elements therein.
+- `vector()`\index{vector() function} produces vector of given `length` and `mode`.
 
 ```{r}
 my_vector <- c(1, 2, 3)
@@ -222,16 +215,14 @@ vec3 <- c(vec1, vec2)
 vec3
 ```
 
-```{r vecconcat, fig.cap="Vector Concatenation", fig.show="hold", fig.align="center", echo=FALSE, out.height="50%"}
+```{r vecconcat, fig.cap="Vector Concatenation", fig.show="hold", fig.align="center", echo=FALSE, out.height="20%"}
 knitr::include_graphics("images/vector_concatenation.png")
 ```
 
 #### Useful Functions to create new vectors {-}
-
 There are some more useful functions to create new vectors in R, which we should discuss here as we will be using these vectors in subsequent chapters.
 
 #### Generate integer sequences with Colon Operator `:` {-}
-
 This function generates a sequence from the number preceding `:` \index{colon operator}\index{: operator}to next specified number, in arithmetical difference of `1` or `-1` as the case may be.  Notice that output vector type is of `integer`.
 
 ```{r}
@@ -249,7 +240,6 @@ n <- 5
 ```
 
 #### Generate specific sequences with function `seq` {-}
-
 This function\index{seq() function} generates a sequence from a given number to another number, similar to `:`, but it gives us more control over the output desired.  We can provide the difference specifically (`double` type also) in the `by` argument.  Otherwise if `length.out` argument is provided it calculates the difference automatically.
 
 ```{r}
@@ -290,7 +280,7 @@ ages <- c(A = 10, B = 20, C = 15)
 ages
 ```
 
-```{r namedvec, fig.cap="Vector elements can have names", fig.show="hold", fig.align="center", echo=FALSE, out.width="99%"}
+```{r namedvec, fig.cap="Vector elements can have names", fig.show="hold", fig.align="center", echo=FALSE, out.width="60%"}
 knitr::include_graphics("images/named_vector.png")
 ```
 
@@ -386,6 +376,13 @@ as.double(c(TRUE, FALSE))
 as.integer(c(1, 'one', 1L))
 ```
 
+#### Coercion precedence
+Sometimes, inside R both coercion happen at same time.  So which one to precede other?  Actually, implicit coercion will precede explicit coercion always.  Consider this example.  However, without seeing the result try to guess the output.
+```{r}
+as.logical(c('TRUE', 1))
+```
+Explanation:  the vector `c('TRUE', 1)` coerces to `c('TRUE', '1')` due to implicit coercion first and thereafter explicit coercion forces second element `as.logical('1')` to `NA`.  Though `as.logical(1)` would have resulted into `TRUE` but `as.logical("1")` would result into `NA`.
+
 #### Checking dimensions {-}
 
 Now a vector can have `n` number of vectors (recall that each element is a vector in itself) and at times we may need to check how many elements a given vector contains. Using function `length()`, we can check the number of elements.
@@ -419,7 +416,7 @@ Another useful argument is `byrow` \index{byrow argument in matrix function}whic
 matrix(1:12, ncol=3, byrow = TRUE)
 ```
 
-```{r byrow, fig.cap="Arrangement of Matrix, if byrow argument is used", fig.show="hold", fig.align="center", echo=FALSE, out.width="99%"}
+```{r byrow, fig.cap="Arrangement of Matrix, if byrow argument is used", fig.show="hold", fig.align="center", echo=FALSE, out.width="60%"}
 knitr::include_graphics("images/byrow.png")
 ```
 
@@ -456,7 +453,7 @@ matrix(1:1000, nrow=2, ncol=3)
 #### Combining matrices {-}
 Using `cbind()` or `rbind()` we can combine two matrices column-wise or row-wise respectively.  
 
-```{r bind, fig.cap="Binding of Two or more matrices together", fig.show="hold", fig.align="center", echo=FALSE, out.width="99%"}
+```{r bind, fig.cap="Binding of Two or more matrices together", fig.show="hold", fig.align="center", echo=FALSE, out.height="60%"}
 knitr::include_graphics("images/cbind_vs_rbind.png")
 ```
 

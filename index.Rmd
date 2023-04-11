@@ -47,30 +47,40 @@ I hope that this book will be a useful resource for auditors who want to learn d
 Happy reading and happy learning!
 
 ## Structure of the book {-}
-This book is a comprehensive guide to learning the R programming language, starting from the basics and progressing to advanced topics. The book is divided into two main parts, with the first part covering basic concepts and the second part covering advanced topics.
+This book is a comprehensive guide to learning the R programming language, from basic concepts to advanced topics. It is divided into three parts.
 
-The first part of the book covers the fundamental concepts of R programming, such as data types, data structures, and subsetting R objects. The second chapter of the book explains how to subset R objects such as vectors, matrices, and lists. The third chapter covers useful pre-defined functions and operations in R, including conditions and logical operators, arithmetical functions, statistical functions, and string manipulation functions.  Fourth chapter include how to use loops for doing tasks repeatedly and effectively.  defining custom functions has also been explained in this chapter.  Next chapter introduces conecpts of functional programming, one of the R's strengths, using `apply` and `purrr` functions.  Next chapter (6) introduces the readers about visualizations in R through ggplot2.
+**Part One** covers basic programming concepts. **Chapter Zero** provides instructions for downloading and installing R, especially useful for first-time users of any programming language. **Chapter One** covers fundamental concepts, including data types and structures. Chapter Two explains how to subset R objects, such as vectors, matrices, and lists. **Chapter Three** covers pre-defined functions and operations in R, including conditions and logical operators, arithmetical and statistical functions, and string manipulation. **Chapter Four** includes how to use loops effectively for repetitive tasks, as well as defining custom functions. **Chapter Five** introduces the reader to functional programming, one of R's strengths, using the apply family of functions and the functions available in the purrr package. Finally, Chapter Six presents readers with an introduction to visualizations in R using `ggplot2`.
 
-Second part 
+**Part Two** covers data analytics, with a focus on analyzing tabular data. **Chapter Seven** covers importing and exporting data in R. **Chapter Eight** provides techniques for data transformation using `dplyr`. **Chapter Nine** delves into techniques for joining tables for analysis, including relational but non-equi joins. **Chapter Ten** covers data wrangling using the `tidyr` package.
 
-Third part of the book covers eight case studies/use cases
+**Part Three** covers eight case studies, or use cases:
 
-1. Data cleaning: This is a critical step in the data analysis process where the dataset is cleaned of errors, inconsistencies, and missing values. It involves identifying and removing duplicate records, handling missing data, and addressing outliers.
+**Data Cleaning:** A critical step in the data analysis process, data cleaning involves identifying and correcting errors, inconsistencies, and missing values in the dataset. This chapter covers identifying and analysing duplicate records, unclean column names, etc. all using `janitor` package.
 
-2. Random sampling in R: Random sampling is a method of selecting a subset of data from a larger dataset. In R, there are several functions available for generating random samples, including the sample() function and the runif() function.
+**Random Sampling in R:** This chapter covers several functions in R that generate random samples, including the `sample()` and `dplyr` functions.
 
-3. Benford's Law: Benford's Law is a statistical principle that describes the frequency distribution of the first digit in many real-world datasets. It is often used to detect fraudulent data or errors in data entry.
+**Benford's Law:** This statistical principle describes the frequency distribution of the first digit in many real-world datasets and is often used to detect fraudulent data or errors in data entry.
 
-4. Finding duplicates: Duplicates in a dataset can skew results and cause errors in data analysis. There are several methods for finding duplicates, including using Excel's conditional formatting, using the R programming language, and using specialized software.
+**Finding Duplicates:** Duplicates in a dataset can skew results and cause errors in data analysis. This chapter covers several methods for finding duplicates, using the R programming language.
 
-5. Detecting gaps in sequences: When working with time series data, it is essential to identify any gaps in the data that may skew results or lead to incorrect conclusions. There are several methods for detecting gaps in time series data, including visual inspection, using the R programming language, and using specialized software.
+**Detecting Gaps in Sequences:** When working with time series data, identifying gaps in the data is essential to avoid skewed results and incorrect conclusions. This chapter covers various methods for detecting gaps in sequential data.
 
-6. Merging large similar datasets into one: When working with large datasets, it may be necessary to merge two or more datasets into a single, comprehensive dataset. There are several methods for merging datasets, including using the R programming language, using SQL queries, and using specialized software.
+**Merging Large Similar Datasets into One:** Usually the data is stored in excel files by auditee units, sometimes, separate files containing year-wise data or sometimes in multiple sheets and in multiple books.  This chapter covers several methods for merging two or more large datasets available in multiple sheets, books, files, etc. into a single, comprehensive dataset, using the R programming language.
 
-7. Sentimental analysis through word cloud: Sentiment analysis is a technique used to determine the sentiment or tone of a particular text or document. One way to visualize the results of sentiment analysis is by creating a word cloud, which displays the most commonly used words in the text.
+**Sentiment Analysis through Word Clouds:** Sentiment analysis is a technique used to determine the sentiment or tone of a particular text or document. This chapter covers creating word clouds to visualize the results of sentiment analysis.
 
-8. Finding string similarity: String similarity is a measure of how similar two strings of text are. This can be useful when working with large datasets that contain text fields, such as customer names or addresses. There are several methods for finding string similarity, including the Levenshtein distance algorithm and the Jaccard similarity index.
+**Finding String Similarity:** String similarity is a measure of how similar two strings of text are, useful when working with large datasets containing text fields. This chapter covers several methods for finding string similarity, including the lexical similarity and phonetic similarity algorithms.
 
+In addition to the main content of the book, there are two annexures that provide additional resources for readers. The **first annexure** covers file handling operations in R, including how to read and write files, work with directories, and perform basic file operations. The **second annexure** covers regular expressions in R, which are powerful tools for text processing and pattern matching. This annexure explains the syntax and usage of regular expressions in R, and provides examples of how to use them in practical situations. Together, these annexes provide readers with additional skills and knowledge that will enhance their ability to work with R and perform data analysis tasks.
+
+## About author {-}
+Anil Goyal is a data analytics enthusiast who has been working in the Indian Audit and Accounts Department since 1998. Currently posted in the Centre for Data Management and Analytics at the headquarters office in New Delhi, Anil has a passion for learning and applying programming languages/other tools such as R and Tableau to solve data-related challenges.
+
+Anil is a self-taught expert in R, and has been involved in a variety of data analytics projects, including audits of the Public Financial Management System (PFMS), Pradhan Mantri Kisan Samman Nidhi, Pradhan Mantri Gramin Digital Saksharta Abhiyan (PMG-DISHA), and e-procurement through the Indian Railways eProcurement System.
+
+Anil holds a post-graduate degree in Mathematics from the University of Rajasthan, Jaipur, which he received in 1998. This book is his first book. He continues to expand his skill set and knowledge in this field.
+
+When not working with data, Anil enjoys pursuing his personal interests, which include bird photography, nature, and watching movies, etc..
 
 ## Software information and conventions {-}
 

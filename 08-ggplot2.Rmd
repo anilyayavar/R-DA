@@ -1,8 +1,7 @@
 # Visualisation with `ggplot2`
 
 ## Core concepts of **grammar of graphics**
-
-__GGPLOT2__^[[https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/)] [@R-ggplot2] is the package developed by Hadley Wickham, which is based on concepts laid (2005) down by Leland Wilkinson in his _The Grammar of Graphics_.^[[https://link.springer.com/book/10.1007/0-387-28695-0](https://link.springer.com/book/10.1007/0-387-28695-0)]  Basically, a grammar of graphics is a framework which follows a layered approach to describe and construct visualizations or graphics in a structured manner. Even the letters `gg` in ggplot2 stand for `g`rammar of `g`raphics.
+__ggplot2__^[[https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/)] [@R-ggplot2] is the package developed by Hadley Wickham, which is based on concepts laid (2005) down by Leland Wilkinson in his _The Grammar of Graphics_.^[[https://link.springer.com/book/10.1007/0-387-28695-0](https://link.springer.com/book/10.1007/0-387-28695-0)]  Basically, a grammar of graphics is a framework which follows a layered approach to describe and construct visualizations or graphics in a structured manner. Even the letters `gg` in ggplot2 stand for `g`rammar of `g`raphics.
 
 Hadley Wilkinson, in his paper titled __A Layered Grammar of Graphics__^[[http://vita.had.co.nz/papers/layered-grammar.pdf](http://vita.had.co.nz/papers/layered-grammar.pdf)](2010) [@layered-grammar] proposed his idea of layered grammar of graphics in detail and simultaneously put forward his idea of _ggplot2_ as an open source implementation framework for building graphics.  Readers/Users are advised to check the paper as it describes the concept of grammar of graphics in detail.  By the end of the decade the package progressed^[Version 3.3.0 was released in March 2020] to one of the most used and popular packages in R.
 
@@ -33,7 +32,6 @@ library(ggplot2)
 > Out of the afore-mentioned components, three are to be explicitly provided and thus can be understood as mandatoty components.  These three componenets are `data`, `aesthetics` and `geometries`.  Whilst these three compoenents are mandatorily provided, it is not that others are not mandatory.  basically other componenets have their defaults (e.g. default coordinate system is cartesian coordinate system).  Let us dive into these three essential components and build a plot using these.
 
 ### Building a basic plot
-
 We will use `mtcars` datasets, a default dataset to learn the concepts.
 
 See what happens when `data` is provided to `ggplot` function-
@@ -63,7 +61,6 @@ ggplot(mtcars, aes(y = wt)) +
 That's basic architecture of this package. Now lets discuss more on `aesthetics` and `geometries` before moving on to another compoenents.
 
 ### More on Aesthetics
-
 Now what if color is provided inside `geom_*` function. 
 ```{r fig_5, fig.height=3, fig.align='center'}
 ggplot(mtcars, aes(wt, mpg)) +
@@ -190,8 +187,16 @@ A complete list of `geoms` available in ggplot2 is given in Annex-.  Some common
 
 **Note that in ggplot2 `color` aesthetic represent border color of geometry and `fill` aesthetic represent color used to be fill that geometry.**
 
-### Faceting
+#### List of geoms available in `ggplot2`
+Table: List of GEOMS available in `ggplot2` package
+```{r geoms, echo=FALSE}
+geoms <- help.search("geom_", package = 'ggplot2')
+geoms <- unique(geoms$matches[, 1:2])
+row.names(geoms) <- NULL
+knitr::kable(geoms)
+```
 
+### Faceting
 The amount of data also makes a difference: if there is a lot of data it can be hard to distinguish different groups. An alternative solution is to use faceting, as described next.  Facets, or “small-multiples”, are used to split one plot into a multi-panel figure, with one panel (“facet”) per group of data. The same type of plot is created multiple times, each one using a sub-group of the same dataset.
 
 In `ggplot2` faceting can be acheived using either of the functions -

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  10 APR 2023 14:58
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.19)  11 APR 2023 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -781,26 +781,26 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 2.
 [3]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 149.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 151.
 [4] [5] [6])
 \tf@toc=\write5
 \openout5 = `Data-Analytics-for-Audit-using-R.toc'.
 
 [7] [8
 
-] [9] [10] [11] [12] [13
+] [9] [10] [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [14
+[12] [13] [14
+
+] [15] [16
 
 ]
 
-Package natbib Warning: Citation `10.2307/1390807' on page 1 undefined on input line 301.
+Package natbib Warning: Citation `10.2307/1390807' on page 1 undefined on input line 311.
 
 File: images/history.png Graphic file (type bmp)
 <images/history.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 [1
 
 ]
@@ -814,20 +814,26 @@ File: images/first_code.png Graphic file (type bmp)
 <images/first_code.png>
 File: images/indent.png Graphic file (type bmp)
 <images/indent.png>
-[2] [3] [4]
+
+Underfull \vbox (badness 1067) has occurred while \output is active []
+
+[2] [3]
 File: images/rstudio.png Graphic file (type bmp)
 <images/rstudio.png>
 File: images/new_script.png Graphic file (type bmp)
 <images/new_script.png>
-[5]
+[4] [5]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 514.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 524.
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--524
+Underfull \hbox (badness 10000) in paragraph at lines 532--534
 
  []
 
-[6] [7] [8
+[6]
+File: images/tidyverse.png Graphic file (type bmp)
+<images/tidyverse.png>
+[7] [8
 
 ] [9] [10
 
@@ -836,6 +842,11 @@ Chapter 1.
 [11]
 File: images/datatypes.png Graphic file (type bmp)
 <images/datatypes.png>
+
+Overfull \hbox (83.52379pt too wide) in paragraph at lines 730--731
+ [][] 
+ []
+
 [12] [13] [14] [15] [16]
 File: images/homgeneous.jpg Graphic file (type bmp)
 <images/homgeneous.jpg>
@@ -849,18 +860,13 @@ File: images/example_vecs.png Graphic file (type bmp)
 [18]
 File: images/vector_concatenation.png Graphic file (type bmp)
 <images/vector_concatenation.png>
-
-Overfull \hbox (60.72652pt too wide) in paragraph at lines 1124--1125
- [][] 
- []
-
-[19] [20] [21]
+[19] [20]
 File: images/named_vector.png Graphic file (type bmp)
 <images/named_vector.png>
-[22] [23]
+[21] [22]
 File: images/implicit_coercion.png Graphic file (type bmp)
 <images/implicit_coercion.png>
-[24] [25]
+[23] [24] [25]
 File: images/byrow.png Graphic file (type bmp)
 <images/byrow.png>
 [26] [27]
@@ -896,18 +902,18 @@ File: images/function.png Graphic file (type bmp)
 [53
 
 ] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64]
-Overfull \hbox (107.13pt too wide) in paragraph at lines 4239--4239
+Overfull \hbox (107.13pt too wide) in paragraph at lines 4275--4275
 []\TU/lmtt/m/n/10 ## [1] "a1+b2+c3+d4+e5+f6+g7+h8+i9+j10+k11+l12+m13+n14+o15+p16+q17+r18+s19+t20+u21+v22+w23+x24+y25+z26"[] 
  []
 
 [65] [66] [67] [68] [69] [70] [71]
-Overfull \hbox (28.38pt too wide) in paragraph at lines 4830--4830
+Overfull \hbox (28.38pt too wide) in paragraph at lines 4866--4866
 []\TU/lmtt/m/n/10 ## January February March April May June July August September October November December[] 
  []
 
 Missing character: There is no ₹ (U+20B9) in font [lmmono10-regular]:!
 [72]
-Overfull \hbox (28.38pt too wide) in paragraph at lines 4933--4933
+Overfull \hbox (28.38pt too wide) in paragraph at lines 4969--4969
 []\TU/lmtt/m/n/10 ##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...[] 
  []
 
@@ -923,7 +929,7 @@ File: images/while_loop.png Graphic file (type bmp)
 <images/while_loop.png>
 
 LaTeX Font Warning: Font shape `TU/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 5258.
+(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 5294.
 
 [79] [80] [81] [82]
 File: images/pipemag.png Graphic file (type bmp)
@@ -938,7 +944,7 @@ Chapter 5.
 
 ]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 5779.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 5815.
 File: images/apply.png Graphic file (type bmp)
 <images/apply.png>
 [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]
@@ -947,7 +953,7 @@ File: images/map1.png Graphic file (type bmp)
 File: images/map2.png Graphic file (type bmp)
 <images/map2.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 6561--6561
+Underfull \hbox (badness 10000) in paragraph at lines 6597--6597
 []\TU/lmr/m/n/10 Figure 5.2: []Working of map vs map2 family of functions
  []
 
@@ -957,16 +963,16 @@ File: images/pmap.png Graphic file (type bmp)
 File: images/pmap-arg.png Graphic file (type bmp)
 <images/pmap-arg.png>
 
-Overfull \hbox (238.93501pt too wide) in paragraph at lines 6595--6595
+Overfull \hbox (238.93501pt too wide) in paragraph at lines 6631--6631
 []\TU/lmr/m/n/10 Figure 5.3: []Working of pmap family of functions   Source
  []
 
 [100]
 Chapter 6.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <24.88> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 6599.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 6635.
 
-Package natbib Warning: Citation `layered-grammar' on page 101 undefined on input line 6606.
+Package natbib Warning: Citation `layered-grammar' on page 101 undefined on input line 6642.
 
 File: images/layers_gg.png Graphic file (type bmp)
 <images/layers_gg.png>
@@ -1003,27 +1009,24 @@ File: Data-Analytics-for-Audit-using-R_files/figure-latex/fig_10-1.pdf Graphic f
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/fig_10-1.pdf>
 File: shapes.png Graphic file (type bmp)
 <shapes.png>
-[108] [109]
-File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-206-1.pdf Graphic file (type pdf)
-<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-206-1.pdf>
+[108]
+Underfull \vbox (badness 3942) has occurred while \output is active []
+
+[109] [110]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-207-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-207-1.pdf>
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-208-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-208-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[110] [111]
-File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-208-1.pdf Graphic file (type pdf)
-<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-208-1.pdf>
+[111] [112]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-209-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-209-1.pdf>
-
-Underfull \vbox (badness 8038) has occurred while \output is active []
-
-[112]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-210-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-210-1.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 8038) has occurred while \output is active []
 
 [113]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-211-1.pdf Graphic file (type pdf)
@@ -1038,45 +1041,51 @@ File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-212-1.pd
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [115]
-Underfull \hbox (badness 10000) in paragraph at lines 7046--7048
-[]\TU/lmtt/m/n/10 theme(axis.title = element_text(size = 16), plot.title = element_text(size =
- []
-
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-213-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-213-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [116]
+Underfull \hbox (badness 10000) in paragraph at lines 7157--7159
+[]\TU/lmtt/m/n/10 theme(axis.title = element_text(size = 16), plot.title = element_text(size =
+ []
+
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-214-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-214-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[117]
 File: images/export.png Graphic file (type bmp)
 <images/export.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[117] [118]
-File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-215-1.pdf Graphic file (type pdf)
-<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-215-1.pdf>
-[119] [120] [121
+[118] [119]
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-216-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-216-1.pdf>
+[120] [121] [122
 
-] [122
+] [123] [124
 
 ]
 Chapter 7.
-[123]
+[125]
 File: images/scan.png Graphic file (type bmp)
 <images/scan.png>
-[124]
+[126]
 File: images/readline.png Graphic file (type bmp)
 <images/readline.png>
-[125] [126]
-Overfull \hbox (7.38pt too wide) in paragraph at lines 7473--7473
+[127] [128]
+Overfull \hbox (7.38pt too wide) in paragraph at lines 7584--7584
 []\TU/lmtt/m/n/10 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.[] 
  []
 
-[127] [128]
+[129] [130]
 File: images/reprex.png Graphic file (type bmp)
 <images/reprex.png>
-[129] [130
+[131] [132
 
 ]
 Chapter 8.
@@ -1084,127 +1093,127 @@ File: images/dplyr.png Graphic file (type bmp)
 <images/dplyr.png>
 File: images/select_dplyr.png Graphic file (type bmp)
 <images/select_dplyr.png>
-[131] [132] [133] [134]
+[133] [134] [135] [136]
 File: images/mutate_dplyr.png Graphic file (type bmp)
 <images/mutate_dplyr.png>
-[135] [136]
+[137] [138]
 File: images/rename_dplyr.png Graphic file (type bmp)
 <images/rename_dplyr.png>
-[137] [138]
+[139] [140]
 File: images/filter_dplyr.png Graphic file (type bmp)
 <images/filter_dplyr.png>
-[139] [140] [141]
+[141] [142] [143]
 File: images/arrange_dplyr.png Graphic file (type bmp)
 <images/arrange_dplyr.png>
-[142]
+[144]
 File: images/groupby_dplyr.png Graphic file (type bmp)
 <images/groupby_dplyr.png>
-[143] [144] [145] [146] [147] [148]
+[145] [146] [147] [148] [149] [150]
 Chapter 9.
 File: images/conf.jpg Graphic file (type bmp)
 <images/conf.jpg>
 
 Underfull \vbox (badness 1584) has occurred while \output is active []
 
-[149
+[151
 
 ]
 File: images/concat_joins.png Graphic file (type bmp)
 <images/concat_joins.png>
-[150] [151]
+[152] [153]
 File: images/mutating_joins.png Graphic file (type bmp)
 <images/mutating_joins.png>
-[152] [153] [154] [155]
-Overfull \hbox (44.13pt too wide) in paragraph at lines 9025--9025
+[154] [155] [156] [157]
+Overfull \hbox (44.13pt too wide) in paragraph at lines 9136--9136
 []\TU/lmtt/m/n/10 ## Warning in left_join(., df2, by = "x"): Detected an unexpected many-to-many relationship[] 
  []
 
-[156] [157] [158] [159]
-Underfull \hbox (badness 3568) in paragraph at lines 9289--9291
+[158] [159] [160] [161]
+Underfull \hbox (badness 3568) in paragraph at lines 9400--9402
 []\TU/lmtt/m/n/10 between(x, y_lower, y_upper, ..., bounds = "[]") \TU/lmr/m/n/10 which is just short for \TU/lmtt/m/n/10 x >=
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 9291--9293
+Underfull \hbox (badness 3568) in paragraph at lines 9402--9404
 []\TU/lmtt/m/n/10 within(x_lower, x_upper, y_lower, y_upper) \TU/lmr/m/n/10 which is just short for \TU/lmtt/m/n/10 x_lower >=
  []
 
-[160] [161] [162
+[162] [163] [164
 
 ]
 Chapter 10.
 
-Package natbib Warning: Citation `JSSv059i10' on page 163 undefined on input line 9420.
+Package natbib Warning: Citation `JSSv059i10' on page 165 undefined on input line 9531.
 
 
-Package natbib Warning: Citation `JSSv021i12' on page 163 undefined on input line 9420.
+Package natbib Warning: Citation `JSSv021i12' on page 165 undefined on input line 9531.
 
 File: images/tidy-1.png Graphic file (type bmp)
 <images/tidy-1.png>
-[163] [164] [165]
-Underfull \hbox (badness 1024) in paragraph at lines 9592--9593
+[165] [166] [167]
+Underfull \hbox (badness 1024) in paragraph at lines 9703--9704
 []\TU/lmr/m/n/10 To perform this \TU/lmr/m/it/10 tidying \TU/lmr/m/n/10 exercise, we will need two most important functions from \TU/lmtt/m/n/10 tidyr
  []
 
 File: images/pivot_longer.png Graphic file (type bmp)
 <images/pivot_longer.png>
-[166] [167] [168]
+[168] [169] [170]
 File: images/pivot_wider.png Graphic file (type bmp)
 <images/pivot_wider.png>
-[169] [170] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180
+[171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182
 
-] [181] [182
+] [183] [184
 
 ]
 Chapter 11.
-[183] [184]
-Underfull \hbox (badness 1127) in paragraph at lines 10596--10597
+[185] [186]
+Underfull \hbox (badness 1127) in paragraph at lines 10707--10708
 \TU/lmr/m/n/10 While loading excel files in R, we may have sometimes noticed \TU/lmtt/m/n/10 41590 \TU/lmr/m/n/10 instead of having
  []
 
-[185] [186
+[187] [188
 
 ]
 Chapter 12.
 File: images/simple.png Graphic file (type bmp)
 <images/simple.png>
-[187]
+[189]
 File: images/systematic.png Graphic file (type bmp)
 <images/systematic.png>
-[188]
+[190]
 Underfull \vbox (badness 1466) has occurred while \output is active []
 
-[189]
-Overfull \hbox (18.94011pt too wide) in paragraph at lines 10818--10847
+[191]
+Overfull \hbox (18.94011pt too wide) in paragraph at lines 10929--10958
 [][] 
  []
 
 File: images/stratified.png Graphic file (type bmp)
 <images/stratified.png>
 
-Overfull \hbox (62.93011pt too wide) in paragraph at lines 10877--10894
+Overfull \hbox (62.93011pt too wide) in paragraph at lines 10988--11005
 [][] 
  []
 
-[190]
-Overfull \hbox (96.63pt too wide) in paragraph at lines 10927--10927
+[192]
+Overfull \hbox (96.63pt too wide) in paragraph at lines 11038--11038
 []  \TU/lmtt/m/n/10 tibble::rownames_to_column('State') %>% # this step will not be used in databases without row names[] 
  []
 
 
-Overfull \hbox (92.3801pt too wide) in paragraph at lines 10929--10950
+Overfull \hbox (92.3801pt too wide) in paragraph at lines 11040--11061
 [][] 
  []
 
-[191] [192] [193] [194
+[193] [194] [195] [196
 
 ]
 Chapter 13.
 
-Package natbib Warning: Citation `frank_ben' on page 195 undefined on input line 11034.
+Package natbib Warning: Citation `frank_ben' on page 197 undefined on input line 11145.
 
 
-Package natbib Warning: Citation `newcomb' on page 195 undefined on input line 11034.
+Package natbib Warning: Citation `newcomb' on page 197 undefined on input line 11145.
 
 File: images/frank_benford.jpg Graphic file (type bmp)
 <images/frank_benford.jpg>
@@ -1213,151 +1222,147 @@ File: images/Simon.jpg Graphic file (type bmp)
 
 Underfull \vbox (badness 3019) has occurred while \output is active []
 
-[195]
-File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-321-1.pdf Graphic file (type pdf)
-<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-321-1.pdf>
+[197]
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-322-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-322-1.pdf>
 
-Package natbib Warning: Citation `pinkham' on page 196 undefined on input line 11062.
+Package natbib Warning: Citation `pinkham' on page 198 undefined on input line 11173.
 
-[196]
+[198]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/census-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/census-1.pdf>
-[197]
+[199]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/scaling-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/scaling-1.pdf>
 
-Package natbib Warning: Citation `t_hill' on page 198 undefined on input line 11117.
+Package natbib Warning: Citation `t_hill' on page 200 undefined on input line 11228.
 
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/ben2-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/ben2-1.pdf>
 
 Underfull \vbox (badness 4120) has occurred while \output is active []
 
-[198]
+[200]
 
-Package natbib Warning: Citation `articlesec' on page 199 undefined on input line 11166.
+Package natbib Warning: Citation `articlesec' on page 201 undefined on input line 11277.
 
 
 Underfull \vbox (badness 6675) has occurred while \output is active []
 
-[199]
+[201]
 
-Package natbib Warning: Citation `nigrinifraud' on page 200 undefined on input line 11181.
+Package natbib Warning: Citation `nigrinifraud' on page 202 undefined on input line 11292.
 
 
-Package natbib Warning: Citation `nigrinifraud' on page 200 undefined on input line 11183.
+Package natbib Warning: Citation `nigrinifraud' on page 202 undefined on input line 11294.
 
-[200] [201] [202]
-Overfull \hbox (107.13pt too wide) in paragraph at lines 11367--11367
+[202] [203] [204]
+Overfull \hbox (107.13pt too wide) in paragraph at lines 11478--11478
 []\TU/lmtt/m/n/10 ## Remember: Real data will never conform perfectly to Benford's Law. You should not focus on p-values![] 
  []
 
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/benplot-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/benplot-1.pdf>
-[203] [204]
+[205] [206]
 Chapter 14.
-[205
+[207
 
-] [206]
+] [208]
 File: images/network.png Graphic file (type bmp)
 <images/network.png>
 
-Overfull \hbox (285.16513pt too wide) in paragraph at lines 11529--11530
+Overfull \hbox (285.16513pt too wide) in paragraph at lines 11640--11641
  [][] 
  []
 
-[207] [208]
+[209] [210]
 
-LaTeX Warning: Reference `across' on page 209 undefined on input line 11609.
+LaTeX Warning: Reference `across' on page 211 undefined on input line 11720.
 
-[209]
+[211]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/igraph2-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/igraph2-1.pdf>
-[210] [211] [212
+[212] [213] [214
 
 ]
 Chapter 15.
-[213] [214]
+[215] [216]
 Chapter 16.
 File: images/excel.png Graphic file (type bmp)
 <images/excel.png>
-[215
+[217
 
-] [216] [217]
-Overfull \hbox (44.13pt too wide) in paragraph at lines 11967--11967
+] [218] [219]
+Overfull \hbox (44.13pt too wide) in paragraph at lines 12078--12078
 []\TU/lmtt/m/n/10 ## [1] "G:\\OneDrive - A c GeM CAG of INDIA (1)\\Documents\\R-DA\\Data\\data_by_4_cyl.xlsx"[] 
  []
 
 
-Overfull \hbox (44.13pt too wide) in paragraph at lines 11967--11967
+Overfull \hbox (44.13pt too wide) in paragraph at lines 12078--12078
 []\TU/lmtt/m/n/10 ## [1] "G:\\OneDrive - A c GeM CAG of INDIA (1)\\Documents\\R-DA\\Data\\data_by_6_cyl.xlsx"[] 
  []
 
 
-Overfull \hbox (44.13pt too wide) in paragraph at lines 11967--11967
+Overfull \hbox (44.13pt too wide) in paragraph at lines 12078--12078
 []\TU/lmtt/m/n/10 ## [1] "G:\\OneDrive - A c GeM CAG of INDIA (1)\\Documents\\R-DA\\Data\\data_by_8_cyl.xlsx"[] 
  []
 
-[218]
+[220]
 Chapter 17.
-[219
+[221
 
 ]
 File: Data-Analytics-for-Audit-using-R_files/figure-latex/wordcloud-1.pdf Graphic file (type pdf)
 <use Data-Analytics-for-Audit-using-R_files/figure-latex/wordcloud-1.pdf>
-[220] [221] [222
+[222] [223] [224
 
 ]
 Chapter 18.
-[223] [224]
-Overfull \hbox (12.63pt too wide) in paragraph at lines 12200--12200
+[225] [226]
+Overfull \hbox (12.63pt too wide) in paragraph at lines 12311--12311
 []  \TU/lmtt/m/n/10 method = c("osa", "lv", "dl", "hamming", "lcs", "qgram", "cosine", "jaccard", "jw",[] 
  []
 
-[225] [226] [227] [228
+[227] [228] [229] [230
 
 ]
 Appendix A.
-[229
+[231
 
-] [230]
+] [232]
 Overfull \hbox (77.89684pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 A.3.  AN IMPORTANT FUNCTION FOR OPENING A DIALOG BOX FOR SELECTING FILES AND FOLDER \TU/lmr/m/n/10 231
+\TU/lmr/m/sl/10 A.3.  AN IMPORTANT FUNCTION FOR OPENING A DIALOG BOX FOR SELECTING FILES AND FOLDER \TU/lmr/m/n/10 233
  []
 
-[231]
+[233]
 File: images/Rproj1.png Graphic file (type bmp)
 <images/Rproj1.png>
 File: images/Rproj2.png Graphic file (type bmp)
 <images/Rproj2.png>
-[232]
+[234]
 Appendix B.
-[233
+[235
 
-] [234] [235] [236] [237] [238] [239] [240]
-Appendix C.
-(./Data-Analytics-for-Audit-using-R.bbl [241
-
-] [242
-
-])
+] [236] [237] [238] [239] [240] [241] (./Data-Analytics-for-Audit-using-R.bbl [242])
 
 Package natbib Warning: There were undefined citations.
 
-[243] (./Data-Analytics-for-Audit-using-R.aux)
+[243
+
+] (./Data-Analytics-for-Audit-using-R.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Data-Analytics-for-Audit-using-R.out' has not changed.
-(rerunfilecheck)             Checksum: 3CC793CD1342E759ECC6CBD828C77C26;26406.
+(rerunfilecheck)             Checksum: 92C5C7306DD716FFC70E49A9401B0E6F;26294.
  ) 
 Here is how much of TeX's memory you used:
- 19827 strings out of 478775
- 384035 string characters out of 5849353
+ 19848 strings out of 478775
+ 384521 string characters out of 5849353
  1867985 words of memory out of 5000000
- 39479 multiletter control sequences out of 15000+600000
+ 39499 multiletter control sequences out of 15000+600000
  518866 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,8n,121p,921b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,8n,121p,1046b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Data-Analytics-for-Audit-using-R.pdf (257 pages).
+Output written on Data-Analytics-for-Audit-using-R.pdf (259 pages).

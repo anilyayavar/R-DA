@@ -6,39 +6,35 @@ library(knitr)
 ```
 
 ## Overview
-
 R programming language is the extended version of the S programming language. John Chambers, the creator of the S programming language in 1976 at Bell laboratories. In 1988, the official version of the S language came into existence with the name S-PLUS. The R language is almost the unchanged version of S-PLUS. 
 
 In 1991, R was created by **Ross Ihaka** \index{Ihaka, Ross} and **Robert Gentleman** \index{Gentleman, Robert} in the Department of Statistics at the University of Auckland. Ross’s and Robert’s experience developing R is documented in a 1996 paper in the Journal of Computational and Graphical Statistics [@10.2307/1390807]. In 1997 the R Core Group was formed, containing some people associated with S and S-PLUS. Currently, the core group controls the source code for R and is solely able to check in changes to the main R source tree. Finally, in 2000 R version 1.0.0 was released to the public. \index{History of R}
 
-```{r history, echo=FALSE, fig.cap="A Brief History of R", fig.show='hold', fig.align='center', out.width="99%"}
+```{r history, echo=FALSE, fig.cap="A Brief History of R", fig.show='hold', fig.align='center', out.width="90%"}
 include_graphics("images/history.png")
 ```
 
 ## Why R?
-
 R programming language is an open-source programming language for statistical computation. It supports n number of statistical analysis techniques, machine learning models, and graphical visualization for data analysis. It serves the purpose of the free software environment for statistical computation and graphics. R is easy to understand and implement. The packages are available to create an effective R program, data models, and graphical charts. For research and analytics purposes,  it is a popular language among statisticians and data scientists.
 
-```{r whyr, echo=FALSE, fig.cap="Why R", fig.show='hold', fig.align='center', out.width="99%"}
+```{r whyr, echo=FALSE, fig.cap="Why R", fig.show='hold', fig.align='center', out.width="90%"}
 include_graphics("images/whyR.png")
 ```
 
 ## Download and installation
-
 The R programming language for your local computer can be downloaded from web portal of **The Comprehensive R Archive Network**,\index{CRAN} in short mostly referred to as **CRAN**,\index{CRAN} which is a network of ftp and web servers around the world that store identical, up-to-date, versions of code and documentation for R.  The portal address is [https://cran.r-project.org/](https://cran.r-project.org/) -
 
-```{r cranportal, echo=FALSE, fig.cap="CRAN Portal", fig.show='hold', fig.align='center', out.width="99%"}
+```{r cranportal, echo=FALSE, fig.cap="CRAN Portal", fig.show='hold', fig.align='center', out.width="60%"}
 include_graphics("images/CRAN.png")
 ```
 
 Download the specific (as per the operating system) file from the port and install it following the instructions.  The R programming interface looks like-
 
-```{r workspace, echo=FALSE, fig.cap="R Workspace", fig.show='hold', fig.align='center', out.width="99%"}
+```{r workspace, echo=FALSE, fig.cap="R Workspace", fig.show='hold', fig.align='center', out.width="70%"}
 include_graphics("images/workspace.png")
 ```
 
 ## Writing your first code
-
 Writing code in R is pretty easy.  Just type the command in front of `>`, as shown in figure \@ref(fig:workspace) prompt and press enter(Return) key.  R will display the results in next line.
 
 ```{r first, echo=FALSE, fig.cap="Left - Writing first Code in R; Right - Indenting code not necessary but recommended", out.width="49%", out.height= "49%", fig.show='hold', fig.align='center'}
@@ -65,7 +61,7 @@ Remember -
 1 + 3 # +5
 ```
 
-> Tip: to clear the workspace, just click `ctrl` + `l` together.
+> Tip: to clear the workspace, just click `ctrl` + `l`.
 
 Normally R code files have an extension `.R` but other R files may have other extensions, such as project files `.Rproj`, markdown files `.Rmd`, and many more.
 
@@ -74,12 +70,11 @@ All of the programming/code writing may be done in R.  But you may have noticed 
 > Using R studio IDE is so much popular that many persons using R, do not distinguish between R and its IDE.  Even Stack Overflow which is a popular forum to seek online help explicitly asks users not to tag 'R studio' in general R code problems^[[https://stackoverflow.com/tags/rstudio/info](https://stackoverflow.com/tags/rstudio/info)].
 
 ## R studio IDE 
-
 RStudio\index{R studio} is free and open source IDE (Integrated Development Environment) for R, which is available for Windows, Mac OS and LINUX. It can be downloaded from its portal [https://www.rstudio.com](https://www.rstudio.com/products/rstudio/download/). For our most of the data analytics needs, we require Rstudio desktop version, which is available for free to download and installation.
 
 It includes a console, syntax-highlighting editor that supports direct code execution, and a variety of robust tools for plotting, viewing history, debugging and managing your work-space. After downloading and installing it the local machine, a work-space/UI similar to that shown in following figure, is opened.
 
-```{r rstud, echo=FALSE, fig.cap="R Studio interface", fig.show='hold', fig.align='center', out.width="99%"}
+```{r rstud, echo=FALSE, fig.cap="R Studio interface", fig.show='hold', fig.align='center', out.width="90%"}
 include_graphics("images/rstudio.png")
 ```
 
@@ -96,13 +91,12 @@ There are four panels
     + **Connections:** Used to connect/import with external database/data
 - Bottom-right: 
     + **tree of folders**, to see the file structure of current working directory
-    + **graph window**, if the out of r command is a plot/graph, it will be generated here
+    + **graph window**, if the output of r command is a plot/graph, it will be generated here
     + **packages**, to download and load the external packages using mouse click
     + **help window**, to get help on desired functions.  Even the help sought through r command will be displayed in this window.
     + **viewer:** can be used to view local web content.
 
 ## Packages and libraries
-
 One of the strength of R is that numerous user-written packages (or _libraries_)\index{packages, external} \index{library} are available on __Comprehensive R Archive Network__ i.e. [CRAN](https://cran.r-project.org/)\index{CRAN}. Package installation is perhaps easiest of the jobs in R.
 
 The command \index{install.packages() function} is fairly simple -
@@ -120,7 +114,6 @@ library(tidyverse)
 ```
 
 ### Double Colon operator `::`
-
 In R, we can use double colon operator \index{double colon operator, ::} i.e. `::` to access functions that are defined as part of the internal functions that a package uses. These may be used in at least two cases-
 
 1. To call a function say `filter` from package `dplyr` we may use `dplyr::filter()` without actually loading it.  
@@ -128,7 +121,6 @@ In R, we can use double colon operator \index{double colon operator, ::} i.e. `:
 
 
 ## Getting Help within R {#help}
-
 Once R is installed, there is a comprehensive built-in help system. We can use any of the following commands-
 ```
 help.start()   # general help
@@ -140,8 +132,7 @@ example(foo)   # show an example of function `foo`
 Alternatively, features under the Help menu or help pane, can also be used.
 
 
-## TIDYVERSE
-
+## tidyverse
 The [tidyverse](https://www.tidyverse.org/) is a _package of packages_ that work in harmony because they share common data representations and 'API' design. This package is designed to make all these easy to install and load multiple 'tidyverse' packages in a single step.
 
 Though `tidyverse`  is a collection 20+ packages (in fact 80+ packages will be installed including depended packages) which are all installed by `install.packages("tidyverse")` command, yet `library(tidyverse)` load [eight](https://www.tidyverse.org/packages/) of them.  Others (like `lubridate`) will have to loaded explicitly.
@@ -156,6 +147,10 @@ Though `tidyverse`  is a collection 20+ packages (in fact 80+ packages will be i
 8. [**forcats**](https://forcats.tidyverse.org/) provides a suite of useful tools that solve common problems with factors. 
 
 With latest version of Tidyverse, while loading it [**lubridate**](https://lubridate.tidyverse.org/) also loads with default.
+
+```{r tidyverse, echo=FALSE, fig.cap="tidyverse", fig.show='hold', fig.align='center', out.width="70%"}
+knitr::include_graphics('images/tidyverse.png')
+```
 
 There are several other `tidyverse` packages which we will be working with-
 
