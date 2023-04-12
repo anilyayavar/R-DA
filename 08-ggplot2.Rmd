@@ -256,6 +256,9 @@ ggplot(mtcars, aes(x = hp, y = mpg)) +
             vjust = -1)
 ```
 
+#### Modifying scales
+
+
 #### Labeling Charts
 There are several ways to add labels to ggplot2 charts, but we will focus on using the `labs()` function, which allows us to add `titles`, `subtitles`, `axis labels`, and other annotations like `caption`, etc. to the plot.  Example -
 ```{r}
@@ -398,17 +401,11 @@ dev.off()
 - [Extensions](https://exts.ggplot2.tidyverse.org/gallery/)
 - [R graph Gallery](https://r-graph-gallery.com/ggplot2-package.html)
 
-### Quick recipes
-
-
-
-
------------
-
 ### More to read
 
 - Book [@ggplot22016]
 - [ggplot2 cheatsheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) 
 - [Another Cheatsheet](http://r-statistics.co/ggplot2-cheatsheet.html)
 
+### Indian States filled map (choropleth)
 
