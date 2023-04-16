@@ -79,8 +79,8 @@ lambdas(model)
  - Further, the `plot()` function will output the following plots which are easy to inerpret.
 
 
-```{r}
+```{r deaplots, out.height='50%', fig.show='hold'}
 plot(model)
 ```
 
-
+The example was simple enough.  However, we can easily perform DEA on any number of inputs and outputs, using R.

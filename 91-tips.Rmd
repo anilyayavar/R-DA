@@ -1,3 +1,40 @@
+# Writing Efficient Code
+
+# Common Errors and debugging
+RStudio is strongly recommended. Features - 
+
+- matching pair of brackets
+- rainbow parenthesis
+
+## single backslash in path
+
+## Missing Quotes/brackets
+
+## Creating list/vector of values using brackets only.
+
+## Indexing starts with 1 (as against 0 in python)
+
+## package installation
+
+## Sampling without seed
+
+## Remember the difference between `=` and `==`
+
+## Remember the differences between subsetting with `$` , `[` and `[[`
+
+## Remember the functions may take individual vector or columns of data.frame
+
+use `with` or `%$%` pipe from magrittr
+
+- `$` operator is invalid for atomic vectors
+- `object of type ‘closure’ is not subsettable`
+
+## Do not forget the implicit coercion
+
+## `“subscript out of bounds” Error`
+
+## `‘non-numeric argument to a binary operator’ Error`
+
 # Quick Tips and Tricks
 
 ## add-ins datapasta

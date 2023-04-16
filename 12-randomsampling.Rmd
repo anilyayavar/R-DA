@@ -1,4 +1,4 @@
-# Part III: Case Studies {-}
+# Part IV: Case Studies {-}
 
 # Data Cleaning in R
 Data cleansing is one of the important steps in data analysis. Multiple packages are available in r to clean the data sets.  One of such packages is `janitor` which we will be using in this chapter along with few other packages.  
