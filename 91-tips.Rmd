@@ -19,7 +19,7 @@ RStudio is strongly recommended. Features -
 
 ## Indexing starts with 1 (as against 0 in python)
 
-## package installation
+## Package installation
 
 ## Sampling without seed
 
@@ -28,6 +28,40 @@ RStudio is strongly recommended. Features -
 ## Remember the differences between subsetting with `$` , `[` and `[[`
 
 ## Remember the functions may take individual vector or columns of data.frame
+
+# Common Misconceptions
+
+## Cross join vs many to many relationship
+
+```{r}
+tbl1 <- data.frame(
+  stringsAsFactors = FALSE,
+                 Head.Name = c("Salaries",
+                               "Medical","Office Expenses","Salaries",
+                               "Office Expenses","Office Expenses"),
+   Budget.Provided = c(10000L, 5000L, 20000L, 9000L, 15000L, 5000L)
+        )
+
+tbl2 <- data.frame(
+  stringsAsFactors = FALSE,
+                 Head.Name = c("Salaries",
+                               "Salaries","Medical","Office Expenses",
+                               "Office Expenses","Salaries","Office Expenses",
+                               "Office Expenses"),
+                  Expenses = c(5000L,5000L,
+                               4500L,10000L,9500L,9000L,15000L,5500L)
+        )
+
+library(tidyverse)
+cross_join(tbl1, tbl2)
+
+left_join(tbl1, tbl2,
+          by = 'Head.Name') %>% 
+  filter(Head.Name == 'Salaries')
+
+
+```
+
 
 use `with` or `%$%` pipe from magrittr
 
