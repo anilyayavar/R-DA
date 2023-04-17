@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.13)  17 APR 2023 11:38
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.13)  17 APR 2023 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1396,55 +1396,82 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Chapter 23.
 [259
 
-] [260
+] [260]
+Overfull \hbox (337.5401pt too wide) in paragraph at lines 13157--13170
+[] 
+ []
 
-] [261] [262
+
+Overfull \hbox (7.33197pt too wide) in paragraph at lines 13172--13172
+[]\TU/lmr/bx/n/12 Alternate syntax (for those who do not want to use \TU/lmtt/b/n/12 purrr::pmap_dfr\TU/lmr/bx/n/12 ) 
+ []
+
+[261]
+Overfull \hbox (23.13pt too wide) in paragraph at lines 13178--13178
+[]       \TU/lmtt/m/n/10 function(x) reverse_geo(sample$lat[x], sample$long[x], full_results = TRUE)) %>%[] 
+ []
+
+[262] [263
+
+] [264
 
 ]
 Chapter 24.
-[263] [264] [265] [266] [267] [268] [269] [270]
+[265] [266] [267] [268] [269] [270] [271] [272]
 Chapter 25.
-[271
+[273
 
-] [272]
+] [274]
 Overfull \hbox (80.39684pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 25.3.  AN IMPORTANT FUNCTION FOR OPENING A DIALOG BOX FOR SELECTING FILES AND FOLDER \TU/lmr/m/n/10 273
+\TU/lmr/m/sl/10 25.3.  AN IMPORTANT FUNCTION FOR OPENING A DIALOG BOX FOR SELECTING FILES AND FOLDER \TU/lmr/m/n/10 275
  []
 
-[273]
+[275]
 File: images/Rproj1.png Graphic file (type bmp)
 <images/Rproj1.png>
 File: images/Rproj2.png Graphic file (type bmp)
 <images/Rproj2.png>
-[274]
+[276]
 Appendix A.
-[275
+[277
 
 
-] [276
+] [278
 
 ]
 Appendix B.
-[277] [278]
+[279] [280
+
+]
 Appendix C.
-(./Data-Analytics-for-Audit-using-R.bbl [279
+[281]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [280
+[282]
+Overfull \hbox (107.13pt too wide) in paragraph at lines 14181--14181
+[]\TU/lmtt/m/n/10 ## Warning in left_join(tbl1, tbl2, by = "Head.Name"): Detected an unexpected many-to-many relationship[] 
+ []
 
-] [281]) [282] (./Data-Analytics-for-Audit-using-R.aux)
+[283] [284]
+Appendix D.
+(./Data-Analytics-for-Audit-using-R.bbl [285
+
+] [286
+
+] [287]) [288] (./Data-Analytics-for-Audit-using-R.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Data-Analytics-for-Audit-using-R.out' has not changed.
-(rerunfilecheck)             Checksum: EA5D8529FF3F406F66CEF83999916ED4;33266.
+(rerunfilecheck)             Checksum: D63862D463C37444D8B44AE96C4231B6;34098.
  ) 
 Here is how much of TeX's memory you used:
- 20106 strings out of 478674
- 397343 string characters out of 5846652
+ 20119 strings out of 478674
+ 397648 string characters out of 5846652
  1868290 words of memory out of 5000000
- 39836 multiletter control sequences out of 15000+600000
+ 39849 multiletter control sequences out of 15000+600000
  518866 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,8n,121p,1046b,549s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Data-Analytics-for-Audit-using-R.pdf (296 pages).
+Output written on Data-Analytics-for-Audit-using-R.pdf (302 pages).
