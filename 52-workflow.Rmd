@@ -1,7 +1,3 @@
-\cleardoublepage 
-
-# (APPENDIX) Appendix {-}
-
 # File handling operations in R {#file}
 
 In chapter \@ref(read) we have already learned about reading and writing data from/to files.  In this section, we will learn about some other functions that are useful while reading and writing data, such as - changing directory, creating a file, renaming a file, check the existence of the file, listing all files in the working directory, copying files and creating directories.
@@ -127,6 +123,4 @@ knitr::include_graphics(c("images/Rproj1.png", "images/Rproj2.png"))
 After Creating the projects you will notice that a file with an extension `.Rproj` has been created by R Studio in the selected directory/location of project.  
 
 To resume working in the same project directory, either double click the file, or open the project using file menu i.e. `file` $->$ `Open Project`.
-
-
 

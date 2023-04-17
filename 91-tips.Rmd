@@ -1,10 +1,15 @@
+\cleardoublepage 
+
+# (APPENDIX) Appendix {-}
+
 # Writing Efficient Code
 
 # Common Errors and debugging
-RStudio is strongly recommended. Features - 
 
-- matching pair of brackets
-- rainbow parenthesis
+RStudio is strongly recommended. Features -
+
+-   matching pair of brackets
+-   rainbow parenthesis
 
 ## single backslash in path
 
@@ -26,8 +31,8 @@ RStudio is strongly recommended. Features -
 
 use `with` or `%$%` pipe from magrittr
 
-- `$` operator is invalid for atomic vectors
-- `object of type ‘closure’ is not subsettable`
+-   `$` operator is invalid for atomic vectors
+-   `object of type ‘closure’ is not subsettable`
 
 ## Do not forget the implicit coercion
 
