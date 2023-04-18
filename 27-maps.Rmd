@@ -1,0 +1,116 @@
+# Plotting Map Objects
+To plot maps we require geo-spatial information for the associated geographical regions.  In other words, to plot a place on a map, we need its coordinates (latitude and longitude), or to plot a country/region we need its spatial geometry polygon.  Many softwares/tools have some inbuilt geo-spatial information that easily plots the given spatial information on a map.
+
+## Spatial objects
+Spatial objects refer to data structures that store geographic or spatial information, such as `points`, `lines`, `polygons`, and `grids`. These objects are typically represented as `data frames` or `lists`, in R, with additional attributes that describe their spatial properties, such as coordinates, projections, and bounding boxes.  
+
+In R there are many packages that provide functionality required to work with these spatial objects.  One such common library is `maps` which stores some spatial information of countries like US, France, etc. and World therein.  
+
+```{r}
+library(maps)
+
+# notice how some polygons extend beyond the [-180,180] interval:
+map('world', fill = TRUE, col = 1:10)
+# if you wrap at [-180,180], you also can get a clean closure of Antarctica
+map('world', fill = TRUE, col = 1:10, wrap=c(-180,180) )
+```
+
+To see the data stored in these spatial files we can use `ggplot2::map_data`.  Let's see its first 6 rows.
+```{r fig.show='hide'}
+
+ggplot2::map_data(map('world', fill = TRUE, col = 1:10, wrap=c(-180,180) )) |> head(6)
+```
+
+The `"sf"` package is another popular package for working with spatial data in R. The "sf" package provides a set of classes and functions for representing, manipulating, and visualizing spatial data in a consistent and efficient way.
+
+One of the main advantages of the "sf" package is that it uses a simple data frame format to store spatial data, which makes it easy to work with and integrate with other R packages. The "sf" package supports a wide range of spatial data types, including points, lines, polygons, and grids, and it can handle both vector and raster data.
+
+We will use package `sf` in combination with `ggplot2` to draw filled maps (or choropleths) of India.  Choropleths (**not chloropleths**) are thematic maps that use shading or coloring to represent spatial data. In other words, choropleths display geographic areas such as countries, states, or counties, and color them according to a variable of interest, such as population density, unemployment rate, or average income.  
+
+Additionally, we will use Indian geo-spatial data provided by Survey of India^[https://onlinemaps.surveyofindia.gov.in/Digital_Product_Show.aspx].
+
+## Drawing Choropleths 
+
+```{r}
+library(sf)
+library(dplyr)
+library(ggplot2)
+
+# Read States SHP file
+states <- st_read("Data\\india shp\\STATE_BOUNDARY.shp")
+
+states %>% 
+  ggplot() +
+  geom_sf()
+```
+Let's beautify the chart.  We may fill colors on...........
+```{r}
+states %>% 
+  ggplot() +
+  geom_sf(aes(fill = as.factor(State_LGD))) +
+  coord_sf() +
+  theme_void() +
+  theme(legend.position = 'none')
+```
+
+labels
+```{r}
+# devtools::install_github("yutannihilation/ggsflabel")
+library(ggsflabel)
+states %>% 
+  ggplot() +
+  geom_sf(aes(fill = as.factor(State_LGD)), 
+          color = 'white', 
+          linewidth = 0.5) +
+  ggsflabel::geom_sf_text_repel(aes(label = STATE), 
+                                size = 3) +
+  theme_void() +
+  theme(legend.position = 'none')
+
+```
+
+with another data (capital names)
+```{r}
+states2 <- st_read("Data\\india shp\\STATE_HQ.shp")
+
+states %>% 
+  ggplot() +
+  geom_sf(aes(fill = as.factor(State_LGD))) +
+  ggsflabel::geom_sf_text_repel(data = states2, 
+                                aes(label = CAPITAL_NA), 
+                                size = 3) +
+  theme_void() +
+  theme(legend.position = 'none')
+```
+
+```{r}
+states %>% 
+  ggplot() +
+  geom_sf(aes(fill = as.factor(State_LGD)), 
+          color = 'white', 
+          linewidth = 0.5) +
+  ggsflabel::geom_sf_text_repel(data = states2 %>% 
+                                  mutate(NAME_OF_ST = stringr::str_to_title(NAME_OF_ST)), 
+                                aes(label = NAME_OF_ST), 
+                                size = 3) +
+  theme_void() +
+  theme(legend.position = 'none')
+```
+
+## districts
+```{r}
+dist <- st_read("Data\\india shp\\DISTRICT_BOUNDARY.shp")
+plot(dist, 
+     max.plot = 2) # max.plot will restrict output plots
+```
+
+## using base R's `plot()`
+
+we can use `st_geometry`
+```{r}
+plot(st_geometry(dist), 
+     col = sf.colors(12, categorical = TRUE), 
+     border = 'grey', 
+     axes = FALSE)
+```
+

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.13)  17 APR 2023 15:10
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.4.13)  18 APR 2023 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1411,67 +1411,127 @@ Overfull \hbox (23.13pt too wide) in paragraph at lines 13178--13178
 []       \TU/lmtt/m/n/10 function(x) reverse_geo(sample$lat[x], sample$long[x], full_results = TRUE)) %>%[] 
  []
 
-[262] [263
+[262]
+Chapter 24.
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-367-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-367-1.pdf>
 
-] [264
+Underfull \vbox (badness 2903) has occurred while \output is active []
+
+[263
 
 ]
-Chapter 24.
-[265] [266] [267] [268] [269] [270] [271] [272]
-Chapter 25.
-[273
-
-] [274]
-Overfull \hbox (80.39684pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 25.3.  AN IMPORTANT FUNCTION FOR OPENING A DIALOG BOX FOR SELECTING FILES AND FOLDER \TU/lmr/m/n/10 275
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-367-2.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-367-2.pdf>
+[264]
+Overfull \hbox (59.88pt too wide) in paragraph at lines 13286--13286
+[]\TU/lmtt/m/n/10 ##   `G:\OneDrive - A c GeM CAG of INDIA (1)\Documents\R-DA\Data\india shp\STATE_BOUNDARY.shp'[] 
  []
 
-[275]
+[265]
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-369-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-369-1.pdf>
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-370-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-370-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[266]
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-371-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-371-1.pdf>
+[267]
+Overfull \hbox (28.38pt too wide) in paragraph at lines 13371--13371
+[]\TU/lmtt/m/n/10 ##   `G:\OneDrive - A c GeM CAG of INDIA (1)\Documents\R-DA\Data\india shp\STATE_HQ.shp'[] 
+ []
+
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-372-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-372-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[268]
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-373-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-373-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[269]
+Overfull \hbox (75.63pt too wide) in paragraph at lines 13424--13424
+[]\TU/lmtt/m/n/10 ##   `G:\OneDrive - A c GeM CAG of INDIA (1)\Documents\R-DA\Data\india shp\DISTRICT_BOUNDARY.shp'[] 
+ []
+
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-374-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-374-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[270]
+File: Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-375-1.pdf Graphic file (type pdf)
+<use Data-Analytics-for-Audit-using-R_files/figure-latex/unnamed-chunk-375-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[271] [272] [273
+
+] [274
+
+]
+Chapter 25.
+[275] [276] [277] [278] [279] [280] [281] [282]
+Chapter 26.
+[283
+
+] [284]
+Overfull \hbox (80.39684pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 26.3.  AN IMPORTANT FUNCTION FOR OPENING A DIALOG BOX FOR SELECTING FILES AND FOLDER \TU/lmr/m/n/10 285
+ []
+
+[285]
 File: images/Rproj1.png Graphic file (type bmp)
 <images/Rproj1.png>
 File: images/Rproj2.png Graphic file (type bmp)
 <images/Rproj2.png>
-[276]
+[286]
 Appendix A.
-[277
+[287
 
 
-] [278
+] [288
 
 ]
 Appendix B.
-[279] [280
+[289] [290
 
 ]
 Appendix C.
-[281]
+[291]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[282]
-Overfull \hbox (107.13pt too wide) in paragraph at lines 14181--14181
+[292]
+Overfull \hbox (107.13pt too wide) in paragraph at lines 14452--14452
 []\TU/lmtt/m/n/10 ## Warning in left_join(tbl1, tbl2, by = "Head.Name"): Detected an unexpected many-to-many relationship[] 
  []
 
-[283] [284]
+[293] [294]
 Appendix D.
-(./Data-Analytics-for-Audit-using-R.bbl [285
+(./Data-Analytics-for-Audit-using-R.bbl [295
 
-] [286
+] [296
 
-] [287]) [288] (./Data-Analytics-for-Audit-using-R.aux)
+] [297]) [298] (./Data-Analytics-for-Audit-using-R.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Data-Analytics-for-Audit-using-R.out' has not changed.
-(rerunfilecheck)             Checksum: D63862D463C37444D8B44AE96C4231B6;34098.
+(rerunfilecheck)             Checksum: 23B263571B90B94BEEAD384488610BE4;34823.
  ) 
 Here is how much of TeX's memory you used:
- 20119 strings out of 478674
- 397648 string characters out of 5846652
+ 20197 strings out of 478674
+ 403142 string characters out of 5846652
  1868290 words of memory out of 5000000
- 39849 multiletter control sequences out of 15000+600000
+ 39918 multiletter control sequences out of 15000+600000
  518866 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,8n,121p,1046b,549s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Data-Analytics-for-Audit-using-R.pdf (302 pages).
+Output written on Data-Analytics-for-Audit-using-R.pdf (312 pages).
