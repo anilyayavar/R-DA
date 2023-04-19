@@ -31,7 +31,7 @@ Additionally, we will use Indian geo-spatial data provided by Survey of India^[h
 
 ## Drawing Choropleths 
 
-```{r}
+```{r two-plots, fig.show="hold", out.width="50%"}
 library(sf)
 library(dplyr)
 library(ggplot2)
@@ -42,9 +42,7 @@ states <- st_read("Data\\india shp\\STATE_BOUNDARY.shp")
 states %>% 
   ggplot() +
   geom_sf()
-```
-Let's beautify the chart.  We may fill colors on...........
-```{r}
+
 states %>% 
   ggplot() +
   geom_sf(aes(fill = as.factor(State_LGD))) +
@@ -52,6 +50,7 @@ states %>%
   theme_void() +
   theme(legend.position = 'none')
 ```
+Let's beautify the chart.  We may fill colors on...........
 
 labels
 ```{r}
@@ -67,10 +66,12 @@ states %>%
   theme_void() +
   theme(legend.position = 'none')
 
+
+
 ```
 
 with another data (capital names)
-```{r}
+```{r two-more, fig.show="hold", out.width="50%"}
 states2 <- st_read("Data\\india shp\\STATE_HQ.shp")
 
 states %>% 
@@ -81,9 +82,7 @@ states %>%
                                 size = 3) +
   theme_void() +
   theme(legend.position = 'none')
-```
 
-```{r}
 states %>% 
   ggplot() +
   geom_sf(aes(fill = as.factor(State_LGD)), 
