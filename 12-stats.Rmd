@@ -4,13 +4,13 @@ library(tidyverse)
 ```
 
 
-# Field Statistics
+# Field Statistics (descriptive statistics)
 Summary stats
 ```
 library(skimr)
 skim(USArrests)
 ```
-```{r}
+```{r skimrr, out.width='50%'}
 knitr::include_graphics('images/skmi1.png')
 ```
 

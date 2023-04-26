@@ -204,3 +204,17 @@ boxplot(count ~ spray,
 
 ## Saving and exporting charts
 See last section of next chapter.
+
+## Use of `par()`
+One of the useful functions while using base R's graphics is `par()` which is used to set or query graphical **par**ameters.  See the following example, where one of its argument `mfrow = c(nr, nc)` has been used inside this function to draw subsequent plots in an `nr`-by-`nc` array on the device.  
+```{r}
+par(mfrow = c(2,2))
+purrr::walk(1:4, 
+     ~plot(anscombe[[paste0('x', .x)]], 
+           anscombe[[paste0('y', .x)]], 
+           xlab = paste0('x', .x),
+           ylab = paste0('y', .x),
+           main = paste("Anscombe's Quartet Chart No.", .x))
+     )
+```
+

@@ -1,3 +1,4 @@
+# Part-V Bonus Chapters {-}
 # Plotting Map Objects
 To plot maps we require geo-spatial information for the associated geographical regions.  In other words, to plot a place on a map, we need its coordinates (latitude and longitude), or to plot a country/region we need its spatial geometry polygon.  Many softwares/tools have some inbuilt geo-spatial information that easily plots the given spatial information on a map.
 
