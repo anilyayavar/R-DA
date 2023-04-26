@@ -10,7 +10,7 @@ Summary stats
 library(skimr)
 skim(USArrests)
 ```
-```{r skimrr, out.width='50%'}
+```{r skimrr, fig.show='hold', out.width='50%'}
 knitr::include_graphics('images/skmi1.png')
 ```
 
