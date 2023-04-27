@@ -30,6 +30,9 @@ options(tinytex.verbose = TRUE)
 
 # Preface {-}
 
+## Why R? {-}
+
+## Preface {-}
 Welcome to my book on R language, designed specifically for auditors who are interested in learning data analytics using open source resources. In today's digital age, data is abundant and ubiquitous, and its importance cannot be overstated. As a result, auditors must be equipped with the necessary skills to leverage this data and draw insights from it. This book is a result of my love for R and my passion for data analytics. In this book, I have tried to present R programming concepts and case studies that are useful in audit analysis as well as forensic audit and fraud investigation.
 
 This book is written based on my notes on R while I was learning the language myself. I have included sufficient figures and examples to make the concepts easy to understand for readers with little or zero knowledge of programming.
@@ -81,23 +84,6 @@ Anil is a self-taught expert in R, and has been involved in a variety of data an
 Anil holds a post-graduate degree in Mathematics from the University of Rajasthan, Jaipur, which he received in 1998. This book is his first book. He continues to expand his skill set and knowledge in this field.
 
 When not working with data, Anil enjoys pursuing his personal interests, which include bird photography, nature, and watching movies, etc..
-
-## Software information and conventions {-}
-
-Packages **knitr**\index{knitr} [@xie2015] and the **bookdown**\index{bookdown} [@R-bookdown] have been used to compile this book. My R session information is shown below:
-
-```{r echo=FALSE, warning=FALSE}
-suppressMessages(library(tidyverse))
-suppressMessages(library(ggrepel))
-suppressMessages(library(benford.analysis))
-suppressMessages(library(igraph))
-suppressMessages(library(stringdist))
-suppressMessages(library(phonics))
-suppressMessages(library(PGRdup))
-xfun::session_info()
-```
-
-Package names are in bold text (e.g., **rmarkdown**), and inline code and filenames are formatted in a typewriter font (e.g., `knitr::knit('foo.Rmd')`). Function names are followed by parentheses (e.g., `bookdown::render_book()`).
 
 ## Acknowledgments {-}
 

@@ -79,7 +79,7 @@ plot(density(iris$Sepal.Length), main = "Density Plot of Sepal Length in the iri
 ```
 Note that we have used `density()` function within `plot()` to create a density plot.
 
-## Other plotting functions in base R {-}
+Let us learn about other plotting functions in base R.
 
 ## Bar plots using `barplot()`
 As the name suggests `barplot()` function is used to create bar charts in R. The basic syntax is `barplot(height, ...)` where `height` should be a vector providing heights of each bar.  Other arguments in ellipsis `...` can be checked by using `?barplot()`.

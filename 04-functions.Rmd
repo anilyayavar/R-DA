@@ -1,4 +1,4 @@
-# Useful functions and operations in R {#func}
+# Functions and operations in R {#func}
 
 What is a function? A function $f$ is a relationship which map an input $x$ to an specific output, which is denoted as $f(x)$.  There are only two conditions i.e. every input should have an output, and same input if passed into same function multiple times, it should produce same output each time.  So if $x=y$ we should have $f(x)=f(y)$.  
 

@@ -192,7 +192,7 @@ Objects\index{data structures in R} in R can be either homogeneous or heterogene
 knitr::include_graphics(c("images/homgeneous.jpg", "images/hetero.jpg"))
 ```
 
-## Homogeneous objects {.unnumbered}
+### Homogeneous objects {.unnumbered}
 
 ### Vectors {#vectors}
 
@@ -520,7 +520,7 @@ Try creating 4 or 5 dimensional arrays in your console and see the results.
 
 Further properties of vectors, matrices will be discussed in next chapter on sub-setting and indexing where we will learn how to retrieve specific elements of vector/matrices/etc. But till now we have created objects which have elements of same type. What if we want to have different types of elements/data retaining their types, together in a single variable? Answer is in next section, where we will discuss hetergeneous objects.
 
-## Heterogeneous objects {.unnumbered}
+### Heterogeneous objects {.unnumbered}
 
 ### Lists
 So lists are used when we want to combine elements of different types together. Function used to create a list is `list()`. Check this

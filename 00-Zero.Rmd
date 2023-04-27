@@ -14,7 +14,7 @@ In 1991, R was created by **Ross Ihaka** \index{Ihaka, Ross} and **Robert Gentle
 include_graphics("images/history.png")
 ```
 
-## Why R?
+## Advantages of R
 R programming language is an open-source programming language for statistical computation. It supports n number of statistical analysis techniques, machine learning models, and graphical visualization for data analysis. It serves the purpose of the free software environment for statistical computation and graphics. R is easy to understand and implement. The packages are available to create an effective R program, data models, and graphical charts. For research and analytics purposes,  it is a popular language among statisticians and data scientists.
 
 ```{r whyr, echo=FALSE, fig.cap="Why R", fig.show='hold', fig.align='center', out.width="90%"}

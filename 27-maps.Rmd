@@ -97,7 +97,7 @@ states %>%
   theme(legend.position = 'none')
 ```
 
-## districts
+## A level deeper to plot districts
 ```{r}
 dist <- st_read("Data\\india shp\\DISTRICT_BOUNDARY.shp")
 plot(dist, 

@@ -1,6 +1,6 @@
 # Finding duplicates
 
-## Prerequisites {-}
+### Prerequisites {-}
 Let us load `tidyverse` first.
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)

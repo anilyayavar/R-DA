@@ -1,10 +1,10 @@
-# Concepts of Functional Programming
+# Functional Programming
 
 ```{r echo=FALSE}
 library(knitr)
 ```
 
-## What is functional programming? {-}
+## What is functional programming?
 
 Conceptually functional programming philosophy is based on lambda calculus. Lambda calculus is a framework developed by Alonzo Church^[Alan Turing, who created Turing machine which in turn laid the foundation of imperative programming style, was a student of __Alonzo Church__.] to study computations with functions.
 
@@ -14,7 +14,7 @@ Functional programming use high order functions.  A high order function is actua
 
 Let us learn a bit more here.
 
-## Usage of functional programming in R {-}
+### Usage of functional programming in R 
 
 Strictly speaking R is not a functional programming language.  But we have already seen that one of the greatest strengths of R is parallel operations on vectors. In fact we need functional programming where concurrency or parallelism is required.  Till now we have seen that most of the functions work on all atomic objects (vectors, matrices, arrays, etc.), but what about working of these functions on recursive objects i.e. lists?  Check this example (in your console)-
 ```

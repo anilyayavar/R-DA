@@ -1,0 +1,7 @@
+# Time Series (Introductory)
+Time series analysis is an essential technique for forecasting and analyzing trends in data over time. It is commonly used in various industries like finance, economics, and engineering.
+
+So a question arises, what is a time series? A **time series** is a sequence of data points collected at regular intervals over time. Time series data can be univariate (one variable) or multivariate (multiple variables), and it can be used to analyze trends, patterns, and relationships between variables.
+
+## Time series objects in R
+Base R's function `ts()` can be used to create time series objects.  In fact, 

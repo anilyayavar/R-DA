@@ -39,7 +39,3 @@ USArrests %>%
 ```
 
 
-# Simple Linear Regression
-
-
-# Time Series Analysis

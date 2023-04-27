@@ -81,7 +81,7 @@ International Standard On Auditing - 530 defines^[[https://www.ifac.org/system/f
 
 Appendix 4 of ISA 53 further prescribes different statistical methods of sample selection.  We will discuss here each type of sampling methodology used to sample records for audit.
 
-## Prerequisites {-}
+### Prerequisites {-}
 
 Load `tidyverse`
 ```{r message=FALSE}
