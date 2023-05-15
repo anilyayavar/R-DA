@@ -32,6 +32,29 @@ options(tinytex.verbose = TRUE)
 
 ## Why R? {-}
 
+"R is the Swiss Army knife of data science. It's a versatile and powerful tool that can handle nearly any data-related task, from data cleaning and preparation to statistical modeling and machine learning. And because it's open-source, there's a vast ecosystem of packages and tools available to extend its capabilities even further." - Norman Matloff, professor of computer science at the University of California, Davis.
+
+Here are some quotes from famous personalities on R language:
+
+1. "R is the lingua franca of statistics, and it's increasingly the lingua franca of data analysis." - Hadley Wickham, statistician and developer of many popular R packages.
+
+2. "R is the tool of choice for data scientists in every industry." - Hilary Mason, founder of Fast Forward Labs.
+
+3. "The R language is the most important tool for computational statistics and data science." - Roger Peng, professor of bio-statistics at Johns Hopkins University.
+
+4. "R is not just a programming language, it's a whole ecosystem for statistical computing and data analysis." - Yihui Xie, author of many popular R packages.
+
+5. "R is a fantastic tool for data visualization, and it's free and open-source." - Edward Tufte, data visualization expert and author of "The Visual Display of Quantitative Information."
+
+6. "R is the most powerful language for statistical computing and graphics." - Ross Ihaka, co-creator of R.
+
+7. "R is the most popular programming language for data science." - KDnuggets, a leading website for data science news and resources.
+
+8. "R is the Swiss Army knife of data science." - Norman Matloff, professor of computer science at the University of California, Davis.
+
+9. "R is not only a tool for statistical analysis, but also a community of people who share their knowledge and expertise." - Garrett Grolemund, data scientist and author of many popular R packages.
+
+
 ## Preface {-}
 Welcome to my book on R language, designed specifically for auditors who are interested in learning data analytics using open source resources. In today's digital age, data is abundant and ubiquitous, and its importance cannot be overstated. As a result, auditors must be equipped with the necessary skills to leverage this data and draw insights from it. This book is a result of my love for R and my passion for data analytics. In this book, I have tried to present R programming concepts and case studies that are useful in audit analysis as well as forensic audit and fraud investigation.
 

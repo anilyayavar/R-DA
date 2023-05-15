@@ -1,7 +1,290 @@
-# Time Series (Introductory)
+# Time Series Analysis
 Time series analysis is an essential technique for forecasting and analyzing trends in data over time. It is commonly used in various industries like finance, economics, and engineering.
 
-So a question arises, what is a time series? A **time series** is a sequence of data points collected at regular intervals over time. Time series data can be univariate (one variable) or multivariate (multiple variables), and it can be used to analyze trends, patterns, and relationships between variables.
+So a question arises, what is a time series? A time series is a sequence of data points collected over time, where the observations are recorded in chronological order. Time series analysis involves analyzing and modeling these data points to understand patterns, trends, and make predictions about future values.  
 
-## Time series objects in R
-Base R's function `ts()` can be used to create time series objects.  In fact, 
+Time Series Analysis plays an important role in audit analytics as well.  A few of the use cases can be-
+
+- **Revenue Analysis:** An auditor may analyze revenue data over time to identify irregularities or suspicious patterns that could indicate potential fraud or misstatement. By examining the revenue time series, the auditor can look for unexpected fluctuations, unusual growth or decline trends, or abnormal seasonality. Deviations from historical patterns or industry benchmarks may indicate fraudulent activities, such as revenue manipulation, fictitious transactions, or irregular recognition practices.
+- **Inventory Analysis:** Auditors often analyze inventory data to assess the adequacy of inventory levels, identify potential inventory obsolescence or shrinkage, and evaluate the efficiency of inventory management. Time series analysis can be valuable in understanding inventory patterns and identifying potential risks or anomalies.
+
+There are several time series data which is loaded by default in R. E.g. 
+
+- `AirPassengers` containing monthly airline passenger numbers from 1949-1960. See figure \@ref(fig:tsex) (a)
+- `Nile` contains flow of Nile river data. See figure \@ref(fig:tsex) (b)
+- `sunspots` containing monthly sunspot numbers from 1749-1983. See figure \@ref(fig:tsex) (c)
+- `JohnsonJohnson` which contains quarterly earnings per Johnson & Johnson share. See figure \@ref(fig:tsex) (d)
+
+```{r tsex, echo=FALSE, fig.cap="Few time series data sets in R", fig.align='center'}
+par(mfrow = c(2,2))
+plot(AirPassengers, main= "(a) Airline Passengers from 1949-1960")
+plot(Nile, main = "(b) Nile flow 1871-1970")
+plot(sunspots, main = "(c) Sunspots")
+plot(JohnsonJohnson, main = "(d) Earnings of Johnson&Jonson")
+```
+
+To analyse these, we have to understand different components of time series.
+
+## Components of Time series
+A time series can be decomposed into several components:
+
+- **Level:** The baseline value or average of the series over time. It represents the long-term behavior of the series. This is basic component, and is always present in a time series object.  E.g. In a straight horizontal line only level is there which is equal to the value of y intercept.
+- **Trend:** The overall direction of the series. It indicates whether the series is increasing, decreasing, or staying relatively constant over time.  E.g. An clear increasing trend can be seen in Johnson & Johnson earnings (see Figure \@ref(fig:tsex) (d))
+- **Seasonality:** The repetitive and predictable patterns within the series that occur at regular intervals. Seasonality can be daily, weekly, monthly, quarterly, or yearly, etc. E.g. In figure \@ref(fig:tsex) (d) we may see seasonal patterns in earnings of Johnson&Johnson share.
+- **Errors (Residuals):** The random fluctuations or noise in the series that cannot be explained by the level, trend, or seasonality.  E.g. See figure \@ref(fig:tsex) (c). The error component is an important aspect of time series analysis because it provides information about the uncertainty and variability of the data.
+
+### Additive or multiplicative components
+In time series analysis, the trend, seasonal, and residual components can be modeled as either additive or multiplicative. The choice of the model depends on how the components combine to create the observed values of the series.
+
+An **additive model** assumes that the components of the time series are added together to create the observed values. In other words, the value of the time series at any point in time is equal to the sum of the trend, seasonal, and residual components at that point in time. This is expressed mathematically as:
+
+$$
+y_t = T_t + S_t + e_t
+$$
+
+where $y_t$, $T_t$, $S_t$ and $e_t$ are the values of the series, trend component, seasonal component and  residuals, respectively at time $t$.
+
+A **multiplicative model**, on the other hand, assumes that the components of the time series are multiplied together to create the observed values. In other words, the value of the time series at any point in time is equal to the product of the trend, seasonal, and residual components at that point in time. This is expressed mathematically as:
+
+$$
+y_t = T_t \times S_t \times e_t
+$$
+
+where $y_t$, $T_t$, $S_t$ and $e_t$ are defined as before.  We can convert multiplicative time series into additive time series by taking $log$.
+
+Example: Note that seasonal component in `AirPassengers` time series depicted in \@ref(fig:tsex) (a) is multiplicative.  We will learn about decomposing time series components in next sections.
+
+## Forecasting Time series
+As forecasting future plays an important part of time series analysis, we have to model our data.  In fact the forecasting/modelling techniques can be broadly classified into two categories, data based and model-based techniques.
+
+**Data-based techniques:** Data-based techniques, also known as statistical or empirical techniques, focus on analyzing the patterns and characteristics of the observed time series data directly. These techniques do not explicitly assume a specific underlying model structure. Instead, they rely on statistical properties and patterns present in the data. Examples of data-based techniques include:
+
+1. **Moving averages**: In this technique, the forecasted value is computed as the average of the most recent observations within a sliding window of fixed length.
+
+2. **Exponential smoothing**: Exponential smoothing techniques update forecasts based on weighted averages of past observations, giving more weight to recent observations. Examples include simple exponential smoothing, Holt's method, and Holt-Winters' method.
+
+3. **Seasonal decomposition**: Seasonal decomposition techniques decompose a time series into its different components, such as level, trend, seasonality, and noise. This allows for a better understanding of the individual components and their impact on the overall series.
+
+**Model-based techniques:** Model-based techniques involve fitting a specific mathematical or statistical model to the observed time series data. These techniques assume a particular structure for the data and estimate model parameters based on the data. Model-based techniques typically require more assumptions but can provide a more detailed understanding of the underlying dynamics. Examples of model-based techniques include:
+
+1. **Autoregressive Integrated Moving Average (ARIMA)**: ARIMA models capture the linear dependencies between lagged observations and differences of the time series. They are commonly used for modeling stationary time series.
+
+2. **Seasonal ARIMA (SARIMA)**: SARIMA models extend the ARIMA framework to incorporate seasonality in the data. They are suitable for time series exhibiting both trend and seasonality.
+
+## Accuracy Metrics
+
+
+We will discuss a few of these through practical examples in next section(s).
+
+## Practical examples in R
+### Pre-requisites
+```
+library(forecast)
+library(ggplot2)
+```
+### Creating a time series object in R
+R provides us a simple function `ts()` to convert a series of observations (basically a vector) into a specific time series object.  The syntax is -
+```
+ts(data, 
+  start = 1, 
+  end = numeric(length(data)), 
+  frequency = 1, 
+  ...)
+```
+where:
+
+- `data`: a numeric vector or matrix containing the data for the time series
+- `start`: the start time of the time series, represented as either a numeric or a Date or POSIXct object
+- `end`: the end time of the time series, represented as either a numeric or a Date or POSIXct object
+- `frequency`: the number of observations per unit time for the time series. For example, if the data is recorded monthly, the frequency would be 12
+- `...`: additional arguments that can be passed to the function, such as `names`, `delim`, or `tsp` (time series start and end points)
+
+Example-
+```{r}
+# Create a numeric vector representing monthly sales data for a year
+sales <- c(10, 20, 30, 25, 35, 40, 45, 50, 55, 60, 65, 70)
+
+# Create a time series object with monthly frequency starting from January
+sales_ts <- ts(sales, start = c(2022, 4), frequency = 12)
+
+# Print the time series object
+sales_ts
+
+```
+
+We can check its class.
+```{r}
+class(sales_ts)
+```
+
+### Plotting Time Series Object
+To plot `ts` object we can simply use. `plot()` command or alternatively we can use `ggplot2` as well.
+```{r tsex2, fig.cap="Example of time series plotting in R", fig.align='center'}
+plot(sales_ts, main = "Sales during FY 2022-23")
+```
+
+Library `forecast` in R also provides us a function `autoplot()` which plots a time series object, similar to plot(), but the plot returned here is a `ggplot2` object which can be modified/fine-tuned using `ggplot2` functions.
+
+```{r ap, warning=FALSE, message=FALSE, fig.align='center', fig.cap="Plotting with autoplot()"}
+library(ggplot2)
+library(patchwork)
+library(forecast)
+p1 <- forecast::autoplot(AirPassengers) +
+  ggtitle('AirPassengers Time Series')
+
+p2 <- forecast::autoplot(AirPassengers) +
+  scale_y_log10('Logrithmic values') +
+  ggtitle('AirPassengers converted to additive')
+
+p1 + p2
+```
+
+### Plotting seasonality, etc
+We can use functions such as 
+
+- `ggseasonplot()`: to create a seasonal plot
+- `ggsubseriesplot()`: to create mini plots for each season and show seasonal means
+- `gglagplot()`: Plot the time series against lags of itself
+- `ggAcf()`: Plot the autocorrelation function (ACF)
+
+Examples
+```{r}
+theme_set(theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)))
+g1 <- ggseasonplot(AirPassengers)
+g2 <- ggsubseriesplot(AirPassengers) +
+  ggtitle('Sub-Series Plot')
+(g1 + g2)
+```
+
+Example- Lag Plot.  Notice that plot at lag=12 suggest that series has seasonality with 12 periods.
+```{r}
+gglagplot(AirPassengers) +
+  ggtitle('Lag Plots')
+
+```
+
+### Decomposing Time Series
+We can decompose a time series using the `decompose()` function. The function decomposes the time series, with frequency > 1 obviously, into trend, seasonal and error(residuals). Let us understand this through the following example.
+
+```{r}
+decomposed_air_passengers <- decompose(AirPassengers)
+summary(decomposed_air_passengers)
+```
+
+If we know that our time series is additive, we can use its argument `type`.
+```{r}
+decomposed_air_passengers2 <- decompose(AirPassengers, type = "multiplicative")
+summary(decomposed_air_passengers2)
+```
+
+To visualise the results better, we can plot decomposed series directly, which plots four plots namely `observed`, `trend`, `seasonal` and `residual` respectively.
+```{r}
+plot(decomposed_air_passengers)
+```
+
+### Smoothing through Moving Average
+Moving average is a technique to smooth out a time series by averaging neighboring values. It helps in reducing noise and revealing underlying trends. In R, you can apply moving averages using the `ma()` function from `forecast` library.  
+```{r ma1, fig.align='center', fig.cap="Centred moving average"}
+plot(wineind)
+sm <- ma(wineind,order=12)
+lines(sm,col="red")
+```
+
+Only thing to note is that, in case of centre-weighted moving averages, $k$ i.e. `order` of the moving average, should be an odd number because each data point is replaced with the mean of that observation and $(k-1)/2$ observations before and $(k-1)/2$ observations after it.  
+
+Example-
+```{r ma, fig.align='center', fig.cap="Simple Moving Averages"}
+
+lims <- c(min(AirPassengers), max(AirPassengers))
+
+p1 <- autoplot(AirPassengers) +
+  scale_y_continuous(limits = lims)+
+  labs(title = 'AirPassengers - original')
+
+p2 <- autoplot(ma(AirPassengers,7)) +
+  scale_y_continuous(limits = lims)+
+  labs(title = 'Moving average k=7')
+
+p3 <- autoplot(ma(AirPassengers,15, centre = FALSE)) +
+  scale_y_continuous(limits = lims)+
+  labs(title = 'Moving average k=15, tailed')
+
+p4 <- autoplot(ma(AirPassengers,15)) +
+  scale_y_continuous(limits = lims)+
+  labs(title = 'Moving average k=15')
+
+(p1 + p2)/(p4 + p3)
+```
+
+### Forecasting future values
+For forecasting we will use `forecast` package which is a very powerful package developed by *Rob J Hyndman* and *Yeasmin Khandakar*.  Some of the commonly used methods are
+
+1. **Naive method:** This method assumes that the future value will be the same as the last observed value. This is the simplest and most basic forecasting method. The formula for the naive method is:
+
+$$
+\text{Naive method: }\hat{Y}_{T+1} = Y_T
+$$
+
+Here, $\hat{Y}_{T+1}$ is the forecasted value for the next time period and $Y_T$ is the last observed value i.e. for a series of $T$ observations.
+
+2. **Moving average method:** The moving average method is a simple technique, already explained above, that involves calculating the average of the past few observations. The formula for the moving average method is:
+
+$$
+\text{Moving average method: }\hat{Y}_{t+1} = \frac{1}{n}(Y_t + Y_{t-1} + ... + Y_{t-n+1})
+$$
+
+Here, $\hat{Y}_{t+1}$ is the forecasted value for the next time period and $Y_t$, $Y_{t-1}$, ..., $Y_{t-n+1}$ are the past $n$ observations.  Needless to state, the method of smoothing through moving average should be right-tailed.  Example
+
+```{r maex2, warning=FALSE, message=FALSE, fig.align='center', fig.cap="Forecasting through moving average"}
+ma_nile <- ma(Nile, order =7, centre = FALSE)
+future_nile <- forecast(ma_nile, h = 10)
+plot(future_nile)
+```
+
+In the next few sections, we will discussed some other frequently used methods.  However, before moving to next section(s), we will learn to check accuracy of these models.
+
+### Checking accuracy of time series models
+
+### Simple Exponential Smoothing
+Simple exponential smoothing is actually a moving weighted average where recent observations are given more weights while calculating averages.  This method is suitable for forecasting data with no clear trend or seasonal pattern. 
+
+$$
+\text{Simple exponential smoothing: }\hat{y}_{T+1} = \alpha{y_T} + \alpha(1- \alpha){y_{T-1}} + \alpha(1 - \alpha)^2{y_{T-2}} + ...
+$$
+
+$$
+\text{Holt's linear method:}
+$$
+$$
+\begin{aligned}
+\hat{y}_{t+h|t} &= l_t + hb_t \\
+l_t &= \alpha y_t + (1-\alpha)(l_{t-1} + b_{t-1}) \\
+b_t &= \beta(l_t - l_{t-1}) + (1-\beta)b_{t-1}
+\end{aligned}
+$$
+
+$$
+\text{Holt-Winters method:}
+$$
+$$
+\begin{aligned}
+\hat{y}_{t+h|t} &= l_t + hb_t + s_{t+m-(m-1 \bmod m)} \\
+l_t &= \alpha(y_t - s_{t-m}) + (1-\alpha)(l_{t-1} + b_{t-1}) \\
+b_t &= \beta(l_t - l_{t-1}) + (1-\beta)b_{t-1} \\
+s_t &= \gamma(y_t - l_{t-1} - b_{t-1}) + (1-\gamma)s_{t-m}
+\end{aligned}
+$$
+
+$$
+\text{ARIMA(p, d, q):}
+$$
+$$
+\phi_p(B)(1-B)^dy_t = \theta_q(B)\epsilon_t
+$$
+
+where 
+- $\phi_p(B) = 1 - \phi_1B - \phi_2B^2 - \cdots - \phi_pB^p$, 
+- $\theta_q(B) = 1 + \theta_1B + \theta_2B^2 + \cdots + \theta_qB^q$, and 
+- $\epsilon_t$ is white noise with mean 0 and variance $\sigma^2$.
+
+
