@@ -1,1 +1,351 @@
 # Linear Regression
+Regression models are a class of statistical models that let us explore the relationship between a response variable and some explanatory variables. That is, given some explanatory variables, we can make predictions about the value of the response variable. As an example if we know about the number of employees in an office, we can predict the monthly expenses incurred by that office on salary.  That lets us do thought experiments like asking how much the a new company had to pay say 10 employees on salary expenses monthly.  That way we can say that the response variable is related to explanatory variable(s).
+
+When the response variable is numeric, the regression is called as linear regression. Of course, there are certain other assumptions, which we will discuss later on in the chapter.
+```{r helpfun, echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+
+my_chart <- function(data, x_var, y_var){
+  # Model
+  lmod <- eval(substitute(lm(y_var ~ x_var , data = data)))
+  # Visualise
+  data %>%
+    mutate(pred = predict(lmod),
+           res = residuals(lmod)) %>%
+    ggplot(aes({{x_var}}, {{y_var}})) +
+    geom_smooth(method = 'lm', color = 'lightgrey', se = FALSE, formula = 'y ~ x') +
+    geom_segment(aes(xend = {{x_var}},  yend = pred), alpha = 0.2, linewidth = 0.9, color = 'seagreen') +
+    geom_point(aes(color = abs(res), size = abs(res))) +
+    scale_color_continuous(low = 'yellow', high = 'darkred') +
+    guides(color = FALSE, size = FALSE) +
+    geom_point(aes(y = pred), shape = 1) +
+    theme(panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank(),
+          axis.line = element_line(colour = "black")
+          )
+
+}
+```
+
+
+## Concepts of Linear Regression
+Before we start running regression models, it's a good idea to visualize the dataset. To visualize the relationship between two numeric variables, we can use a scatter plot. See the following examples 
+
+```{r concept, echo=FALSE}
+library(patchwork)
+p1 <- longley |> 
+  ggplot(aes(Population, GNP)) +
+  geom_point() +
+  geom_smooth(method = 'lm', se = FALSE, color = 'red', formula = 'y ~ x') +
+  labs(title = 'Ex-1: Gross Nation Product Vs. Population in longley dataset')
+
+p2 <- mtcars |>
+  ggplot(aes(disp, mpg)) +
+  geom_point() +
+  geom_smooth(method = 'lm', se = FALSE, color = 'red', formula = 'y ~ x') +
+  labs(title = 'Ex-2: Mileage in miles per gallon vs. Displacement')
+
+p1 + p2
+```
+
+We can see a near perfect linear relationship between GNP and Population of that country, in the first example, whereas a moderate but negative relationship between two variables in second example. 
+
+So, linear regression is a perfect model to predict outcome or response variable when it has linear relationship with explanatory variables.  Simple maths behind estimating or predicting outcomes is the following algebraic equation.
+
+$$
+y = mx + c
+$$
+
+Where - 
+
+- `m` is the slope of the line (in linear relationship)
+- `c` is the intercept of Y-axis. (value of $y$ when $x$ is `0` )
+
+Interpreting this equation in real world is like estimating the coefficient (i.e. $m$ in above equation), of change in response variable $y$ with unit change in explanatory variable $x$. 
+
+Now, estimating the equation of regression line actually depend upon two parameters, $c$ and $m$, sometimes referred to as $\beta_1$ and $\beta_0$ respectively.  Those familiar with mathematics behind finding these parameters may know that we actually require only two variable (data points i.e. $x$ and $y$ value pairs) values to find these parameters.  So that means, if have a fair amount of data available, we can actually get a large large number of such regression lines.  So in linear regression, our job is to find best of such line.  But, how?
+
+To answer this question, let us also understand that the actual values don't lie on the regression line.  So there is an actual value and one fitted value (the one falling on the regression line) for each data point.  The difference between these values is called error term.  Mathematically, if $\hat{y}$ is fitted value, the error term say $\epsilon$ can be denoted as
+$$
+\epsilon = y - \hat{y}
+$$
+OR, we can say that
+$$
+y = \beta_0 + \beta_1x + \epsilon
+$$
+
+Now one method to find best fit regression line is to minimise the error terms.  Now these error terms can be both positive or negative.  So to ensure that these are not cancelled while taking these average for minimizing these errors, we actually minimise their squares.  That's why this linear regression technique is also sometimes referred to as **Ordinary Least Squares** or **OLS** regression.
+
+```{r errors, echo=FALSE}
+my_chart(LifeCycleSavings, sr, pop75)
+```
+
+## Linear Regression in R
+Don't worry, in R we do not have to do this minimisation job ourselves.  In fact R has a fantastic function `lm` which can fit a best regression line for us, for a given set of variables.  The syntax is simple.
+
+```
+lm(formula, data, ...)
+```
+
+where -
+
+- `formula` an object of class "formula" (or one that can be coerced to that class): a symbolic description of the model to be fitted.  For our example above, we can write `y ~ x`
+- `data` an optional data frame.
+
+It actually returns a special object, which can be printed directly as with other R objects.  However, it is best printed with the `summary` function.  See the following example, where we are fitting `Sepal.Length` and `Sepal.Length` variables of `iris` dataset, (first 50 records only, for sake of simplicity only).
+
+```{r ex1}
+lin_reg1 <- lm(formula = Sepal.Width ~ Sepal.Length, data = iris[1:50,])
+
+# Let us print the object directly
+lin_reg1
+
+# Try printing it with summary()
+summary(lin_reg1)
+```
+
+Observing the output above we can notice that simply printing the object returns coefficients whereas printing with `summary` gives us a lot of other information.  But how to interpret this information?  But before proceeding to interpretation of the output, let us understand a few more concepts which are essential.  These concepts are basically some assumptions, which we made while finding the best fit line.
+
+## Assumptions of Linear Regression
+Linear regression makes several assumptions about the data, such as :
+
+- *Linearity of the data*. The relationship between the predictor (x) and the outcome (y) is assumed to be linear.
+- *Normality of residuals*. The residual errors are assumed to be normally distributed.
+- *Homogeneity of residuals variance*. The residuals are assumed to have a constant variance (homoscedasticity)
+- *Independence* of residuals error terms.
+
+## Interpreting the output of `lm`
+Let us discuss each of the component or section of `lm` output, hereinafter referred as model.
+
+### `call`
+The call section shows us the formula that R used to fit the regression model.  So `Sepal.Width` is our dependent or response variable, `Sepal.Length` is predictor or independent variable.  These variables refer to first 50 rows of iris dataset i.e. `iris[1:50,]`.
+
+### `Residuals`
+This depicts the quantile or five point summary of error terms or the residuals, which as discussed, are the difference between the actual values and the predicted values. We can generate these same values by taking the actual values of salary and subtracting it from the predicted values of the model.
+
+```{r}
+summary(iris$Sepal.Width[1:50] - lin_reg1$fitted.values)
+```
+
+Ideally, the median of error values/residuals should be centered around `0` thus telling us that these are somewhat symmetrical and our model is predicting fairly at both positive/higher and negative/lower side.  Any skewness will thus show that our model may be biased towards that end.
+
+In our example, we can observe a slight right-skewed distribution of error terms which indicates that our model is not doing that well for higher sepal lengths as it is doing for lower ones.
+
+### `Coefficients`
+These are our initial goals of the exercise.  Here coefficients will be written as coefficient for that predictor and an intercept term, i.e. our $\beta_1$ and $\beta_0$ respectively.  So, in our example, we can deduce that -
+
+- for `0` sepal length, the sepal width will be -0.5694
+- for every unit i.e. 1 increase in sepal length, width increases by 0.7985
+
+Thus our regression line equation is -
+
+$$
+Sepal.Width = -0.5694 + 0.7985 * Sepal.Length
+$$
+**Now one thing to note here that, since we are adopting OLS approach to find out the estimated equation of best line, the coefficients we have arrived at are only the estimated values of mean of these coefficients.  Actually, we started (behind the scenes) with a null hypothesis that there is no linear relationship or in other words that the coefficients are zero.  Alternate hypothesis, in this case, as you may have guessed by now, was that these coefficients are not zero.  In fact, the coefficients may follow a statistical/ probabilistic distribution and thus, we may infer only its estimated (mean) value.**
+
+Thus, these estimated distribution must have some standard error, a probability statistic and a p-value.  
+
+- The *standard error* of the coefficient is an estimate of the standard deviation of the coefficient. It tells us how much uncertainty there is with our coefficient. We can also build confidence intervals of coefficients using this statistic. 
+- The t-statistic is simply the coefficient divided by the standard error. By now you may understood that we are applying student's t-distribution.
+- Finally `p value` i.e. **Pr(>|t|)** gives us the probability value and tells us how significant is our coefficient value.
+
+### `Signif. codes`
+These are code legends which are simply telling us how significant out p-value may be for each case.  Notice three asterisks in from of coefficient estimate of `Sepal.Length` which indicate that coefficient is extremely significant and we can reject null hypothesis that $\beta_1$ is $0$.
+
+The coefficient codes give us a quick way to visually see which coefficients are significant to the model. 
+
+### `Residual standard error`
+The residual standard error is a measure of how well the model fits the data.  This is actually the standard deviation of all error terms with the difference that instead of taking `n` terms we are taking `degrees of freedom`.
+
+$$
+RSE = \sqrt{\frac{1}{(n-2)} \sum_{i=1}^n (y_i - \hat{y_i})^2}
+$$
+Obviously $n-2$ is $df$ as there is one regressor and one intercept.  We can verify-
+
+```{r}
+sqrt(sum((iris[1:50, "Sepal.Width"] - lin_reg1$fitted.values)^2)/48)
+```
+
+### `R-Squared` both Multiple and adjusted
+*Multiple R-Squared* is also called the coefficient of determination.  Often this is the most cited measurement of how well the model is fitting to the data. It tells us what percentage of the variation within our dependent variable that the independent variable is explaining through the model. By looking at output we can say that about 55% of variation is explained through the model.
+
+*Adjusted R squared* on the other hand, shows us what percentage of the variation within our dependent variable that all predictors are explaining.  Thus, it is helpful when there are multiple regressors i.e. in Multiple Linear Regression. The difference between these two metrics is subtle where we adjust for the variance attributed by adding multiple variables.  
+
+
+### `F-Statistic` and `p-value`
+So why a p-value again?  Is there a hypothesis again?  Yes, When running a regression model, a hypothesis test is being run on the global model, that there is no relationship between the dependent variable and the independent variable(s).  The alternative hypothesis is that there is a relationship. In other words, alternate hypothesis means at least one coefficient of regression is non-zero.  This hypothesis is tested on F-statistic and hence the two values.  `p-value` in our example is very small which lead us to reject the null hypothesis and conclude that there is strong evidence that a relationship does exist between `Sepal.Length` and `Sepal.Width`.
+
+The reason for this test is based on the fact that if we run multiple hypothesis tests on our coefficients, it is likely to include a variable that isn’t actually significant. 
+
+## Plotting the results and their interpretion
+The output of lm can be plotted with `plot` command to see six diagnostics plots, which can be chosen using `which` argument.  These six plots are -
+
+- Residuals Vs. Fitted Values
+- Normal Q-Q
+- Sacle-Location
+- Cook's distance
+- Residuals vs. leverage
+- Cook's distance vs. leverage
+
+Let us see these, for the example above.
+
+
+```{r}
+par(mfrow = c(1, 2), oma = c(0, 0, 2, 0))
+plot(lin_reg1, which = 1:2)
+```
+
+1. **Residuals Vs. Fitted Values**: This plot is used to determine if the residuals exhibit non-linear patterns. If the red line across the center of the plot is roughly horizontal then we can assume that the residuals follow a linear pattern.  In our example we can see that the red line deviates from a perfect horizontal line but not severely. We would likely declare that the residuals follow a roughly linear pattern and that a linear regression model is appropriate for this dataset. This plot is useful to check first assumption of linear regression i.e. linearity of the data.
+2. **Normal Q-Q**: This plot is used to determine if the residuals of the regression model are normally distributed, which was our another assumption. If the points in this plot fall roughly along a straight diagonal line, then we can assume the residuals are normally distributed.
+
+Moreover, the extreme outlier values impacting our modelling will be labeled.  We can see that values from rows, 23, 33 and 42 are labeled.  
+
+```{r}
+par(mfrow = c(1, 2), oma = c(0, 0, 2, 0))
+plot(lin_reg1, which = 3:4)
+```
+
+3. **Sacle-Location**: This plot is used to check the assumption of equal variance (also called “homoscedasticity”) among the residuals in our regression model. If the red line is roughly horizontal across the plot, then the assumption of equal variance is likely met.
+4. **Cook's Distance**: An influential value is a value, which inclusion or exclusion can alter the results of the regression analysis. Such a value is associated with a large residual. Not all outliers (or extreme data points) are influential in linear regression analysis. A metric called Cook’s distance, is used to determine the influence of a value. This metric defines influence as a combination of leverage and residual size.
+
+```{r}
+par(mfrow = c(1, 2), oma = c(0, 0, 2, 0))
+plot(lin_reg1, which = 5:6)
+```
+
+5. **Residuals vs. leverage**: This plot is used to identify influential observations. If any points in this plot fall outside of Cook’s distance (the dashed lines) then it is an influential observation.  Actually, a data point has high leverage, if it has extreme predictor x values.
+6. **Sixth plot i.e. Cooks distance vs. leverage** is also used to identify extreme values that may be impacting our model.
+
+All the relevant diagnostic plots can be generated using library `performance` in R.  See
+
+```{r}
+library(performance)
+check_model(lin_reg1)
+```
+
+The warning is obvious, we cannot have `multi-collinearity` problem as there is only one regressor.
+
+## Using `lm` for predictions
+The output of `lm` is actually a list which contains much more information than we saw above.  See which info is contained here -
+
+```{r}
+names(lin_reg1) |>
+  as.data.frame() |>
+  setNames('Objects')
+```
+We may extract any of the as per requirement. E.g.
+```{r}
+lin_reg1$coefficients
+```
+There is a package using `tidy` fundamentals which returns all the useful information by a single function.
+
+```{r}
+library(broom)
+augment(lin_reg1)
+```
+So if we have predict output from a new data, just ensure that data is in exactly same format as of regressor and we can use `predict` from base R directly.  See this example.
+
+```{r}
+new_vals <- rnorm(10, 5, 1) |> 
+  as.data.frame() |>
+  setNames('Sepal.Length')
+predict(lin_reg1, new_vals)
+```
+
+## Multiple Linear Regression
+As the name suggests, multiple linear regression is the model using multiple independent variables having linear relationship with dependent variable.  Now, additional assumption would be all the independent variables are mutually independent too i.e. do not have multi-collinearity between them.  So the method is simple again
+
+```{r}
+lin_reg2 <- lm(Sepal.Width ~ Petal.Length + Petal.Width + Sepal.Length, data = iris[1:50,])
+summary(lin_reg2)
+```
+
+We may notice that one c
+
+## Including categorical or factor variables in `lm`
+By now you would have understood that linear regression is useful for predicting numerical output and through the examples we have seen that our regressors were numerical too.  But what if there's an input variable which is categorical.
+
+In such case, we will have to ensure that categorical variable is of type `factor` before proceeding.  See this example-
+
+```{r}
+lin_reg3 <- lm(Sepal.Width ~ Petal.Length + Petal.Width + Sepal.Length + Species, data = iris)
+summary(lin_reg3)
+```
+Visualising the output above, we can observe that there are two additional coefficients now for `Species` factor.  So why two when three levels were available.  This can be seen using `contrasts` function.
+
+```{r}
+contrasts(iris$Species)
+```
+
+It is clear that for the first level no additional variable is created as it will act as reference level.  For rest of the levels, one additional binary variable is created and used like a numerical variable in model.  Thus, interpreting model outcomes won't be difficult.
+
+## Multi-collinearity and Variance Inflation Factor (VIF)
+
+
+## One Complete Example
+Let's try linear regression on LifeCycleSavings data.
+
+```{r}
+# Visualise first 6 rows
+head(LifeCycleSavings)
+
+# Build a model
+ex1 <- lm(sr ~ . , data = LifeCycleSavings)
+```
+
+In `call` formula above, notice the shorthand `.` operator which here means all variable other than y variable are treated as input variables.  See its output
+```{r}
+summary(ex1)
+```
+Multiple R squared is about 34% which means nearly 34% variablity is explained by linear model.  Let us see some diagnostics plots
+
+```{r}
+performance::check_model(ex1)
+```
+
+We may notice some multi-collinearity, between two population variables.
+
+```{r}
+LifeCycleSavings %>% 
+  ggplot(aes(pop15, pop75)) +
+  geom_point()+
+  geom_smooth(method = 'lm', formula = 'y~x')
+```
+
+
+This can also be verified by corpplots.
+
+```{r}
+GGally::ggcorr(LifeCycleSavings)
+GGally::ggpairs(LifeCycleSavings)
+```
+Even some Our model can be tuned better by removing this multi-collinear variables.
+
+## Simpson's paradox
+It is classic example how regressions without confounding terms can be misleading.  Here is data of `palmerpenguins` where let's try to establish relationship between penguins bills' depth and lengths.  See the following plot.
+```{r}
+library(palmerpenguins)
+penguins %>% 
+  na.omit() %>% 
+  ggplot(aes(bill_length_mm, bill_depth_mm)) +
+  geom_point() +
+  geom_smooth(method = 'lm', formula = 'y ~ x')
+
+```
+
+Clearly, a negative relationship is seen.  But let's try to include species in the model.  See the following plot.
+```{r}
+penguins %>% 
+  na.omit() %>% 
+  ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
+  geom_point() +
+  geom_smooth(method = 'lm', formula = 'y ~ x') +
+  theme(legend.position = 'bottom')
+```
+
+We can see that for each of the species a positive relationship is seen. Thus, species is a lurking variable here.  Thus before finalising the model, we have to be sure that we are not missing any important variable.
+
+# Logistic Regression
+Logistic regression is special case of linear regression, where the output variable is binary or logical.

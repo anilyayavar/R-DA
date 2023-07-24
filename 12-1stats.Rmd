@@ -38,4 +38,17 @@ USArrests %>%
 
 ```
 
+`dplyr::glimpse`
 
+
+# Probability in R
+We will keep short here.  Instead of learning all the concepts of probability, we will see how to calculate probability, densities, quantiles for nearly any type of distribution.  R's powerhorse has four types of functions for each of the distributions associated called `pqdr` functions.  Actually all these are prefixes.  Consider a probability function $P(X=x) = p$ for a variable $x$ and $p$ be the associated probability.  All these functions are vectorised. Let us explore these one by one.
+
+## `p*()` set of functions
+These set of functions give the cumulative distribution of that probability function.
+
+## `q*()` set of functions
+
+## `d*()` set of functions
+
+## `r*()` set of functions

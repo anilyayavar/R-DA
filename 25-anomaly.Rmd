@@ -1,0 +1,347 @@
+# Anomaly Detection
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+river <- structure(list(index = 1:291, nitrate = c(1.581, 1.323, 1.14, 
+1.245, 1.072, 1.483, 1.162, 1.304, 1.14, 1.118, 1.342, 1.245, 
+1.204, 1.14, 1.204, 1.118, 1.025, 1.118, 1.285, 1.14, 0.949, 
+0.922, 0.949, 1.118, 1.265, 1.095, 1.183, 1.162, 1.118, 1.285, 
+1.049, 0.922, 0.775, 0.866, 0.922, 1.643, 1.323, 1.285, 1.095, 
+1.049, 1.095, 0.922, 0.866, 1.049, 0.922, 1.095, 1.183, 1.304, 
+1.162, 1.225, 1.285, 1.072, 1.533, 1.095, 1.396, 1.025, 0.922, 
+0.949, 1.118, 1.342, 1.36, 1.36, 1.204, 1.265, 1, 1.183, 1.025, 
+0.866, 1.072, 1.049, 1.049, 1.049, 1.095, 1.183, 1.095, 0.975, 
+1.118, 0.975, 1.049, 0.837, 0.922, 1.118, 1.072, 1.204, 0.975, 
+1.095, 1.049, 0.866, 0.922, 1.049, 1.127, 1.072, 0.975, 1.049, 
+1.183, 1.245, 1.225, 1.225, 1.265, 1.118, 1.14, 1.072, 1.095, 
+0.671, 1.183, 0.949, 1.162, 1.095, 1.323, 1.342, 1.277, 1.015, 
+1, 0.922, 0.894, 1, 1.049, 0.922, 1.517, 1.265, 1.414, 1.304, 
+1.14, 1.14, 1.049, 1.068, 0.906, 1.095, 0.883, 1.14, 1.025, 1.36, 
+1.183, 1.265, 1.304, 0.964, 0.975, 0.99, 0.877, 1.049, 0.975, 
+1, 1.183, 1.225, 1.265, 1.183, 1.049, 0.97, 0.894, 0.98, 0.964, 
+0.894, 0.922, 1.14, 1.183, 1.897, 1.095, 1.14, 1.414, 1.14, 1, 
+1.049, 0.889, 0.872, 1, 1.095, 0.671, 1.095, 1.14, 1.304, 1.025, 
+0.975, 1, 0.877, 0.949, 0.866, 1.058, 1.086, 1.118, 1.162, 1.221, 
+1.265, 1.122, 1.015, 1.162, 0.825, 0.906, 0.849, 0.985, 1.118, 
+1.077, 1.237, 1.237, 1.063, 1.01, 0.933, 0.922, 0.806, 0.748, 
+0.592, 0.911, 0.806, 0.98, 1.077, 1.212, 1.277, 0.954, 0.837, 
+0.917, 0.9, 1.068, 0.872, 0.99, 1.131, 1.068, 1.208, 1.319, 1.281, 
+0.905, 0.819, 0.826, 0.974, 0.888, 0.804, 0.996, 1.127, 1.17, 
+1.166, 1.261, 1.275, 1.179, 1.079, 0.951, 0.852, 0.872, 0.834, 
+0.859, 1.077, 1.095, 1.285, 1.323, 1.16, 1.125, 0.957, 0.948, 
+0.907, 0.89, 0.999, 0.999, 0.953, 0.9, 0.986, 1.187, 1.054, 1.079, 
+0.997, 0.851, 0.803, 0.971, 1.025, 1.086, 1.114, 1.068, 1.091, 
+1.034, 0.871, 0.781, 0.865, 0.7, 0.673, 0.881, 0.782, 0.97, 1.044, 
+1.17, 1.196, 1.091, 1.068, 0.967, 0.823, 0.73, 0.693, 0.788, 
+1.095, 1.183, 0.996, 1.105, 0.939, 0.914, 0.813, 0.775), months = structure(c(1L, 
+2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 
+5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 
+8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 
+11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 
+1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 
+4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 
+7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 
+10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 
+12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 
+3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 
+6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 
+9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 
+12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 
+3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 
+6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 
+9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 
+12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 
+3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 
+6L, 7L, 8L, 9L, 10L, 11L, 12L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 
+9L, 10L, 11L, 12L, 1L, 2L, 3L), .Label = c("January", "February", 
+"March", "April", "May", "June", "July", "August", "September", 
+"October", "November", "December"), class = "factor")), .Names = c("index", 
+"nitrate", "months"), row.names = c("1", "2", "3", "4", "5", 
+"6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", 
+"17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", 
+"28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", 
+"39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", 
+"50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", 
+"61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", 
+"72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", 
+"83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", 
+"94", "95", "96", "97", "98", "99", "100", "101", "102", "103", 
+"104", "105", "106", "107", "108", "109", "110", "111", "112", 
+"113", "114", "115", "116", "117", "118", "119", "120", "121", 
+"122", "123", "124", "125", "126", "127", "128", "129", "130", 
+"131", "132", "133", "134", "135", "136", "137", "138", "139", 
+"140", "141", "142", "143", "144", "145", "146", "147", "148", 
+"149", "150", "151", "152", "153", "154", "155", "156", "157", 
+"158", "159", "160", "161", "162", "163", "164", "165", "166", 
+"167", "168", "169", "170", "171", "172", "173", "174", "175", 
+"176", "177", "178", "179", "180", "181", "182", "183", "184", 
+"185", "186", "187", "188", "189", "190", "191", "192", "193", 
+"194", "195", "196", "197", "198", "199", "200", "201", "202", 
+"203", "204", "205", "206", "207", "208", "209", "210", "211", 
+"212", "213", "214", "215", "216", "217", "218", "219", "220", 
+"221", "222", "223", "224", "225", "226", "227", "228", "229", 
+"230", "231", "232", "233", "234", "235", "236", "237", "238", 
+"239", "240", "241", "242", "243", "244", "245", "246", "247", 
+"248", "249", "250", "251", "252", "253", "254", "255", "256", 
+"257", "258", "259", "260", "261", "262", "263", "264", "265", 
+"266", "267", "268", "269", "270", "271", "272", "273", "274", 
+"275", "276", "277", "278", "279", "280", "281", "282", "283", 
+"284", "285", "286", "287", "288", "289", "290", "291"), class = "data.frame")
+```
+
+Anomalies play a significant role in the field of audit. As auditors examine financial statements, transactions, and other relevant data, the detection of anomalies can provide valuable insights and help identify potential issues or irregularities. A few of the examples could be:
+
+- **Fraud Detection:** Anomalies often indicate the presence of fraudulent activities. Unusual or unexpected patterns in financial transactions or account balances may suggest potential fraud or misappropriation of assets. Auditors actively search for anomalies that may indicate fraudulent behavior, such as fictitious transactions, unauthorized access, or unusual changes in financial data.
+
+- **Material Misstatement Identification:** Anomalies can help auditors identify material misstatements in financial statements. Material misstatements are errors or irregularities that, if left undetected, could potentially influence the decisions of users of the financial statements. Anomalies in financial data, such as significant deviations from expected values or unexpected relationships between different accounts, can alert auditors to potential material misstatements that require further investigation.
+
+- **Control Weakness Identification:** Anomalies can highlight weaknesses in internal controls within an organization. Internal controls are processes implemented by management to ensure the reliability of financial reporting, safeguard assets, and prevent fraud. Anomalies that bypass or circumvent these controls may indicate control weaknesses or breakdowns that need to be addressed to mitigate risks.
+
+- **Compliance Monitoring:** Anomalies can help auditors monitor compliance with laws, regulations, and industry standards. Deviations from regulatory requirements or industry benchmarks may indicate non-compliance or potential violations. Auditors can use anomaly detection techniques to identify unusual patterns or transactions that raise compliance concerns, enabling them to report and address such issues.
+
+- **Process Improvement:** Anomalies can provide valuable feedback for process improvement within an organization. Identifying and analyzing anomalies can help auditors uncover inefficiencies, errors, or gaps in operational processes. By addressing these anomalies and their underlying causes, organizations can enhance their internal controls, reduce risks, and improve the accuracy and reliability of their financial reporting.
+
+Thus, anomalies in the audit context serve as indicators of potential issues, including fraud, material misstatements, control weaknesses, compliance violations, and process inefficiencies. Detecting and investigating anomalies is crucial for auditors to provide accurate and reliable financial information, enhance internal controls, and support informed decision-making by stakeholders.
+
+## Definition and types of anomalies
+Anomalies are patterns or data points that deviate significantly from the expected or normal behavior within a dataset. These are also known as outliers, novelties, or deviations and can provide valuable insights into unusual events or behavior in various domains.
+
+Types of anomalies:
+
+- **Point Anomalies:** Individual data points that are considered anomalous when compared to the rest of the dataset. For example, a temperature sensor reading that is significantly different from the expected range.
+
+- **Contextual Anomalies:** Data points that are considered anomalous within a specific context or subset of the dataset. For instance, a sudden increase in obsolete website traffic.
+
+- **Collective Anomalies:** Groups of data points that exhibit anomalous behavior when analyzed together but might appear normal when considered individually. An example is a sudden drop in sales for multiple related products.
+
+## Anomaly detection, in R
+### By inspection
+Several times, anomalies or outliers are detectable by observation.  The `summary()` function prints the *maximum*, *minimum*, *upper* and *lower quartiles*, and the *mean* and *median*, and can give a sense for how far an extreme point lies from the rest of the data. E.g.
+
+```{r}
+summary(nhtemp)
+```
+
+The easiest way to get a sense for how unusual a particular value is is by using a graphical summary like a boxplot. In R this is created using the `boxplot` function. The `boxplot` function takes a column of values as an input argument, here illustrated with the temperature data, and produces a box and whiskers representation of the distribution of the values. The extreme values are represented as distinct points, making them easier to spot.
+
+```{r}
+boxplot(nhtemp)
+```
+
+It's important to note that a point anomaly is not necessarily always extreme. A point anomaly can also arise as an unusual combination of values across several attributes.  
+
+A collective anomaly, on the other hand, is a collection of similar data instances that can be considered anomalous together when compared to the rest of the data. For example, a consecutive 5 day period of high temperatures are shown by the red points in the plot. These daily temperatures are unusual because they occur together, and are likely caused by the same underlying weather event. 
+
+```{r echo=FALSE}
+set.seed(567)
+c(rnorm(15, 30, 2), rnorm(5, 40, 2.1), rnorm(10, 30, 2)) %>% ts() -> myts
+dates <- 1:30
+plot(dates, myts, type = 'l',ylab = "Temp in Celsius", xlab = 'Dates')
+points(16:20, myts[16:20], col = 'red', pch = 16)
+points(1:15, myts[1:15], col = 'black', pch = 16)
+points(21:30, myts[21:30], col = 'black', pch = 16)
+```
+
+### Grubb's Test
+Wee saw that visual assessment of outliers works well when the majority of data points are grouped together and rest of them lie separate.  In statistics there are several tests to detect anomalies.  **Grubb's Test** is one of these. Grubbs' test assesses whether the point that lies farthest from the mean in a dataset could be an outlier. This point will either be the largest or smallest value in the data.  This test is however based on assumption that data points are normally distributed.  So before proceeding for this test, we must be sure that there is a plausible explanation for this assumption. *(We can check normality of data points by plotting a histogram.  For other methods please refer to chapter on linear regression.)*
+
+Let's run this test on `nhtemp` data example, we saw above (boxplot). So let's check its normality assumption.
+```{r}
+hist(nhtemp, breaks = 20)
+```
+
+Our assumption is nearly satisfied.  Let's run the test.
+
+```{r}
+library(outliers)
+outliers::grubbs.test(nhtemp)
+```
+As p value is `0.15` we do not have strong evidence to reject null hypothesis that extreme maximum value is an outlier.
+
+### Seasonal Hybrid ESD Algorithm
+As we have seen that above test may not be appropriate for anomaly detection (normality assumption as well as detection of extreme values only), particularly detecting anomalies from a time series that may have seasonal variations.  We may install `AnomalyDetection` package development version from github using `devtools::install_github("twitter/AnomalyDetection")`.  Example: in `JohnsonJohnson` data having quarterly sales data, we can use the following syntax.
+```{r}
+#devtools::install_github("twitter/AnomalyDetection")
+library(AnomalyDetection)
+AnomalyDetectionVec(as.vector(JohnsonJohnson), 
+                    period = 4, # Sesaonality
+                    plot = TRUE, # set FALSE when plot not needed
+                    direction = 'both' # set 'pos' for higher values
+                                       # or 'neg' for lower values
+                    )
+```
+
+We can see that in output `$anoms` contain anomalies and these are denoted in blue dots in plot output as well.
+
+### k-Nearest Neighbour Distance Score
+One of greatest limitation of above two methods was that, these were applicable on univariate data series, whereas, in real world, data analysis is rarely univariate.  The knn technique works on bivariate analysis, but the fundamentals can be applied to multivariate data as well (though such multivariate is very hard to visualise for anomaly detection). 
+
+We will make use of `get.knn` function from `FNN` package.  However, `k` parameter is required beforehand.  Let us analyse the bivariate (Sales Vs. Profit) data from `Sample Superstore`.  
+
+```{r warning=FALSE, message=FALSE}
+library(readxl)
+superstore <- read_excel("data/Sample - Superstore.xls")
+sup <- superstore[, c('Sales', 'Profit')]
+plot(Profit ~ Sales, data = sup, pch = 20)
+```
+
+As two variable may vary in scale, it is always advisable to normalise the data before proceeding for kNN distance calculation.  We will make use of `scale` function available in base R.
+
+```{r}
+sup_scaled <- scale(sup)
+# Load the library
+library(FNN)
+# get kNN object, using k = 5
+sup_knn <- FNN::get.knn(sup_scaled, 5)
+```
+
+The `knn` object created above will have two sub-objects (both matrices having columns equal to chosen `k`), one having nearest neighbors' indices and another having distances from those.  Let's view their top 6 rows.
+
+```{r}
+head(sup_knn$nn.index)
+head(sup_knn$nn.dist)
+```
+
+Using `rowMeans` we can calculate mean distance for each data point.  Let's also store that mean distance in a variable/column say `score` in main dataset, and visualise the results by setting the point-size with this mean distance (actually its square root).
+
+```{r}
+sup$score <- rowMeans(sup_knn$nn.dist)
+plot(Profit ~ Sales, data = sup, cex = sqrt(score), pch = 20)
+```
+
+We can see that the bigger the point is, the chances of it being anomaly is large.
+
+### Local Outlier Factor
+As against kNN which uses distances of k neighbors, this algorithm uses density of each data point vis-a-vis density of its nearest neighbors. kNN distance seems to be good at detecting points that are really far from their neighbors, sometimes called global anomalies, but sometimes fail to capture all of the points that might be considered anomalous like local anomalies.  Local Anomalies may lie near to a cluster still they won't be like their neighbors. To understand it better, see the following plot consisting of dummy data.
+```{r, echo=FALSE}
+set.seed(123)
+dummy <- data.frame(
+  sales = rnorm(25, 500, 100),
+  profit = rnorm(25, 75, 10)
+)
+dummy2 <- data.frame(
+  sales = rnorm(25, 1000, 5),
+  profit = rnorm(25, 75, 2)
+)
+dummy3 <- data.frame(
+  sales = rnorm(5, 500, 100),
+  profit = rnorm(5, 120, 10)
+)
+dummy4 <- data.frame(
+  sales = rnorm(5, 1000, 10),
+  profit = rnorm(5, 90, 2)
+)
+dummy <- rbind(dummy, dummy2, dummy3, dummy4)
+
+plot(profit ~ sales, data = dummy, xlim = c(0, 1100), ylim = c(0, 200))
+points(profit ~ sales, data = dummy[51:55,], xlim = c(0, 1100), ylim = c(0, 200), col = 'red', pch = 20)
+points(profit ~ sales, data = dummy[56:60,], xlim = c(0, 1100), ylim = c(0, 200), col = 'blue', pch = 20)
+```
+
+The red points may be global outliers, being far from its immediate neigbors, yet the blue points may be local anomalies as these are not like their immediate neighbors and may be local anomalies.
+
+As stated, LOF segregates the data points based on the ratio of density of that point with that of densities of its neigbors.  A score `>1` thus indicates that the data point may be an anomaly.  Let's see that on same example `SuperStore`.
+
+```{r}
+library(dbscan)
+sup$lof_score <- lof(sup_scaled, 5)
+plot(Profit ~ Sales, data = sup, cex = lof_score^(1/3), pch = 20)
+
+```
+
+Clearly, we can see presence of local anomalies, within the clustered data points.  We can also verify this.
+
+```{r}
+# Biggest Anomaly - kNN
+which.max(sup$score)
+
+# Biggest Anomaly - LOF
+which.max(sup$lof_score)
+max(sup$lof_score)
+```
+
+A histogram of `LOF` score can also be drawn
+```{r}
+hist(sup$lof_score, breaks = 40)
+```
+
+**Change this ex**
+
+### Isolation Trees/Forest
+
+Concept
+
+One tree
+
+```{r message=FALSE, warning=FALSE}
+# remotes::install_github("Zelazny7/isofor")
+library(isofor)
+# Generate a single tree
+sup_1 <- iForest(sup[, c('Sales', 'Profit')], nt = 1)
+
+# Specify number of samples explicitly
+sup_1 <- iForest(sup[, c('Sales', 'Profit')], nt = 1, phi = 100)
+
+# Generate isolation score
+sup$iso_score_1 <- predict(sup_1, sup)
+
+# View fisrt 10 scores
+sup$iso_score_1[1:10]
+```
+Score interpretations
+
+Vs. Forest
+
+```{r warning=FALSE}
+sup_100 <- iForest(sup[, c('Sales', 'Profit')], nt = 100, phi = 100)
+sup_500 <- iForest(sup[, c('Sales', 'Profit')], nt = 500, phi = 100)
+
+# Compare scores
+
+sup$iso_score_100 <- predict(sup_100, sup)
+sup$iso_score_500 <- predict(sup_500, sup)
+head(sup)
+```
+
+Comparison in a plot
+
+```{r warning=FALSE}
+sup_600 <- iForest(sup[, c('Sales', 'Profit')], nt = 600, phi = 100)
+sup$iso_score_600 <- predict(sup_600, sup)
+plot(iso_score_600 ~ iso_score_500, data = sup, xlim = c(0, 1), ylim = c(0, 1))
+abline(a = 0, b = 1)
+```
+
+Contour plots
+
+```{r}
+# Create Sequences
+Sales_seq <- seq(min(sup$Sales), max(sup$Sales), length.out = 25)
+Profit_seq <- seq(min(sup$Profit), max(sup$Profit), length.out = 25)
+# Create Grid
+sup_grid <- expand.grid(Sales = Sales_seq, Profit = Profit_seq)
+# append scores
+sup_grid$score <- predict(sup_500, sup_grid)
+
+# Draw Plot
+library(lattice)
+contourplot(score ~ Sales + Profit, data = sup_grid, region = TRUE)
+```
+
+### Including categorical variables
+
+### Time Series Anomalies
+
+
+```{r}
+library(timetk)
+bike_sharing_daily %>% 
+  select(date = dteday, value = cnt) %>% 
+  plot_anomaly_diagnostics(date, value,
+                           .interactive = FALSE) 
+
+bike_sharing_daily %>% 
+  select(date = dteday, value = cnt) %>% 
+  tk_anomaly_diagnostics(date, value) %>% 
+  filter(anomaly == 'Yes')
+```
+
